@@ -1,10 +1,6 @@
 <h1> FlyGuesWeb Introduction </h1>
 
----
-
 FlyGuesWeb is the content repository of the official FlyGues website. You can view all the website's files here.
-
----
 
 <h2>Copyright and Use License</h2>
 
