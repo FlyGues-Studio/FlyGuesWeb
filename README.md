@@ -6,22 +6,6 @@ FlyGuesWeb is the content repository of the official FlyGues website. You can vi
 
 ---
 
-<h2>structure</h2>
-
-The content of the code consists of the following:
-
-**FlyGuesWeb**<br/>
-©¸©¤docs<br/>
-    ©À©¤css<br/>
-    ©À©¤Downland project<br/>
-    ©¦  ©¸©¤Minecraft7.22test<br/>
-    ©À©¤information webside<br/>
-    ©¦  ©¸©¤Minecraft7.22test<br/>
-    ©¦      ©À©¤css<br/>
-    ©¦      ©¸©¤images<br/>
-    ©À©¤js<br/>
-    ©¸©¤photo<br/>
-
 <h2>Copyright and Use License</h2>
 
 &copy; 2023 FlyGues Organisation
