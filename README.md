@@ -13,9 +13,6 @@ FlyGuesWeb is the content repository of the official FlyGues website. You can vi
 **Main Editor**<br/>
 FlyGues2889
 
-**Special Thanks**<br/>
-~
-
 <h2>Feedback</h2>
 
 **Email** FlyGues2889@outlook.com<br/>
