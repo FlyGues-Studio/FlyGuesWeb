@@ -1,34 +1,17 @@
-input{
-    /* 文字颜色 */
-    color: #0099CC;
-    /* 清除背景色 */
-    background: transparent;
-    /* 边框样式、颜色、宽度 */
-    border: 2px solid #0099CC;
-    /* 给边框添加圆角 */
-    border-radius: 6px;
-    /* 字母转大写 */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.btn1 {
+input {
+    /* 主体设置 */
     background-color: white;
-    color: black;
-    border: 2px solid #008CBA;
+    padding: 10px 24px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    /* 边框设置 */
+    border-radius: 6px;
+    border: none;
+    border-block-color: white;
+    /* 文字设置 */
+    color: darkblue;
+    font-size: 16px;
+    font-family: 'Product Sans';
+    text-align: center;
 }
-    /* 悬停样式 */
-    .btn1:hover {
-        background-color: #008CBA;
-        color: white;
-    }
