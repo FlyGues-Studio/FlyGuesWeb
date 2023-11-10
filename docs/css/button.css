@@ -1,6 +1,6 @@
 input {
     /* 主体设置 */
-    background-color: white;
+    background-color: darkblue;
     padding: 10px 24px;
     display: inline-block;
     margin: 4px 2px;
@@ -8,9 +8,9 @@ input {
     /* 边框设置 */
     border-radius: 6px;
     border: none;
-    border-block-color: white;
+    border-block-color: darkblue;
     /* 文字设置 */
-    color: darkblue;
+    color: white;
     font-size: 16px;
     font-family: 'Product Sans';
     text-align: center;

@@ -53,5 +53,5 @@ All trademarks and logos used and displayed on the FlyGuys Organization website 
 
 <h2>Update History</h2>
 
-**V0.0.1** &brvbar; Fix some issues.<br/>
+**V0.0.1** &brvbar; Fix some issues.<br/>a
 **Early Test** &brvbar; Build the main structure of the website.
