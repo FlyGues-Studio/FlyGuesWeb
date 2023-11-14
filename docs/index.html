@@ -16,10 +16,10 @@
     <!--配置样式-->
     <style>
         .list {
-            width:50px;
+            text-indent: 2em;
         }
         .topic {
-            background-color: dodgerblue;
+            background-color: lightgray;
         }
 
         body {
@@ -50,7 +50,7 @@
 <body>
     <!--页眉-->
     <div class="header">
-        <div class="satisDiv" style="text-indent: 1em;">
+        <div class="satisDiv" style="text-indent: 1em;" align="center">
             <a href="index.html">
                 <img src="image/logowhite.png" width="36" height="36" />
                 <img src="image/logotextwhite.png" height="48" />
@@ -60,7 +60,7 @@
     </div>
     <!--网站主体部分-->
     <div>
-        <table width="100%" style="border-spacing:10px;">
+        <table width="100%" style="border-spacing:20px;">
             <tr align="center">
                 <td class="topic" width="20%" height="24px">
                     <a href="#">
@@ -85,38 +85,52 @@
                 </td>
             </tr>
             <tr>
-                <td width="20%" style="text-align: center; vertical-align:top">
+                <td width="20%" style="text-align: center; vertical-align:top;">
                     <p>
-                        <a href="home.html" style="color: green">
+                        <a href="home.html" style="color: grey;">
                             <iconify-icon icon="fluent:home-24-filled"></iconify-icon>
                             主页
                         </a>
                     </p>
+                    <hr width="80%" />
                     <p>
-                        <a href="#" style="color: green">
+                        <a href="#" style="color:grey">
                             <iconify-icon icon="fluent:store-microsoft-24-filled"></iconify-icon>
                             软件商城
                         </a>
                     </p>
                     <p>
-                        <a href="informationmenu.html" style="color: green">
+                        <a href="informationmenu.html" style="color: grey">
                             <iconify-icon icon="fluent:news-24-filled"></iconify-icon>
                             资讯新闻
                         </a>
                     </p>
                     <p>
-                        <a href="#" style="color: green">
+                        <a href="#" style="color: grey">
                             <iconify-icon icon="fluent:people-community-24-filled"></iconify-icon>
                             社区
                         </a>
                     </p>
                     <hr width="80%" />
                     <p>
-                        <a href="info.html">
+                        <a href="#" style="color:grey">
+                            <iconify-icon icon="fluent:bug-24-filled"></iconify-icon>
+                            错误报告
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" style="color:grey">
+                            <iconify-icon icon="fluent:person-feedback-24-filled"></iconify-icon>
+                            反馈
+                        </a>
+                    </p>
+                    <p>
+                        <a href="info.html" style="color:grey">
                             <iconify-icon icon="fluent:info-24-filled"></iconify-icon>
                             关于
                         </a>
                     </p>
+
                 </td>
                 <td width="60%">
                     <p>
@@ -127,124 +141,88 @@
                             </span>
                         </marquee>
                     </p>
-                    <p>
-                        <table>
-                            <tr>
-                                <td class="list">
-                                    <iconify-icon icon="fluent:history-48-regular" width="50"></iconify-icon>
-                                </td>
-                                <td width="100%">
-                                    <p>
-                                        <b>
-                                            Update 1.1.0
-                                        </b>
-                                        &nbsp;
-                                        <small>
-                                            2021.7.31
-                                        </small>
-                                    </p>
-                                    <p>
-                                        <small>
-                                            更新UI及图标
-                                        </small>
-                                    </p>
-                                </td>
-                                <td class="list" width="50px;" align="right">
-                                    <iconify-icon icon="fluent:arrow-circle-right-24-regular" width="24"></iconify-icon>
-                                </td>
-                            </tr>
-                        </table>
-                    </p>
-                    <p>
-                        <table>
-                            <tr>
-                                <td>
-                                    <iconify-icon icon="fluent:document-add-48-regular" width="50"></iconify-icon>
-                                </td>
-                                <td width="100%">
-                                    <p>
-                                        <b>
-                                            FlyGues-Minecraft 7月22日测试卷已经发布！
-                                        </b>
-                                        &nbsp;
-                                        <small>
-                                            2021.7.24
-                                        </small>
-                                    </p>
-                                    <p>
-                                        <small>
-                                            点击以查看内容
-                                        </small>
-                                        <a href="information webside/Minecraft7.22test/Minecraft7.22test.html">
-                                            <img src="photo/go-big.png" width="50" height="25">
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </p>
-                    <p>
-                        <table>
-                            <tr>
-                                <td>
-                                    <iconify-icon icon="fluent:warning-48-regular" width="50"></iconify-icon>
-                                </td>
-                                <td width="100%">
-                                    <p>
-                                        <b>
-                                            维护网站通知
-                                        </b>
-                                        &nbsp;
-                                        <small>
-                                            2021.7.23
-                                        </small>
-                                    </p>
-                                    <p>
-                                        <small>
-                                            关于维护网站的通知：为了之后一段时间的......
-                                        </small>
-                                        <a href="informationmenu.html">
-                                            <img src="photo/go-big.png" width="50" height="25">
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </p>
-                    <p>
-                        <table>
-                            <tr>
-                                <td>
-                                    <iconify-icon icon="fluent:history-48-regular" width="50"></iconify-icon>
-                                </td>
-                                <td width="100%">
-                                    <p>
-                                        <b>
-                                            Update 1.0.5
-                                        </b>
-                                        &nbsp;
-                                        <small>
-                                            2020.2.11
-                                        </small>
-                                    </p>
-                                    <p>
-                                        <small>
-                                            内容更新及......
-                                        </small>
-                                        <a href="informationmenu.html">
-                                            <img src="photo/go-big.png" width="50" height="25">
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </p>
-                    <p>
-                        <b>
-                            更多新闻
-                        </b>
+                    <a href="informationmenu.html">
+                        <p>
+                            <table>
+                                <tr>
+                                    <td class="list">
+                                        <iconify-icon icon="fluent:history-48-regular" width="50"></iconify-icon>
+                                    </td>
+                                    <td width="100%">
+                                        <p>
+                                            <b>Update 2023/11/14</b>&nbsp;&nbsp;<small>2023.11.14</small>
+                                        </p>
+                                        <p>
+                                            <small>更新主页UI</small>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </p>
+                    </a>
+                    <a href="informationmenu.html">
+                        <p>
+                            <table>
+                                <tr>
+                                    <td class="list">
+                                        <iconify-icon icon="fluent:history-48-regular" width="50"></iconify-icon>
+                                    </td>
+                                    <td width="100%">
+                                        <p>
+                                            <b>Update 1.1.0</b>&nbsp;&nbsp;<small>2021.7.31</small>
+                                        </p>
+                                        <p>
+                                            <small>更新UI及图标</small>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </p>
+                    </a>
+                    <a href="information webside/Minecraft7.22test/Minecraft7.22test.html">
+                        <p>
+                            <table>
+                                <tr>
+                                    <td class="list">
+                                        <iconify-icon icon="fluent:document-add-48-regular" width="50"></iconify-icon>
+                                    </td>
+                                    <td width="100%">
+                                        <p>
+                                            <b>FlyGues测试卷发布</b>&nbsp;&nbsp;<small>2021.7.24</small>
+                                        </p>
+                                        <p>
+                                            <small>最近由FlyGues Team推出的FlyGues-Minecraft7月22日试题正式发布...</small>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </p>
+                    </a>
+                    <a href="informationmenu.html">
+                        <p>
+                            <table>
+                                <tr>
+                                    <td class="list">
+                                        <iconify-icon icon="fluent:warning-48-regular" width="50"></iconify-icon>
+                                    </td>
+                                    <td width="100%">
+                                        <p>
+                                            <b>维护网站通知</b>&nbsp;&nbsp;<small>2021.7.23</small>
+                                        </p>
+                                        <p>
+                                            <small>
+                                                关于维护网站的通知：为了之后一段时间的更新，我们决定在2021.7...
+                                            </small>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </p>
+                    </a>
+                    <p class="list">
                         <a href="informationmenu.html">
-                            <img src="photo/go-big.png" width="50" height="25">
+                            <b>更多新闻</b>
+                            <iconify-icon icon="fluent:arrow-circle-right-32-regular"></iconify-icon>
                         </a>
                     </p>
                 </td>
@@ -254,14 +232,6 @@
                 </td>
             </tr>
         </table>
-        <table width="100%">
-            <tr>
-                <td style="color: white">
-                    应用商店软件推荐
-                </td>
-            </tr>
-        </table>
-
     </div>
 </body>
 </html>
