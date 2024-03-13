@@ -2,58 +2,89 @@
 <html>
 <head>
     <title>
-        FlyGues Blog - 关于
+        FlyGuesWeb - 关于
     </title>
     <meta charset="utf-8">
     <!--网站logo-->
     <link rel="shortcut icon" href="image/logonormal.png" type="image/x-icon" />
     <!--链接外部文件-->
-    <link rel="stylesheet" type="text/css" href="css/linecenter.css">
     <link rel="stylesheet" type="text/css" href="css/button.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <!--配置样式-->
     <style>
-        .div {
+        p.BigTitle {
+            font-size: 2em;
+            white-space: nowrap;
+            line-height: 2em;
+            margin: 0;
+            color: #002FA7;
+        }
+
+        body {
+            margin: 0;
             font-family: 'HarmonyOS Sans SC';
         }
-        .satisDiv span, img {
-            padding-left: 0;
-            vertical-align: middle;
-            display: inline-block;
-            float: none;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 80px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #002FA7;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.ActiveBox {
+            border-radius: 10px;
+            background-color: #002FA7;
+            margin: 10%;
         }
     </style>
 </head>
 <body>
-    <!--页眉-->
-    <div class="header">
-        <div class="satisDiv" style="text-indent: 1em;">
-            <a href="index.html">
-                <img src="image/logowhite.png" width="36" height="36" />
-                <img src="image/logotextwhite.png" height="48" />
-            </a>
-        </div>
-    </div>
-    <!--网站主体部分-->
-    <div>
-        <br />
-        &nbsp;
+
+    <!--导航栏-->
+    <ul>
+        <li><img src="image/logonormal.png" style="width: 2em; clear: both; display: block; margin: auto; padding: 8px 16px; " /></li>
+        <li><a href="index.html"><iconify-icon icon="fluent:home-24-regular" width="1.6em" height="1.6em" style="color:#002FA7"></iconify-icon></a></li>
+        <li><a href="#news"><iconify-icon icon="fluent:news-24-regular" width="1.6em" height="1.6em" style="color: #002fa7"></iconify-icon></a></li>
+        <li><a href="info.html"><iconify-icon icon="fluent:archive-24-regular" width="1.6em" height="1.6em" style="color: #002fa7"></iconify-icon></a></li>
+        <li>
+            <div class="ActiveBox">
+                <a href="#about">
+                    <iconify-icon icon="fluent:info-24-filled" width="1.6em" height="1.6em" style="color: #f1f1f1"></iconify-icon>
+                </a>
+            </div>
+        </li>
+
+    </ul>
+
+    <!--网页主体-->
+    <div style="margin-left:6em;padding:1px 16px;height:1000px;">
+        <p class="BigTitle"><b>关于</b></p><br />
         <table cellpadding="10">
             <tr>
                 <th width="100px" height="100px">
                     <img src="image/cmlogo.svg" width="100" height="100" />
                 </th>
-                <th style="font-family:'Product Sans';" height="100px">
-                    <span style="font-size:24px;vertical-align:top">FlyGues Blog</span><br />
+                <th height="100px">
+                    <span style="font-size:24px;vertical-align:top">FlyGuesWeb</span><br />
                     &nbsp;<br />
-                    <span style="vertical-align:bottom">* 个人网站博客 *</span>
+                    <span style="color:lightgray;"><small>最后更新时间：2024/3/13</small></span>
                 </th>
             </tr>
         </table>
-        <br />
-        &nbsp;<br />
         &nbsp;2023 , FlyGues Organization<br />
         &nbsp;<br />
         <a href="https://github.com/FlyGues2889/FlyGuesWeb" style="color:dodgerblue;" target="_blank">
@@ -62,18 +93,22 @@
                 访问源码 | GitHub 库
             </small>
         </a>
+        <hr width="100%" />
+        &nbsp;
+        <h3>网站隐私政策</h3>
+        <b>我们的网站使用 Iconify Icons 开源项目</b><br />
+        &nbsp;
+        <small>
+            <li>Iconify is an open source project.</li>
+            <br />
+            <li>Almost all parts of the project use MIT license. Some older packages use Apache 2.0 and/or GPL 2.0 licenses.</li>
+            <br />
+            <li>This license does not apply to icons. Icon sets use various open source licenses, see each icon set for details.</li>
+        </small>
+
     </div>
-    <hr width="100%" />
-    &nbsp;
-    <h3>网站隐私政策</h3>
-    <b>我们的网站使用 Iconify Icons 开源项目</b><br />
-    &nbsp;
-    <small>
-        <li> Iconify is an open source project.</li>
-        <br />
-        <li>Almost all parts of the project use MIT license. Some older packages use Apache 2.0 and/or GPL 2.0 licenses.</li>
-        <br />
-        <li>This license does not apply to icons. Icon sets use various open source licenses, see each icon set for details.</li>
-    </small>
+    <!--JavaScript外引
+        =====================================================================-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 </html>
