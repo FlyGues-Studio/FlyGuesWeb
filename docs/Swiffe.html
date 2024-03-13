@@ -2,97 +2,110 @@
 <html>
 <head>
     <title>
-        FlyGues Swiffe
+        FlyGuesWeb - Swiffe
     </title>
     <meta charset="utf-8">
     <!--网站logo-->
     <link rel="shortcut icon" href="image/logonormal.png" type="image/x-icon" />
     <!--链接外部文件-->
-    <link rel="stylesheet" type="text/css" href="css/linecenter.css">
     <link rel="stylesheet" type="text/css" href="css/button.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
-    <link rel="stylesheet" type="text/css" href="css/bkg.css">
-    <!--配置样式-->
     <style>
-        .list {
-            text-indent: 2em;
+        a{
+            text-decoration:none;
+            color:#808080;
         }
-
-        .topic {
-            background-color: lightgray;
+        p.BigTitle{
+            font-size:2em;
+            white-space:nowrap;
+            line-height:2em;
+            margin:0;
+            color:#002FA7;
         }
-
         body {
-            font-family: 'HarmonyOS Sans SC';
+            margin: 0;
+            font-family:'HarmonyOS Sans SC';
         }
 
-        .satisDiv span, img {
-            padding-left: 0;
-            vertical-align: middle;
-            display: inline-block;
-            float: none;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 80px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
         }
 
-        td {
-            border-radius: 5px;
-            background-color: #e6e6e6;
+        li a {
+            display: block;
+            color: #002FA7;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        a {
-            color: black
+        div.ActiveBox{
+            border-radius:10px;
+            background-color:#001959;
+            margin:10%;
         }
-
-        tr {
-            border-radius: 5px;
-        }
-
-        .header {
-            background-color: #E4F1FF;
-            border-radius: 10px;
-            color: white;
+        div.SubActiveBox{
+            border-radius:10px;
+            border:solid;
+            border-color:#002FA7;
+            margin:10%;
         }
     </style>
 </head>
-<body class="bkg">
-    <!--页眉-->
-    <div class="header" align="center">
-        <div class="satisDiv" style="text-indent: 1em;">
-            <a href="Swiffe.html">
-                <img src="image/Swiffe.svg" height="48" />
-                WEB
-            </a>
-            &nbsp;
-        </div>
-    </div>
-    <!--网站主体部分-->
-    <div>
-        <table width="80%" style="border-spacing:10px;" align="center">
-            <tr>
-                <td class="topic" width="5%">
+<body>
 
-                </td>
-                <td class="topic" width="25%">
+    <!--导航栏-->
+    <ul>
+        <li><img src="image/SwiffeLogo.svg" style="width: 2em; clear: both; display: block; margin: auto; padding: 8px 16px; " /></li>
+        <li>
+            <div class="ActiveBox">
+                <a href="Swiffe.html"><iconify-icon icon="fluent:chat-24-filled" width="1.6em" height="1.6em" style="color:#f1f1f1"></iconify-icon></a>
+            </div>
+        </li>
+        <li><a href="#news"><iconify-icon icon="fluent:people-24-regular" width="1.6em" height="1.6em" style="color: #001959"></iconify-icon></a></li>
+        <li><a href="#contact"><iconify-icon icon="fluent:compass-northwest-24-regular" width="1.6em" height="1.6em" style="color: #001959"></iconify-icon></a></li>
+        <li><a href="info.html"><iconify-icon icon="fluent:info-24-regular" width="1.6em" height="1.6em" style="color: #001959"></iconify-icon></a></li>
+        <li><a href="#settings"><iconify-icon icon="fluent:settings-24-regular" width="1.6em" height="1.6em" style="color: #001959"></iconify-icon></a></li>
+        <li>&nbsp;</li>
+        <li>
+            <div class="SubActiveBox">
+                <a href="index.html"><iconify-icon icon="fluent:arrow-hook-up-left-24-regular" width="1.6em" height="1.6em" style="color: #001959"></iconify-icon></a>
+            </div>
+        </li>
 
-                </td>
-                <td class="topic" width="70%">
+    </ul>
+    <!--二级菜单-->
+    <ul style="margin-left:80px;background-color:#ebebeb;width:240px;">
+        <li style="padding-top:1em;padding-left:1em;padding-right:1em;">
+            <div style="border-radius:10px;background-color:#ffffff;height:2em;display:flex;align-items:center;align-content:center;padding-left:1em;color:#808080">
+                <iconify-icon icon="fluent:search-24-regular" width="1.4em" height="1.4em" style="color: #808080"></iconify-icon>点击开始搜索
+            </div>
+        </li>
+        <li style="padding-top:1em;padding-left:1em;padding-right:1em;">
+            <table width="100%" style="border:dashed;">
+                <tr>
+                    <td width="20%">
+                        <img src="image/logowhite.png" width="100%" />
+                    </td>
+                    <td width="80%">
+                        <b>TEST</b><br />
+                        <small>Hello</small>
+                    </td>
+                </tr>
+            </table>
+        </li>
+    </ul>
 
-                </td>
-            </tr>
-        </table>
-    </div>
-    <!--页尾-->
-    <hr width="80%" />
-    <footer align="center" style="color:grey;">
-        <a href="#" style="color:lightsteelblue">
-            <small>Bug report</small>
-        </a>&nbsp;
-        <a href="#" style="color:lightsteelblue">
-            <small>Contact us</small>
-        </a>&nbsp;
-        <small>FlyGues Organization</small>
-    </footer>
-
-    <!--JavaScript外引-->
+    <!--JavaScript外引
+        =====================================================================-->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 </html>
