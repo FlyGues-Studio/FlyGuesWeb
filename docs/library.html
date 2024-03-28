@@ -10,6 +10,7 @@
     <!--链接外部文件-->
     <link rel="stylesheet" type="text/css" href="css/button.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
+
     <style>
         a{
             text-decoration:none;
@@ -63,7 +64,15 @@
             align-items:center;
             color:#002FA7;
         }
-
+        div.ListBox{
+            background-color:#c3cee8;
+            height:3em;
+            width:50%;
+            padding:1em;
+            border-radius:10px;
+            display:flex;
+            align-items:center;
+        }
     </style>
 </head>
 <body>
@@ -72,7 +81,7 @@
     <ul>
         <li><img src="image/logonormal.png" style="width: 2em; clear: both; display: block; margin: auto; padding: 8px 16px; " /></li>
         <li><a href="index.html"><iconify-icon icon="fluent:home-24-regular" width="1.6em" height="1.6em" style="color:#002FA7"></iconify-icon></a></li>
-        <li><a href="#news"><iconify-icon icon="fluent:news-24-regular" width="1.6em" height="1.6em" style="color: #002FA7"></iconify-icon></a></li>
+        <li><a href="informationmenu.html"><iconify-icon icon="fluent:news-24-regular" width="1.6em" height="1.6em" style="color: #002FA7"></iconify-icon></a></li>
         <li>
             <div class="ActiveBox">
                 <a href="library.html"><iconify-icon icon="fluent:archive-24-filled" width="1.6em" height="1.6em" style="color: #f1f1f1"></iconify-icon></a>
@@ -95,7 +104,27 @@
                 <iconify-icon icon="fluent:folder-zip-24-regular" width="1.4em" height="1.4em" style="color: #002fa7"></iconify-icon>&nbsp;桌面应用
             </div>
         </p>
+        <h3>网页应用</h3>
+        <div class="ListBox">
+            <table width="100%">
+                <tr>
+                    <td width="20%">
+                        <img src="image/SwiffeLogo.svg" width="50%" />
+                    </td>
+                    <td width="70%">
+                        <b>Swiffe</b><br />
+                        Swiffe web edition
+                    </td>
+                    <td width="10%">
+                        <a href="#Swiffe">
+                            <input type="button" value="Go" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
+
     <!--JavaScript外引
         =====================================================================-->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
