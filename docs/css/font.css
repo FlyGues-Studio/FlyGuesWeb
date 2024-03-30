@@ -1,7 +1,12 @@
 @font-face {
     font-family:Prodct Sans;
     src:url("fonts/Product Sans Regular.ttf");
-
-    font-family:Harmony Sans SC;
-    src:url("fonts/Harmony_Sans_SC_Regular.ttf");
+}
+@font-face {
+    font-family: Harmony Sans SC;
+    src: url("fonts/Harmony_Sans_SC_Regular.ttf");
+}
+@font-face {
+    font-family: Product Sans Bold;
+    src: url("fonts/Product Sans Bold.ttf");
 }
