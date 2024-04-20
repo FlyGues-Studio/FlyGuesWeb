@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\docs",
-    "\\docs\\css",
-    "\\docs\\demo",
-    "\\docs\\fonts"
+    "\\docs\\css"
   ],
-  "SelectedNode": "\\docs\\css\\font.css",
+  "SelectedNode": "\\docs\\css\\button.css",
   "PreviewInSolutionExplorer": false
 }

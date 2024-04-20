@@ -11,6 +11,19 @@
     <link rel="stylesheet" type="text/css" href="css/button.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <style>
+        .main {
+            text-align: center; /*让div内部文字居中*/
+            background-color: #fff;
+            border-radius: 20px;
+            width: 500px;
+            height: 350px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
         a{
             text-decoration:none;
             color:#808080;
@@ -25,6 +38,8 @@
         body {
             margin: 0;
             font-family:'HarmonyOS Sans SC';
+            min-width:600px;
+            width:100px;
         }
 
         ul {
@@ -52,7 +67,17 @@
             background-color:#002FA7;
             margin:10%;
         }
-
+        div.SubBtn {
+            background-color: #ebebeb;
+            width: 6em;
+            height: 2em;
+            border-radius: 10px;
+            padding: 0.4em;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            color: #808080;
+        }
     </style>
 </head>
 <body>
@@ -71,100 +96,26 @@
     </ul>
 
     <!--网页主体-->
-    <div style="margin-left:6em;padding:1px 16px;height:1000px;">
+    <div class="main">
+        <img src="image/logonormal.svg" height="100"/>
         <p class="BigTitle"><b>FlyGuesWeb</b></p><br />
         FlyGuesWeb库是个人课业之余制作的demo源码存放的地方。<br />
-        &nbsp;
-        <hr width="100%"/>
-        <br />
-        <h3>最近更新</h3>
-        <div>
-            <p>
-            </p>
-            <a href="informationmenu.html">
-                <p>
-                    <table>
-                        <tr>
-                            <td class="list">
-                                <iconify-icon icon="fluent:history-48-regular" width="50"></iconify-icon>
-                            </td>
-                            <td width="100%">
-                                <p>
-                                    <b>Update 2023/11/22</b>&nbsp;&nbsp;<small>2023.11.22</small>
-                                </p>
-                                <p>
-                                    <small>更新资讯界面UI</small>
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </p>
-            </a>
-            <a href="informationmenu.html">
-                <p>
-                    <table>
-                        <tr>
-                            <td class="list">
-                                <iconify-icon icon="fluent:history-48-regular" width="50"></iconify-icon>
-                            </td>
-                            <td width="100%">
-                                <p>
-                                    <b>Update 2023/11/14</b>&nbsp;&nbsp;<small>2023.11.14</small>
-                                </p>
-                                <p>
-                                    <small>更新主页UI</small>
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </p>
-            </a>
-            <a href="informationmenu.html">
-                <p>
-                    <table>
-                        <tr>
-                            <td class="list">
-                                <iconify-icon icon="fluent:history-48-regular" width="50"></iconify-icon>
-                            </td>
-                            <td width="100%">
-                                <p>
-                                    <b>Update 1.1.0</b>&nbsp;&nbsp;<small>2021.7.31</small>
-                                </p>
-                                <p>
-                                    <small>更新UI及图标</small>
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </p>
-            </a>
-            <a href="information webside/Minecraft7.22test/Minecraft7.22test.html">
-                <p>
-                    <table>
-                        <tr>
-                            <td class="list">
-                                <iconify-icon icon="fluent:document-add-48-regular" width="50"></iconify-icon>
-                            </td>
-                            <td width="100%">
-                                <p>
-                                    <b>FlyGues测试卷发布</b>&nbsp;&nbsp;<small>2021.7.24</small>
-                                </p>
-                                <p>
-                                    <small>最近由FlyGues Team推出的FlyGues-Minecraft7月22日试题正式发布...</small>
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </p>
-            </a>
-            <p class="list">
-                <a href="informationmenu.html">
-                    <b>更多新闻</b>
-                    <iconify-icon icon="fluent:arrow-circle-right-32-regular"></iconify-icon>
-                </a>
-            </p>
-        </div>
-
+        <p style="white-space:nowrap;" align="center">
+            <table style="width:10em;" cellspacing="10" align="center">
+                <tr>
+                    <td style="width:8em;height:2em;">
+                        <div class="SubBtn">
+                            <iconify-icon icon="fluent:globe-24-regular" width="1.4em" height="1.4em" style="color: #808080"></iconify-icon>&nbsp;网站应用
+                        </div>
+                    </td>
+                    <td style="width:8em;height:2em;">
+                        <div class="SubBtn">
+                            <iconify-icon icon="fluent:folder-zip-24-regular" width="1.4em" height="1.4em" style="color: #808080"></iconify-icon>&nbsp;桌面应用
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </p>
     </div>
     <!--JavaScript外引
         =====================================================================-->
