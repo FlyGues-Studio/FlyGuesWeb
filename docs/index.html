@@ -13,8 +13,6 @@
     <style>
         .main {
             text-align: center; /*让div内部文字居中*/
-            background-color: #fff;
-            border-radius: 20px;
             width: 500px;
             height: 350px;
             margin: auto;
@@ -35,11 +33,12 @@
             margin:0;
             color:#002FA7;
         }
-        body {
+        .body {
             margin: 0;
-            font-family:'HarmonyOS Sans SC';
-            min-width:600px;
-            width:100px;
+            font-family: 'HarmonyOS Sans SC';
+            min-width: 600px;
+            width: 100px;
+            background: linear-gradient(45deg,#ffffff,#D1DEFF);
         }
 
         ul {
@@ -80,7 +79,7 @@
         }
     </style>
 </head>
-<body>
+<body class="body">
 
     <!--导航栏-->
     <ul>
@@ -104,14 +103,18 @@
             <table style="width:10em;" cellspacing="10" align="center">
                 <tr>
                     <td style="width:8em;height:2em;">
-                        <div class="SubBtn">
-                            <iconify-icon icon="fluent:globe-24-regular" width="1.4em" height="1.4em" style="color: #808080"></iconify-icon>&nbsp;网站应用
-                        </div>
+                        <a href="informationmenu.html">
+                            <div class="SubBtn">
+                                <iconify-icon icon="fluent:document-24-filled" width="1.4em" height="1.4em" style="color: #808080"></iconify-icon>&nbsp;文档归档
+                            </div>
+                        </a>
                     </td>
                     <td style="width:8em;height:2em;">
-                        <div class="SubBtn">
-                            <iconify-icon icon="fluent:folder-zip-24-regular" width="1.4em" height="1.4em" style="color: #808080"></iconify-icon>&nbsp;桌面应用
-                        </div>
+                        <a href="informationmenu.html">
+                            <div class="SubBtn">
+                                <iconify-icon icon="fluent:archive-24-filled" width="1.4em" height="1.4em" style="color: #808080"></iconify-icon>&nbsp;存储列表
+                            </div>
+                        </a>
                     </td>
                 </tr>
             </table>
