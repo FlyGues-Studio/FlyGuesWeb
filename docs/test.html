@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        FlyGues Blog [正在施工]
+    </title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bkg">
+
+  <form>
+    <md-outlined-text-field label="Email" type="email"
+        name="email" required></md-outlined-text-field>
+    <label>
+      Subscribe
+      <md-checkbox name="subscribe"></md-checkbox>
+    </label>
+  
+    <md-text-button type="reset">Reset</md-text-button>
+    <md-outlined-button>Submit</md-outlined-button>
+  </form>
+    
+    <!--JavaScript外引=======================================================================-->
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+      </script>
+      <script type="module">
+        import '@material/web/all.js';
+        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+    
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+      </script>
+</body>
+</html>
