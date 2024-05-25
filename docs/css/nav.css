@@ -1,0 +1,20 @@
+div.ActiveBox {
+    border-radius: 10px;
+    background-color: #002FA7;
+    margin: 10%;
+}
+a.ActiveBox {
+    font-family: 'Segoe Fluent Icons';
+    font-size: 24px;
+    color: #f1f1f1;
+}
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}

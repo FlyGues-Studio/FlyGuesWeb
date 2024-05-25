@@ -10,6 +10,7 @@
     <!--链接外部文件-->
     <link rel="stylesheet" type="text/css" href="css/button.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
     <style>
         .main {
             text-align: center; /*让div内部文字居中*/
@@ -40,18 +41,6 @@
             width: 100px;
             background: linear-gradient(45deg,#ffffff,#D1DEFF);
         }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 80px;
-            background-color: #f1f1f1;
-            position: fixed;
-            height: 100%;
-            overflow: auto;
-        }
-
         li a {
             display: block;
             color: #002FA7;
@@ -60,11 +49,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        div.ActiveBox{
-            border-radius:10px;
-            background-color:#002FA7;
-            margin:10%;
         }
         div.SubBtn {
             background-color: #ebebeb;
@@ -82,11 +66,11 @@
 <body class="body">
 
     <!--导航栏-->
-    <ul>
+    <ul class="nav">
         <li><img src="image/logonormal.png" style="width: 2em; clear: both; display: block; margin: auto; padding: 8px 16px; " /></li>
         <li>
             <div class="ActiveBox">
-                <a href="index.html"><iconify-icon icon="fluent:home-24-filled" width="1.6em" height="1.6em" style="color:#f1f1f1"></iconify-icon></a>
+                <a class="ActiveBox" href="index.html">&#xea8a;</a>
             </div>
         </li>
         <li><a href="informationmenu.html"><iconify-icon icon="fluent:library-24-regular" width="1.6em" height="1.6em" style="color: #002fa7"></iconify-icon></a></li>
@@ -96,7 +80,7 @@
 
     <!--网页主体-->
     <div class="main">
-        <img src="image/logonormal.svg" height="100"/>
+        <img src="image/logonormal.svg" height="100" />
         <p class="BigTitle"><b>FlyGuesWeb</b></p><br />
         FlyGuesWeb库是个人课业之余制作的demo源码存放的地方。<br />
         <p style="white-space:nowrap;" align="center">
