@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数抽取器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #result {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>随机数抽取器</h1>
+        <label for="range">选择随机数范围：</label>
+        <input type="number" id="range" min="1" value="10">
+        <br>
+        <label for="count">单次抽取数目：</label>
+        <input type="number" id="count" min="1" value="1">
+        <button onclick="pickRandomNumbers()">抽取随机数</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function pickRandomNumbers() {
+            const range = parseInt(document.getElementById('range').value);
+            const count = parseInt(document.getElementById('count').value);
+            const resultElement = document.getElementById('result');
+
+            if (range < count) {
+                resultElement.textContent = '范围应大于等于抽取数目';
+                return;
+            }
+
+            const randomNumbers = [];
+            while (randomNumbers.length < count) {
+                const randomNumber = Math.floor(Math.random() * range) + 1;
+                if (!randomNumbers.includes(randomNumber)) {
+                    randomNumbers.push(randomNumber);
+                }
+            }
+
+            resultElement.textContent = `抽取的随机数：${randomNumbers.join(', ')}`;
+        }
+    </script>
+</body>
+</html>
