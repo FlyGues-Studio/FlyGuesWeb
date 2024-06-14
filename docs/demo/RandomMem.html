@@ -18,8 +18,9 @@
 		#out {
 			font-family: 'Product Sans Bold';
 			text-align: center;
-			background: #fff;
-			-webkit-text-stroke: .01em white;
+			font-size: 8em;
+			color:#CFCFCF;
+			background: #EBEBEB;
 		}
 
 		#num {
@@ -46,20 +47,10 @@
 				border-color: #59f;
 			}
 
-		#t {
-			position: fixed;
-			bottom: 5px;
-			right: 5px;
-			display: none;
-			font-size: 24px;
-			text-align: right;
-			line-height: 1.2;
-		}
-
 		.settings {
 			border:1px solid lightgray;
 			border-radius: 1em;
-			height: 16em;
+			height: 10em;
 			width: 24em;
 			margin: 4em;
 			padding: 12px;
@@ -141,10 +132,19 @@
 		#notes {
 			border:1px solid lightgray;
 			border-radius: 1em;
-			height: 16em;
-			width: 24em;
-			padding: 12px;
+			height: 8em;
+			width: 36em;
+			padding: 6px;
 			margin: 4em;
+		}
+
+		table{
+			height: 18em;
+		}
+
+		#btn{
+			font-family: 'Segoe Fluent Icons';
+			font-size: 1.4em;
 		}
 	</style>
 
@@ -152,51 +152,39 @@
 <body>
 	<div class="main" style="height: auto !important;" align="center">
 		<div class="title">
-			<h1>随机数抽取器离线去广告版（By FlyGues）</h1>
+			<h1>随机数抽取器</h1>
 		</div>
 	</div>
-	<div id="out" style="font-size: 10em;color:#CFCFCF;">0</div>
-	<div id="t" style="display: none;"></div>
-	<p align="center">
-		<input type="text" id="num" value="1-55" placeholder="数字范围"><br/><br/>
-		<input id="btn" onclick="getNum()" type="button" value="抽取" style="border-radius: 5px;background-color: #002FA7;color: white;border: 0px;height: 2em;width: 4em;font-size: 1em;">
-	</p>
-
-	<center>
-		<div class="settings">
-			<b>设置</b><span id="r"></span><br>
-			时延<span id="timeout"><input type="range" max="5000" min="250" value="700" onchange="tm=false;settime(this.value,0);storage(0)" oninput="tm=true;$(&#39;time&#39;).innerHTML=(this.value*0.001).toFixed(2)" id="settime"><span id="time">0.70</span>秒</span>
-			<label class="manual"><input id="manual" type="checkbox" onclick="manuald();storage(0)">手动</label><span id="manualtips">（点击按钮或按回车、空格键停止）</span><br>
-			背　景　颜　色　<input type="color" value="#ffffff" id="bc" onchange="$(&#39;out&#39;).style.backgroundColor=this.value;storage(0)" style="border: 0px;"><br>
-			数字颜色（滚动）<input type="color" value="#CFCFCF" id="tc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br>
-			数字颜色（抽中）<input type="color" value="#002FA7" id="tsc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br>
-			<div class="toggle">周期内不重复　　　<input id="repeat" type="checkbox" value="1" checked="" onchange="if(this.checked)add=[];storage(0)" onclick="if(c){alert(&#39;运行中不可设置！&#39;);return false}"><label for="repeat"></label></div>
-			<div class="toggle">显示已抽取的数字　<input id="note" type="checkbox" value="1" onchange="$(&#39;notes&#39;).style.display=this.checked?&#39;block&#39;:&#39;none&#39;;storage(0)"><label for="note"></label></div>
-			<div id="bg">
-				<div class="box">
-					<label><input id="boxbtn" type="checkbox" value="1" onclick="$(&#39;box&#39;).style.display=this.checked?&#39;block&#39;:&#39;none&#39;;if(!this.checked)$(&#39;tips&#39;).value=&#39;&#39;">添加全屏提示文字</label><div id="box">
-						<textarea id="tips" placeholder="全屏时显示的文字，可以多行。" onfocus="javascript:f=1" onblur="javascript:f=0"></textarea><br>
-						文字颜色
-						<input type="color" value="#000000" id="ttc" onchange="$(&#39;t&#39;).style.color=this.value;storage(0)">&nbsp;
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="notes"><p align="center">已抽取的数字(共<b>0</b>个)：<br><span>无</span></p></div>
-
-
-	</center>
+	<table align="center" style="border-spacing: 1em;">
+		<tr>
+			<td style="width: 36em;background-color: #EBEBEB;border-radius: 1.2em;;">
+				<div id="out">-</div>
+				<center>
+					<input id="btn" onclick="getNum()" type="button" value="&#xe815;" style="border-radius: 1em;background-color: #002FA7;color: white;border: 0px;height: 2em;width: 4em;">
+					&nbsp;
+				</center>
+			</td>
+			<td align="left" style="vertical-align: top;width: 24em;">
+				<p style="font-size: 1.4em;"><b>设置</b></p>
+				抽取数字范围：<input type="text" id="num" value="1-55" placeholder="数字范围"><br/>
+				时延<span id="timeout"><input type="range" max="5000" min="250" value="700" onchange="tm=false;settime(this.value,0);storage(0)" oninput="tm=true;$(&#39;time&#39;).innerHTML=(this.value*0.001).toFixed(2)" id="settime"><span id="time">0.70</span>秒</span>
+				<label class="manual"><input id="manual" type="checkbox" onclick="manuald();storage(0)">手动</label><span id="manualtips">（点击按钮或按回车、空格键停止）</span><br>
+				背　景　颜　色　<input type="color" value="#ffffff" id="bc" onchange="$(&#39;out&#39;).style.backgroundColor=this.value;storage(0)" style="border: 0px;"><br>
+				数字颜色（滚动）<input type="color" value="#CFCFCF" id="tc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br>
+				数字颜色（抽中）<input type="color" value="#002FA7" id="tsc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br><br/>
+				<div class="toggle"><input id="repeat" type="checkbox" value="1" checked="" onchange="if(this.checked)add=[];storage(0)" onclick="if(c){alert(&#39;运行中不可设置！&#39;);return false}"><label for="repeat"></label>周期内不重复</div>
+			</td>
+		</tr>
+	</table><br/>
 	<p align="center">在输入框中填写数字范围，然后点击抽取即可<span id="btntip">（按回车键或空格键亦可）</span>。</p>
+
+	<!--====================================-->
+	<center>
+        <div id="notes"><p align="center">已抽取的数字(共<b>0</b>个)：<br><span>无</span></p></div>
+	</center>
 	<div id="screen" align="center">
-		<p class="pc">
-			<input onclick="fullScreen(this)" type="button" value="全屏" style="background-color: lightgrey;border-radius: 5px;border: 0px;color: grey;height: 36px;width: 64px;"><br>
-			<small>
-				(全屏后使用回车键或空格键抽取)
-			</small>
-		</p>
-			<br><br><br>
 			<div align="center" style="color: grey;">
-				<small>*随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数*<br>2024.2.27</small>
+				<small>*随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数*<br />FlyGues Studio</small>
 			</div>
 
 		</div>
@@ -230,7 +218,6 @@
 			add.push(numarr[rn]);
 			document.querySelector('#notes span').innerHTML = add.join(', ');
 			document.querySelector('#notes b').innerHTML = add.length;
-			$('btn').value = '抽取';
 		} else
 			t = setTimeout("timedCount(numarr)", 50)
 	}
@@ -414,25 +401,6 @@
 		manuald();
 		localStorage.removeItem("suijishu");
 		$('r').innerHTML = ''
-	}
-	function readImage(target) {
-		var file = target.files[0];
-		if (file) {
-			if (!/^image\/[a-z]+/.test(file.type)) {
-				target.value = "";
-				alert("不接受此文件类型！请选择图片文件。");
-				return false;
-			}
-			var reader = new FileReader();
-			reader.onload = function (e) {
-				$('out').style.backgroundImage = "url(" + reader.result + ")";
-				$('out').style.backgroundPosition = "center";
-				$('out').style.backgroundAttachment = "fixed";
-				$('out').style.backgroundSize = "contain";
-				$('delimage').style.display = "inline-block";
-			}
-			reader.readAsDataURL(file);
-		}
 	}
 	function manuald() {
 		var check = $('manual').checked;
