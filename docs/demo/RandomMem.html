@@ -153,6 +153,7 @@
 	<div class="main" style="height: auto !important;" align="center">
 		<div class="title">
 			<h1>随机数抽取器</h1>
+			<p align="center">在输入框中填写数字范围，然后点击抽取即可<span id="btntip">（按回车键或空格键亦可）</span>。</p>
 		</div>
 	</div>
 	<table align="center" style="border-spacing: 1em;">
@@ -175,8 +176,7 @@
 				<div class="toggle"><input id="repeat" type="checkbox" value="1" checked="" onchange="if(this.checked)add=[];storage(0)" onclick="if(c){alert(&#39;运行中不可设置！&#39;);return false}"><label for="repeat"></label>周期内不重复</div>
 			</td>
 		</tr>
-	</table><br/>
-	<p align="center">在输入框中填写数字范围，然后点击抽取即可<span id="btntip">（按回车键或空格键亦可）</span>。</p>
+	</table>
 
 	<!--====================================-->
 	<center>
@@ -184,9 +184,8 @@
 	</center>
 	<div id="screen" align="center">
 			<div align="center" style="color: grey;">
-				<small>*随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数*<br />FlyGues Studio</small>
+				<img src="../image/logonormal.svg" width="200em"><br/>
 			</div>
-
 		</div>
 </body>
 </html>
