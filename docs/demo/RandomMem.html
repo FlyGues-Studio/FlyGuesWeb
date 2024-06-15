@@ -30,23 +30,6 @@
 			box-sizing: border-box;
 		}
 
-		#tips {
-			width: 100%;
-			height: 5em;
-			max-width: 340px;
-			border: 1px solid #ccc;
-			padding: 4px;
-			box-sizing: border-box;
-		}
-
-			#num:hover, #tips:hover {
-				border-color: #999;
-			}
-
-			#num:focus, #tips:focus {
-				border-color: #59f;
-			}
-
 		.settings {
 			border:1px solid lightgray;
 			border-radius: 1em;
@@ -55,50 +38,6 @@
 			margin: 4em;
 			padding: 12px;
 		}
-
-			.settings .toggle input[type=checkbox] {
-				height: 0;
-				width: 0;
-				visibility: hidden;
-				margin: 0;
-				padding: 0;
-			}
-
-			.settings .toggle {
-				margin: 5px 0;
-			}
-
-				.settings .toggle label {
-					display: inline-block;
-					width: 50px;
-					height: 20px;
-					border: 1px solid #ccc;
-					box-sizing: border-box;
-					border-radius: 10px;
-					background: #fff;
-					cursor: pointer;
-					transition: border-color .2s, background-color .2s;
-					vertical-align: middle;
-					position: relative;
-				}
-
-					.settings .toggle label:before {
-						content: '';
-						position: absolute;
-						top: 0;
-						left: 0;
-						transition: transform 0.2s;
-						width: 18px;
-						height: 18px;
-						border-radius: 50%;
-						box-shadow: 0 0 3px rgba(0,0,0,.5);
-						background: #fff;
-					}
-
-				.settings .toggle input:checked + label {
-					border-color: #05f;
-					background: #07f;
-				}
 
 					.settings .toggle input:checked + label:before {
 						transform: translateX(30px);
@@ -136,6 +75,7 @@
 			width: 36em;
 			padding: 6px;
 			margin: 4em;
+			min-width: 800px;
 		}
 
 		table{
@@ -148,11 +88,15 @@
 			font-family: 'Segoe Fluent Icons';
 			font-size: 1.4em;
 		}
-
 		div.FIcons{
 			font-family: 'Segoe Fluent Icons';
 			color: grey;
 			font-size: 1.4em;
+		}
+
+		input{
+			background: none;
+			border-radius: 10em !important;
 		}
 	</style>
 
@@ -176,16 +120,14 @@
 			<td align="left" style="vertical-align: top;width: 24em;">
 				<p style="font-size: 1.4em;"><b>设置</b></p>
 				抽取数字范围：<input type="text" id="num" value="1-55" placeholder="数字范围"><br/>
-				时延<span id="timeout"><input type="range" max="5000" min="250" value="700" onchange="tm=false;settime(this.value,0);storage(0)" oninput="tm=true;$(&#39;time&#39;).innerHTML=(this.value*0.001).toFixed(2)" id="settime"><span id="time">0.70</span>秒</span>
+				时延<span id="timeout"><input type="range" max="5000" min="250" value="700" onchange="tm=false;settime(this.value,0);storage(0)" oninput="tm=true;$('time').innerHTML=(this.value*0.001).toFixed(2)" id="settime"><span id="time">0.70</span>秒</span>
 				<label class="manual"><input id="manual" type="checkbox" onclick="manuald();storage(0)">手动</label><span id="manualtips">（点击按钮或按回车、空格键停止）</span><br>
-				数字颜色（滚动）<input type="color" value="#CFCFCF" id="tc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br>
-				数字颜色（抽中）<input type="color" value="#002FA7" id="tsc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br><br/>
-				<div class="toggle"><input id="repeat" type="checkbox" value="1" checked="" onchange="if(this.checked)add=[];storage(0)" onclick="if(c){alert(&#39;运行中不可设置！&#39;);return false}"><label for="repeat"></label>周期内不重复</div>
+				数字颜色（滚动）<input type="color" value="#CFCFCF" id="tc" onchange="$('out').style.color=this.value;storage(0)" style="border: 0px;"><br>
+				数字颜色（抽中）<input type="color" value="#002FA7" id="tsc" onchange="$('out').style.color=this.value;storage(0)" style="border: 0px;"><br><br/>
+				<div class="toggle"><input id="repeat" type="checkbox" value="1" checked="" onchange="if(this.checked)add=[];storage(0)" onclick="if(c){alert('运行中不可设置！');return false}"><label for="repeat"></label>周期内不重复</div>
 			</td>
 		</tr>
 	</table>
-
-	<!--====================================-->
 	<center>
         <div id="notes"><p align="center" style="font-size: 1.4em;"><div class="FIcons">&#xf738;</div><br><span>开始抽取以显示记录</span></p></div>
 	</center>
