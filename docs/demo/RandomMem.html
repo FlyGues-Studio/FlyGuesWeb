@@ -205,8 +205,6 @@
 	var c = 0, t, add = [], sec, f = 0, m = 0;
 	function $(id) { return document.getElementById(id) }
 	function timedCount(numarr) {
-		if ($('manual').checked)
-			$('btn').value = '停止';
 		var node = $('out'), rn = Math.floor(Math.random() * (numarr.length));
 		node.style.color = $('tc').value;
 		node.innerHTML = numarr[rn];
