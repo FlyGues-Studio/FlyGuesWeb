@@ -130,7 +130,7 @@
 		}
 
 		#notes {
-			border:1px solid lightgray;
+			border:1px solid gray;
 			border-radius: 1em;
 			height: 8em;
 			width: 36em;
@@ -148,6 +148,12 @@
 			font-family: 'Segoe Fluent Icons';
 			font-size: 1.4em;
 		}
+
+		div.FIcons{
+			font-family: 'Segoe Fluent Icons';
+			color: grey;
+			font-size: 1.4em;
+		}
 	</style>
 
 </head>
@@ -163,7 +169,7 @@
 			<td style="width: 36em;background-color: #EBEBEB;border-radius: 1.2em;;">
 				<div id="out">-</div>
 				<center>
-					<input id="btn" onclick="getNum()" type="button" value="&#xe815;" style="border-radius: 1em;background-color: #002FA7;color: white;border: 0px;height: 2em;width: 4em;">
+					<input id="btn" onclick="getNum()" type="button" value="&#xf5b0;" style="border-radius: 1em;background-color: grey;color: white;border: 0px;height: 2em;width: 4em;">
 					&nbsp;
 				</center>
 			</td>
@@ -172,7 +178,6 @@
 				抽取数字范围：<input type="text" id="num" value="1-55" placeholder="数字范围"><br/>
 				时延<span id="timeout"><input type="range" max="5000" min="250" value="700" onchange="tm=false;settime(this.value,0);storage(0)" oninput="tm=true;$(&#39;time&#39;).innerHTML=(this.value*0.001).toFixed(2)" id="settime"><span id="time">0.70</span>秒</span>
 				<label class="manual"><input id="manual" type="checkbox" onclick="manuald();storage(0)">手动</label><span id="manualtips">（点击按钮或按回车、空格键停止）</span><br>
-				背　景　颜　色　<input type="color" value="#ffffff" id="bc" onchange="$(&#39;out&#39;).style.backgroundColor=this.value;storage(0)" style="border: 0px;"><br>
 				数字颜色（滚动）<input type="color" value="#CFCFCF" id="tc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br>
 				数字颜色（抽中）<input type="color" value="#002FA7" id="tsc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br><br/>
 				<div class="toggle"><input id="repeat" type="checkbox" value="1" checked="" onchange="if(this.checked)add=[];storage(0)" onclick="if(c){alert(&#39;运行中不可设置！&#39;);return false}"><label for="repeat"></label>周期内不重复</div>
@@ -182,25 +187,13 @@
 
 	<!--====================================-->
 	<center>
-        <div id="notes"><p align="center">已抽取的数字(共<b>0</b>个)：<br><span>无</span></p></div>
+        <div id="notes"><p align="center" style="font-size: 1.4em;"><div class="FIcons">&#xf738;</div><br><span>开始抽取以显示记录</span></p></div>
 	</center>
 	<div id="screen" align="center">
-			<div align="center" style="color: grey;">
-				<img src="../image/logonormal.svg" width="200em"><br/>
-			</div>
-		</div>
+		<img src="../image/logonormal.svg" width="200em"><br/>
+	</div>
 </body>
 </html>
-<script>
-	if (/Android/i.test(navigator.userAgent) && window.DeviceMotionEvent) {
-		document.getElementsByClassName('phone').item(0).style.display = 'block';
-		document.querySelectorAll('.pc,#btntip,.manual,.box').forEach(function (n) { n.style.display = 'none' });
-	}
-	else if (/(Android|iOS|iPhone|iPad)/i.test(navigator.userAgent)) {
-		document.querySelectorAll('#screen,.manual,.box,#btntip,#bg').forEach(function (n) { n.style.display = 'none' });
-	}
-	storage(1);
-</script>
 <script>
 	var c = 0, t, add = [], sec, f = 0, m = 0;
 	function $(id) { return document.getElementById(id) }
