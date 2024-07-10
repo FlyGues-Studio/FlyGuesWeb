@@ -1,423 +1,74 @@
 ﻿<!DOCTYPE html>
-<html style="overflow: auto;">
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/font.css">
-
-	<!--网站logo-->
-	<link rel="shortcut icon" href="../image/logonormal.png" type="image/x-icon" />
-
-	<title>FlyGuesWeb - 随机数抽取</title>
-
-	<style>
-		body {
-			font-family: 'HarmonyOS Sans SC';
-		}
-
-		#out {
-			font-family: 'Product Sans Bold';
+    <title>
+        FlyGuesWeb - 关于
+    </title>
+    <meta charset="utf-8">
+    <!--网站logo-->
+    <link rel="shortcut icon" href="image/logonormal.png" type="image/x-icon" />
+    <!--链接外部文件-->
+    <link rel="stylesheet" type="text/css" href="css/button.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <style>
+        p.BigTitle {
+            font-size: 6em;
+            white-space: nowrap;
+            margin: 0;
 			text-align: center;
-			font-size: 8em;
-			color:#CFCFCF;
-			background: #EBEBEB;
-		}
+        }
 
-		#num {
-			width: 150px;
-			border: 1px solid #ccc;
-			padding: 4px;
-			box-sizing: border-box;
-		}
+        body {
+            margin: 0;
+            font-family: 'HarmonyOS Sans SC';
+			background-color: black;
+			color: #f1f1f1;
+        }
 
-		#tips {
-			width: 100%;
-			height: 5em;
-			max-width: 340px;
-			border: 1px solid #ccc;
-			padding: 4px;
-			box-sizing: border-box;
-		}
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 80px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            font-family: 'Segoe Fluent Icons';
+        }
 
-			#num:hover, #tips:hover {
-				border-color: #999;
-			}
+        li a {
+            display: block;
+            color: #002FA7;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-			#num:focus, #tips:focus {
-				border-color: #59f;
-			}
-
-		.settings {
-			border:1px solid lightgray;
-			border-radius: 1em;
-			height: 10em;
-			width: 24em;
-			margin: 4em;
-			padding: 12px;
-		}
-
-			.settings .toggle input[type=checkbox] {
-				height: 0;
-				width: 0;
-				visibility: hidden;
-				margin: 0;
-				padding: 0;
-			}
-
-			.settings .toggle {
-				margin: 5px 0;
-			}
-
-				.settings .toggle label {
-					display: inline-block;
-					width: 50px;
-					height: 20px;
-					border: 1px solid #ccc;
-					box-sizing: border-box;
-					border-radius: 10px;
-					background: #fff;
-					cursor: pointer;
-					transition: border-color .2s, background-color .2s;
-					vertical-align: middle;
-					position: relative;
-				}
-
-					.settings .toggle label:before {
-						content: '';
-						position: absolute;
-						top: 0;
-						left: 0;
-						transition: transform 0.2s;
-						width: 18px;
-						height: 18px;
-						border-radius: 50%;
-						box-shadow: 0 0 3px rgba(0,0,0,.5);
-						background: #fff;
-					}
-
-				.settings .toggle input:checked + label {
-					border-color: #05f;
-					background: #07f;
-				}
-
-					.settings .toggle input:checked + label:before {
-						transform: translateX(30px);
-					}
-
-			.settings .box select {
-				margin-top: 3px;
-			}
-
-			.settings #fileinp {
-				position: absolute;
-				left: 0;
-				top: 0;
-				opacity: 0;
-				width: 5em;
-			}
-
-			.settings .manual {
-				margin-left: .5em;
-			}
-
-		#manualtips {
-			font-size: .86em;
-			display: none;
-		}
-
-		#box {
-			display: none;
-		}
-
-		#notes {
-			border:1px solid lightgray;
-			border-radius: 1em;
-			height: 8em;
-			width: 36em;
-			padding: 6px;
-			margin: 4em;
-		}
-
-		table{
-			height: 18em;
-		}
-
-		#btn{
-			font-family: 'Segoe Fluent Icons';
-			font-size: 1.4em;
-		}
-	</style>
-
+        div.ActiveBox {
+            border-radius: 10px;
+            background-color: #002FA7;
+            margin: 10%;
+        }
+    </style>
 </head>
 <body>
-	<div class="main" style="height: auto !important;" align="center">
-		<div class="title">
-			<h1>随机数抽取器</h1>
-		</div>
+
+    <!--导航栏-->
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
+
+    <!--网页主体-->
+    <div style="height:1000px;">
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<p align="center">
+			<iconify-icon icon="material-symbols:sticky-note-2" width="10em" height="10em"  style="color: white"></iconify-icon>		</p>
+		<p class="BigTitle"><b>我们严正抗议</b></p>
+		<p style="font-size: 2em;margin-left: 4em;margin-right: 4em;" align="center">本班因为班主任一直强调要举行活动必须要列举活动方案，今天晚修没得看电影，望周知。</p>
 	</div>
-	<table align="center" style="border-spacing: 1em;">
-		<tr>
-			<td style="width: 36em;background-color: #EBEBEB;border-radius: 1.2em;;">
-				<div id="out">-</div>
-				<center>
-					<input id="btn" onclick="getNum()" type="button" value="&#xe815;" style="border-radius: 1em;background-color: #002FA7;color: white;border: 0px;height: 2em;width: 4em;">
-					&nbsp;
-				</center>
-			</td>
-			<td align="left" style="vertical-align: top;width: 24em;">
-				<p style="font-size: 1.4em;"><b>设置</b></p>
-				抽取数字范围：<input type="text" id="num" value="1-55" placeholder="数字范围"><br/>
-				时延<span id="timeout"><input type="range" max="5000" min="250" value="700" onchange="tm=false;settime(this.value,0);storage(0)" oninput="tm=true;$(&#39;time&#39;).innerHTML=(this.value*0.001).toFixed(2)" id="settime"><span id="time">0.70</span>秒</span>
-				<label class="manual"><input id="manual" type="checkbox" onclick="manuald();storage(0)">手动</label><span id="manualtips">（点击按钮或按回车、空格键停止）</span><br>
-				背　景　颜　色　<input type="color" value="#ffffff" id="bc" onchange="$(&#39;out&#39;).style.backgroundColor=this.value;storage(0)" style="border: 0px;"><br>
-				数字颜色（滚动）<input type="color" value="#CFCFCF" id="tc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br>
-				数字颜色（抽中）<input type="color" value="#002FA7" id="tsc" onchange="$(&#39;out&#39;).style.color=this.value;storage(0)" style="border: 0px;"><br><br/>
-				<div class="toggle"><input id="repeat" type="checkbox" value="1" checked="" onchange="if(this.checked)add=[];storage(0)" onclick="if(c){alert(&#39;运行中不可设置！&#39;);return false}"><label for="repeat"></label>周期内不重复</div>
-			</td>
-		</tr>
-	</table><br/>
-	<p align="center">在输入框中填写数字范围，然后点击抽取即可<span id="btntip">（按回车键或空格键亦可）</span>。</p>
-
-	<!--====================================-->
-	<center>
-        <div id="notes"><p align="center">已抽取的数字(共<b>0</b>个)：<br><span>无</span></p></div>
-	</center>
-	<div id="screen" align="center">
-			<div align="center" style="color: grey;">
-				<small>*随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数*<br />FlyGues Studio</small>
-			</div>
-
-		</div>
+		<!--JavaScript外引
+        =====================================================================-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 </html>
-<script>
-	if (/Android/i.test(navigator.userAgent) && window.DeviceMotionEvent) {
-		document.getElementsByClassName('phone').item(0).style.display = 'block';
-		document.querySelectorAll('.pc,#btntip,.manual,.box').forEach(function (n) { n.style.display = 'none' });
-	}
-	else if (/(Android|iOS|iPhone|iPad)/i.test(navigator.userAgent)) {
-		document.querySelectorAll('#screen,.manual,.box,#btntip,#bg').forEach(function (n) { n.style.display = 'none' });
-	}
-	storage(1);
-</script>
-<script>
-	var c = 0, t, add = [], sec, f = 0, m = 0;
-	function $(id) { return document.getElementById(id) }
-	function timedCount(numarr) {
-		if ($('manual').checked)
-			$('btn').value = '停止';
-		var node = $('out'), rn = Math.floor(Math.random() * (numarr.length));
-		node.style.color = $('tc').value;
-		node.innerHTML = numarr[rn];
-		c = c + 1;
-		if (new Date().getTime() - sec > $('settime').value || m) {
-			stopCount();
-			c = 0;
-			m = 0;
-			node.style.color = $('tsc').value;
-			add.push(numarr[rn]);
-			document.querySelector('#notes span').innerHTML = add.join(', ');
-			document.querySelector('#notes b').innerHTML = add.length;
-		} else
-			t = setTimeout("timedCount(numarr)", 50)
-	}
-	function stopCount() {
-		clearTimeout(t)
-	}
-	function getNum() {
-		var manual = $('manual').checked;
-		if (c) {
-			if (manual) m = 1;
-			return;
-		}
-		m = 0;
-		var nr = $('num').value, out = $('out');
-		if (sessionStorage.getItem('randomIn') != nr) {
-			sessionStorage.setItem('randomIn', nr);
-			add = [];
-		}
-		if (!/^\d{1,6}-\d{1,6}$/.test(nr)) return alert('输入有误，格式如：1-100，范围0至999999之间的整数。');
-		arr = nr.split("-");
-		a = 0, b = 0;
-		var in0 = Number(arr[0]), in1 = Number(arr[1]);
-		if (in0 > in1) {
-			a = in0;
-			b = in1;
-		} else if (in1 > in0) {
-			a = in1;
-			b = in0;
-		} else {
-			out.innerHTML = in0;
-			return
-		}
-		numarr = [];
-		var i = b;
-		while (i <= a) {
-			if (!$('repeat').checked || add.indexOf(i) == -1)
-				numarr.push(i);
-			i++;
-		}
-		if (numarr.length == 0) {
-			alert('全部抽取完毕，共计' + add.length + '次。');
-			add = [];
-			window.removeEventListener("devicemotion", motionEventHandler, false);
-			x = y = z = lastX = lastY = lastZ = 0;
-			out.style.color = 'black';
-			out.innerHTML = '0';
-			return;
-		}
-		sec = new Date().getTime();
-		if (manual) sec += 1000 * 60 * 60 * 24 * 7;
-		timedCount(numarr)
-	}
-	document.onkeydown = function (e) {
-		var keyCode = window.event ? e.keyCode : e.which;
-		if ((13 == keyCode || 32 == keyCode) && f == 0) {
-			getNum();
-			$('num').blur();
-			return false;
-		}
-	}
-	window.onresize = function () {
-		var isFull = !!(document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
-		var the = $('out').style;
-		var T = $('t').style;
-		if (isFull == false) {
-			the.position = '';
-			the.width = '';
-			the.height = '';
-			the.fontSize = '100px';
-			the.lineHeight = '';
-			T.display = 'none';
-			document.body.parentNode.style.overflow = 'auto';
-			window.removeEventListener("devicemotion", motionEventHandler, false);
-		} else {
-			the.position = 'fixed';
-			the.width = '100%';
-			the.height = '100%';
-			the.fontSize = '28vw';
-			the.lineHeight = '100vh';
-			the.top = 0;
-			the.left = 0;
-			the.zIndex = 9;
-			T.color = $('ttc').value;
-			if ($('boxbtn').checked) T.display = 'block';
-			T.zIndex = 10;
-			document.body.parentNode.style.overflow = 'hidden';
-		}
-	}
-	function fullScreen(e) {
-		e.blur();
-		var element = document.documentElement;
-		if (element.requestFullscreen) {
-			element.requestFullscreen();
-		} else if (element.msRequestFullscreen) {
-			element.msRequestFullscreen();
-		} else if (element.mozRequestFullScreen) {
-			element.mozRequestFullScreen();
-		} else if (element.webkitRequestFullscreen) {
-			element.webkitRequestFullscreen();
-		}
-		$('t').innerHTML = ($('tips').value).replace(/</g, '&lt;').replace(/\n/g, '<br>');
-	}
-	var speed = 30, last_update = 0, x = y = z = lastX = lastY = lastZ = 0, zd = sy = 0;
-	function motionEventHandler(e) {
-		var acceleration = e.accelerationIncludingGravity;
-		x = acceleration.x;
-		y = acceleration.y;
-		z = acceleration.z;
-		if (Math.abs(x - lastX) > speed || Math.abs(y - lastY) > speed || Math.abs(z - lastZ) > speed) {
-			var curTime = new Date().getTime();
-			if (!c && curTime - last_update > 500) {
-				last_update = curTime;
-				if (sy) $("audio").play();
-				if (zd) window.navigator.vibrate(200);
-				getNum();
-			}
-		}
-		lastX = x;
-		lastY = y;
-		lastZ = z;
-	}
-	var tm = false;
-	function settime(vs, vx) {
-		if (tm) return;
-		setTimeout(function () {
-			vx += 50;
-			if (vx > vs) vx = vs;
-			$('time').innerHTML = (vx * 0.001).toFixed(2);
-			if (vx < vs) settime(vs, vx)
-		}, 50);
-	}
-	function storage(n) {
-		if (n) {
-			if (localStorage.getItem("suijishu")) {
-				var settings = JSON.parse(localStorage.getItem("suijishu"));
-				if ('settime' in settings) { $('settime').value = settings.settime; settime(settings.settime, 0) }
-				if ('bc' in settings) { $('bc').value = settings.bc; $('out').style.backgroundColor = settings.bc }
-				if ('tc' in settings) { $('tc').value = settings.tc; $('out').style.color = settings.tc }
-				if ('tsc' in settings) $('tsc').value = settings.tsc;
-				if ('ttc' in settings) { $('ttc').value = settings.ttc; $('t').style.color = settings.ttc }
-				if ('repeat' in settings) $('repeat').checked = (settings.repeat == 1 ? true : false);
-				if ('note' in settings) { if (settings.note == 1) { $('note').checked = true; $('notes').style.display = 'block' } else $('note').checked = false }
-				if ('manual' in settings) { $('manual').checked = (settings.manual == 1 ? true : false); manuald() }
-				if ('position' in settings) { setSelectChecked('position', settings.position); Tposition(settings.position) }
-				if ('fs' in settings) { setSelectChecked('fontsize', settings.fs); $('t').style.fontSize = settings.fs + 'px' }
-			}
-			if ($('settime').value != 700 || $('bc').value != '#ffffff' || $('tc').value != '#000000' || $('tsc').value != '#ff0000' || $('ttc').value != '#000000' || !$('repeat').checked || $('note').checked || $('manual').checked || $('position').selectedIndex != 4 || $('fontsize').selectedIndex != 2)
-				$('r').innerHTML = '[<a onclick="defaultValue()">恢复默认</a>]';
-			return;
-		}
-		var setting = new Object();
-		setting.settime = $('settime').value;
-		setting.bc = $('bc').value;
-		setting.tc = $('tc').value;
-		setting.tsc = $('tsc').value;
-		setting.ttc = $('ttc').value;
-		setting.repeat = $('repeat').checked ? 1 : 0;
-		setting.note = $('note').checked ? 1 : 0;
-		setting.manual = $('manual').checked ? 1 : 0;
-		setting.position = $('position').value;
-		setting.fs = $('fontsize').value;
-		localStorage.setItem("suijishu", JSON.stringify(setting));
-	}
-	function defaultValue() {
-		$('settime').value = 700;
-		tm = true;
-		setTimeout(function () { tm = false; settime(700, 0) }, 100);
-		$('bc').value = '#ffffff';
-		$('out').style.backgroundColor = '#ffffff';
-		$('tc').value = '#000000';
-		$('out').style.color = '#000000';
-		$('tsc').value = '#ff0000';
-		$('ttc').value = '#000000';
-		$('t').style.color = '#000000';
-		$('repeat').checked = true;
-		$('note').checked = false;
-		$('notes').style.display = 'none';
-		$('manual').checked = false;
-		$('position').selectedIndex = 4;
-		$('fontsize').selectedIndex = 2;
-		manuald();
-		localStorage.removeItem("suijishu");
-		$('r').innerHTML = ''
-	}
-	function manuald() {
-		var check = $('manual').checked;
-		$('timeout').style.display = check ? 'none' : 'inline-block';
-		$('manualtips').style.display = check ? 'inline-block' : 'none';
-		if (!check) { m = 0; sec = new Date().getTime() };
-	}
-	function Tposition(v) {
-		$('t').style.cssText = 'position:fixed;display:none;width:100vw;' + (v ? v : $('position').value) + ';font-size:' + $('fontsize').value + 'px';
-	}
-	function setSelectChecked(id, val) {
-		var node = $(id), i = 0;
-		for (; i < node.options.length; i++) {
-			if (node.options[i].value == val) {
-				node.options[i].selected = true;
-				break;
-			}
-		}
-	}
-</script>
