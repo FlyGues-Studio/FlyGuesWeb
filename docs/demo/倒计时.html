@@ -5,15 +5,15 @@
 <title>中考倒计时</title>
 <style>
 *{ margin:0; padding:0; list-style:none;}
-body{ font-size:18px; text-align:center;}
+body{ font-size:18px; text-align:center;font-family: 'HarmonyOS Sans SC';}
 .time{ height:30px; padding:200px;}
 </style>
 </head>
 <body style="background-color: black;">
   <link rel="stylesheet" type="text/css" href="../css/font.css">
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <div class="time" style="font-size: 5em;color:yellow;font-weight: lighter;font-family: 'Product Sans Bold';">
-        <span id="t_d">00天</span>
+    <div class="time" style="font-size: 8em;color:yellow;font-family: 'Product Sans Bold';">
+        <!--span id="t_d">00天</span-->
         <span id="t_h">00时</span>
         <span id="t_m">00分</span>
         <span id="t_s">00秒</span>
@@ -23,7 +23,6 @@ body{ font-size:18px; text-align:center;}
     <p style="
     font-size:30px;
     color: white;
-    font-weight: lighter;
   ">
     距离放假当日8:00剩余时间
   </p>
@@ -45,7 +44,7 @@ body{ font-size:18px; text-align:center;}
   </p>
 <script>
    function GetRTime(){
-       var EndTime= new Date('2024/7/12 08:00:00');//这里设置你预定的时间
+       var EndTime= new Date('2024/7/12 08:00:00');//!!这里设置你预定的时间
        var NowTime = new Date();
        var t =EndTime.getTime() - NowTime.getTime();
        var d=Math.floor(t/1000/60/60/24);
@@ -53,10 +52,10 @@ body{ font-size:18px; text-align:center;}
        var m=Math.floor(t/1000/60%60);
        var s=Math.floor(t/1000%60);
 
-       document.getElementById("t_d").innerHTML = d + "day";
-       document.getElementById("t_h").innerHTML = h + "h";
-       document.getElementById("t_m").innerHTML = m + "m";
-       document.getElementById("t_s").innerHTML = s + "s";
+       //document.getElementById("t_d").innerHTML = d + "day";
+       document.getElementById("t_h").innerHTML = h + ":";
+       document.getElementById("t_m").innerHTML = m + ":";
+       document.getElementById("t_s").innerHTML = s ;
        if(s=="0" && m=="0" && h=="0" && d=="0"){
        document.getElementById("daoqi").innerHTML ="中考时间已到";//这里设置到期时间后的提醒内容
        document.getElementById("daoqi").style.color="red";}
