@@ -11,6 +11,9 @@
 	<title>FlyGuesWeb - 随机数抽取</title>
 
 	<style>
+		a{
+			text-decoration: none;
+		}
 		body {
 			font-family: 'HarmonyOS Sans SC';
 		}
@@ -87,6 +90,16 @@
 		#btn{
 			font-family: 'Segoe Fluent Icons';
 			font-size: 1.4em;
+			border-radius: 1em;
+			background-color: grey;
+			color: white;
+			border: 0px;
+			height: 2em;
+			width: 4em;
+		}
+		#btn:hover{
+			background-color: white;
+			color: #afafaf;
 		}
 		div.FIcons{
 			font-family: 'Segoe Fluent Icons';
@@ -99,10 +112,26 @@
 			border-radius: 10em !important;
 			padding: 0px;
 		}
+		a.SubBtn {
+            background-color: #ebebeb;
+            width: 2em;
+            height: 2em;
+            border-radius: 10px;
+            padding: 0.4em;
+            display: block;
+            align-content: center;
+            align-items: center;
+            color: #808080;
+        }
+		a.SubBtn:hover{
+			background-color: #808080;
+			color: #ebebeb;
+		}
 	</style>
 
 </head>
 <body>
+
 	<div class="main" style="height: auto !important;min-width: 1000px;" align="center">
 		<div class="title">
 			<h1>随机数抽取器</h1>
@@ -114,7 +143,7 @@
 			<td style="width: 36em;background-color: #EBEBEB;border-radius: 1.2em;;">
 				<div id="out">-</div>
 				<center>
-					<input id="btn" onclick="getNum()" type="button" value="&#xf5b0;" style="border-radius: 1em;background-color: grey;color: white;border: 0px;height: 2em;width: 4em;">
+					<input id="btn" onclick="getNum()" type="button" value="&#xf5b0;">
 					&nbsp;
 				</center>
 			</td>
@@ -132,11 +161,16 @@
 	<center>
         <div id="notes"><p align="center" style="font-size: 1.4em;"><div class="FIcons">&#xf738;</div><br><span>开始抽取以显示记录</span></p></div>
 	</center>
-	<div id="screen" align="center">
-		<img src="../image/logonormal.svg" width="200em"><br/>
+	<div align="center">
+		By FlyGues.<br><br>
+		<a href="../index.html" style="font-family: 'Segoe Fluent Icons';" class="SubBtn">
+			<b>&#xea8a;</b>
+		</a>
 	</div>
 </body>
 </html>
+
+
 <script>
 	var c = 0, t, add = [], sec, f = 0, m = 0;
 	function $(id) { return document.getElementById(id) }
