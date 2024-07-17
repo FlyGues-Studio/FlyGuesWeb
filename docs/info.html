@@ -10,6 +10,8 @@
     <!--链接外部文件-->
     <link rel="stylesheet" type="text/css" href="css/button.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+
     <style>
         p.BigTitle {
             font-size: 2em;
@@ -56,20 +58,33 @@
 <body>
 
     <!--导航栏-->
-    <link rel="stylesheet" type="text/css" href="css/nav.css" />
-    <ul>
-        <li><img src="image/logonormal.png" style="width: 2em; clear: both; display: block; margin: auto; padding: 8px 16px; " /></li>
-		<li><a class="ActiveBox" href="index.html" style="color:#002FA7;">&#xe80f</a></li>
-        <li><a href="informationmenu.html"><iconify-icon icon="fluent:library-24-regular" width="1.6em" height="1.6em" style="color: #002fa7"></iconify-icon></a></li>
-        <li><a href="library.html"><iconify-icon icon="fluent:archive-24-regular" width="1.6em" height="1.6em" style="color: #002fa7"></iconify-icon></a></li>
-        <li>
-            <div class="ActiveBox">
-                <a href="info.html">
-                    <iconify-icon icon="fluent:info-24-filled" width="1.6em" height="1.6em" style="color: #f1f1f1"></iconify-icon>
-                </a>
-            </div>
-        </li>
+    <ul class="nav">
+        <li style="padding: 8px;">
+            <a href="index.html" style="padding: 0;">
+                <img src="image/logo/usual_circle.svg" style="width: 1.4em; clear: both; display: block; margin: auto; padding: 8px; " /></li>
+            </a>
 
+        <li class="list">
+            <a class="ActiveBox" href="index.html">
+                &#xe80f;
+            </a>            
+
+        </li>
+        <li class="list">
+            <a href="informationmenu.html">
+                &#xe74c;
+            </a>
+        </li>
+        <li class="list">
+            <a href="library.html">
+                &#xe8f1;
+            </a>
+        </li>
+        <li class="list">
+            <a href="info.html">
+                &#xe712;    
+            </a>
+        </li>
     </ul>
 
     <!--网页主体-->

@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/bkg.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <style type="text/css">
         p.BigTitle {
@@ -76,19 +78,36 @@
     <meta charset="utf-8">
 </head>
 <body>
-	<!--导航栏-->
-    <link rel="stylesheet" type="text/css" href="css/nav.css" />
-	<ul>
-		<li><img src="image/logonormal.png" style="width: 2em; clear: both; display: block; margin: auto; padding: 8px 16px; " /></li>
-		<li><a class="ActiveBox" href="index.html" style="color:#002FA7;">&#xe80f;</a></li>
-		<li>
-            <div class="ActiveBox">
-                <a href="informationmenu.html"><iconify-icon icon="fluent:library-24-filled" width="1.6em" height="1.6em" style="color: #f1f1f1"></iconify-icon></a>
-            </div>
+    <!--导航栏-->
+    <ul class="nav">
+        <li style="padding: 8px;">
+            <a href="index.html" style="padding: 0;">
+                <img src="image/logo/usual_circle.svg" style="width: 1.4em; clear: both; display: block; margin: auto; padding: 8px; " /></li>
+            </a>
+
+        <li class="list">
+            <a class="ActiveBox" href="index.html">
+                &#xe80f;
+            </a>            
+
         </li>
-		<li><a href="library.html"><iconify-icon icon="fluent:archive-24-regular" width="1.6em" height="1.6em" style="color: #002FA7"></iconify-icon></a></li>
-		<li><a href="info.html"><iconify-icon icon="fluent:info-24-regular" width="1.6em" height="1.6em" style="color: #002fa7"></iconify-icon></a></li>
-	</ul>
+        <li class="list">
+            <a href="informationmenu.html">
+                &#xe74c;
+            </a>
+        </li>
+        <li class="list">
+            <a href="library.html">
+                &#xe8f1;
+            </a>
+        </li>
+        <li class="list">
+            <a href="info.html">
+                &#xe712;    
+            </a>
+        </li>
+    </ul>
+
 	<!--资讯部分-->
     <div style="margin-left:6em;padding:1px 16px;height:1000px;">
         <p class="BigTitle"><b>文章归档中心</b></p><br />
