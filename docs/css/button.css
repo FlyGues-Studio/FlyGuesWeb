@@ -1,17 +1,17 @@
 input {
-    /* Ö÷ÌåÉèÖÃ */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     background-color: darkblue;
     padding: 10px 24px;
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
-    /* ±ß¿òÉèÖÃ */
+    /* ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½ */
     border-radius: 6px;
     border: none;
     border-block-color: darkblue;
-    /* ÎÄ×ÖÉèÖÃ */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     color: white;
     font-size: 1em;
     text-align: center;
-    font-family:'HarmonyOS Sans SC';
+    font-family:'Segoe Fluent Icons';
 }
