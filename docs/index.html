@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/button.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bkg.css"/>
     <style>
         .main {
             text-align: center; /*让div内部文字居中*/
@@ -39,7 +40,6 @@
             font-family: 'HarmonyOS Sans SC';
             min-width: 600px;
             width: 100px;
-            background: linear-gradient(45deg,#ffffff,#D1DEFF);
         }
         li a {
             display: block;
@@ -95,33 +95,19 @@
         </li>
     </ul>
 
+
+
     <!--网页主体-->
     <div class="main">
         <img src="image/logonormal.svg" height="100" />
         <p class="BigTitle"><b>FlyGuesWeb</b></p><br />
         FlyGuesWeb库是个人课业之余制作的demo源码存放的地方。<br />
-        <p style="white-space:nowrap;" align="center">
-            <table style="width:10em;" cellspacing="10" align="center">
-                <tr>
-                    <td style="width:8em;height:2em;">
-                        <a href="informationmenu.html" style="font-family: 'Segoe Fluent Icons';">
-                            <div class="SubBtn">
-                                <b>&#xe74c;</b>
-                            </div>
-                        </a>
-                    </td>
-                    <td style="width:8em;height:2em;">
-                        <a href="library.html" style="font-family: 'Segoe Fluent Icons';">
-                            <div class="SubBtn">
-                                <b>&#xe8f1;</b>
-                            </div>
-                        </a>
-                    </td>
-                </tr>
-            </table>
-        </p>
     </div>
+
+    <canvas id="canvas" style="opacity: 0.2;position:absolute;"></canvas>
+
     <!--JavaScript外引
         =====================================================================-->
+    <script src="js/bkg.js"></script>
 </body>
 </html>
