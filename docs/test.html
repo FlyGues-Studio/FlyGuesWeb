@@ -1,74 +1,41 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <title>
-        FlyGuesWeb - 关于
-    </title>
-    <meta charset="utf-8">
-    <!--网站logo-->
-    <link rel="shortcut icon" href="image/logonormal.png" type="image/x-icon" />
-    <!--链接外部文件-->
-    <link rel="stylesheet" type="text/css" href="css/button.css">
-    <link rel="stylesheet" type="text/css" href="css/font.css">
-    <style>
-        p.BigTitle {
-            font-size: 6em;
-            white-space: nowrap;
-            margin: 0;
-			text-align: center;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'HarmonyOS Sans SC';
-			background-color: black;
-			color: #f1f1f1;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 80px;
-            background-color: #f1f1f1;
-            position: fixed;
-            height: 100%;
-            overflow: auto;
-            font-family: 'Segoe Fluent Icons';
-        }
-
-        li a {
-            display: block;
-            color: #002FA7;
-            padding: 8px 16px;
-            text-decoration: none;
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <script type="importmap">
+          {
+            "imports": {
+              "@material/web/": "https://esm.run/@material/web/"
+            }
+          }
+        </script>
+        <script type="module">
+          import '@material/web/all.js';
+          import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+      
+          document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+        </script>
+      </head>
+      <body>
+        <h1 class="md-typescale-display-medium">Hello Material!</h1>
+        <form>
+          <p class="md-typescale-body-medium">Check out these controls in a form!</p>
+          <md-checkbox></md-checkbox>
+          <div>
+            <md-radio name="group"></md-radio>
+            <md-radio name="group"></md-radio>
+            <md-radio name="group"></md-radio>
+          </div>
+          <md-outlined-text-field label="Favorite color" value="Purple"></md-outlined-text-field>
+          <md-outlined-button type="reset">Reset</md-outlined-button>
+        </form>
+        <style>
+          form {
             display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        div.ActiveBox {
-            border-radius: 10px;
-            background-color: #002FA7;
-            margin: 10%;
-        }
-    </style>
-</head>
-<body>
-
-    <!--导航栏-->
-    <link rel="stylesheet" type="text/css" href="css/nav.css" />
-
-    <!--网页主体-->
-    <div style="height:1000px;">
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<p align="center">
-			<iconify-icon icon="material-symbols:sticky-note-2" width="10em" height="10em"  style="color: white"></iconify-icon>		</p>
-		<p class="BigTitle"><b>我们严正抗议</b></p>
-		<p style="font-size: 2em;margin-left: 4em;margin-right: 4em;" align="center">本班因为班主任一直强调要举行活动必须要列举活动方案，今天晚修没得看电影，望周知。</p>
-	</div>
-		<!--JavaScript外引
-        =====================================================================-->
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-</body>
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+          }
+        </style>
+      </body>
 </html>
