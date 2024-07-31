@@ -1,0 +1,53 @@
+div.ListBox{
+    border-radius: 2em;
+    border: 1px solid;
+    padding: 2rem;
+
+    background-color: #e6eaf630;
+}
+input.ListBtn{
+    margin-top: 1em;
+    border: none;
+    width:3rem;
+    border-radius: 2em;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    height: 2em;
+    width: auto;
+
+    background-color: #002175;
+    color: white;
+
+    font-size: medium;
+    font-family: 'HarmonyOS Sans SC';
+}
+a.ListBtn:hover{
+    opacity: 0.8;
+}
+
+input.ListBtn2{
+    margin-top: 1em;
+    border: none;
+    width:3rem;
+    border-radius: 2em;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    height: 2em;
+    width: auto;
+
+    border: 1px solid;
+    background-color: #e6eaf630;
+    border-color: #002175;
+    color: #002175;
+
+    font-size: medium;
+    font-family: 'HarmonyOS Sans SC';
+}
+
+a.ListBtn2:hover{
+    opacity: 0.5;
+}
