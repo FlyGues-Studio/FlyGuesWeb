@@ -5,13 +5,17 @@
     <title>FlyGuesWeb - 主页</title>
     
     <link rel="shortcut icon" href="image/logonormal.png" type="image/x-icon">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     <style>
     md-list-item:hover{
       background-color: #002fa71a;
     }
-    .stoc,.toc{
+    .toc{
       color: #002fa7;
+    }
+    .stoc{
+      color: #000;
     }
 
 
@@ -439,7 +443,7 @@
         <p>在此网站上：</p>
         <h2>快速移动</h2>
         <slot name="toc"></slot>
-        <h2>最近的更新</h2>
+        <h2>统计数据</h2>
         <slot name="stoc"></slot>
       </div>
     </div><!--/lit-part--><!--lit-part GKKwOiyVSkk=--> <!--lit-node 0-->
@@ -918,8 +922,8 @@
     <section slot="stoc">
       <div class="stoc">
         <ol>
-          <li><a href="filelib.html#webapp">[更新]MC15</a></li>
-          <li><a href="filelib.html#webapp">[修补]MC15</a></li>
+          <li>网站浏览量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></li>
+          <li>访客数：<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></li>
         </ol>
       </div>
     </section>
@@ -1044,7 +1048,7 @@
       <style>:host{box-sizing:border-box;color:var(--md-divider-color, var(--md-sys-color-outline-variant, #cac4d0));display:flex;height:var(--md-divider-thickness, 1px);width:100%}:host([inset]),:host([inset-start]){padding-inline-start:16px}:host([inset]),:host([inset-end]){padding-inline-end:16px}:host::before{background:currentColor;content:"";height:100%;width:100%}@media(forced-colors: active){:host::before{background:CanvasText}}</style><!--lit-part--><!--/lit-part--></template>
   </md-divider>
 
-  
+
   <md-item>
     <template shadowrootmode="open">
       <style>:host{color:var(--md-sys-color-on-surface, #1d1b20);font-family:var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-large-size, 1rem);font-weight:var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-large-line-height, 1.5rem);align-items:center;box-sizing:border-box;display:flex;gap:16px;min-height:56px;overflow:hidden;padding:12px 16px;position:relative;text-overflow:ellipsis}:host([multiline]){min-height:72px}[name=overline]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-medium-size, 0.875rem);font-weight:var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-medium-line-height, 1.25rem)}[name=trailing-supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=container]::slotted(*){inset:0;position:absolute}.default-slot{display:inline}.default-slot,.text ::slotted(*){overflow:hidden;text-overflow:ellipsis}.text{display:flex;flex:1;flex-direction:column;overflow:hidden}</style><!--lit-part 1ARHIrl/+y8=-->
@@ -1118,4 +1122,7 @@
 
 
   </body>
+
+
+
 </html>
