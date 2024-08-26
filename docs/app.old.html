@@ -1,22 +1,20 @@
 <!DOCTYPE html>
+<!-- saved from url=(0047)file:///E:/GitHub_Git/docs/newview/filelib.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
-    <title>FlyGuesWeb - 主页</title>
+    <title>FlyGuesWeb - 应用和小工具</title>
     
     <link rel="shortcut icon" href="image/logonormal.png" type="image/x-icon">
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     <style>
     md-list-item:hover{
       background-color: #002fa71a;
     }
-    .toc{
+    .stoc,.toc{
       color: #002fa7;
     }
-    .stoc{
-      color: #000;
-    }
+
 
 
     :root{
@@ -106,7 +104,6 @@
     }
 
     h1{
-      font-family: 'Product Sans';
       font-size:var(--catalog-display-xl-font-size)
     }
 
@@ -121,19 +118,6 @@
       padding-inline-start:var(--catalog-spacing-xl)
     }
     .toc ol li{
-      margin-block:var(--catalog-spacing-m)
-    }
-    .stoc ol{
-      list-style-type:none;font-size:var(--catalog-body-m-font-size)
-    }
-    .stoc>ol{
-      padding:0
-    }
-    .stoc>ol ol{
-      list-style-type:circle;
-      padding-inline-start:var(--catalog-spacing-xl)
-    }
-    .stoc ol li{
       margin-block:var(--catalog-spacing-m)
     }
     </style>
@@ -377,9 +361,8 @@
 
       .content {
         /* adjust for the scrollbar width */
-        padding-inline-end: calc(
-          var(--catalog-spacing-xl) - var(--_scrollbar-width)
-        );
+        padding-inline: 4em;
+
       }
 
       /* Chromium + Safari */
@@ -420,10 +403,6 @@
           /* Chromium + Safari */
           background-color: CanvasText;
         }
-        .content{
-          padding-inline: 4em;
-
-        }
       }
     }
   </style>
@@ -440,11 +419,9 @@
       <div class="panes">
       <div class="pane toc">
       <div class="scroll-wrapper" style="BACKGROUND-COLOR: #fff;">
-        <p>在此网站上：</p>
-        <h2>快速移动</h2>
+        <p>在本页面上：</p>
+        <h2>应用和小工具</h2>
         <slot name="toc"></slot>
-        <h2>统计数据</h2>
-        <slot name="stoc"></slot>
       </div>
     </div><!--/lit-part--><!--lit-part GKKwOiyVSkk=--> <!--lit-node 0-->
     <div class="pane content-pane" style="background-color: #fff;">
@@ -552,11 +529,11 @@
 
       <header style="BACKGROUND-COLOR: #e6eaf6;">
         <div class="default-content">
-          <a href="#reload" id="home-link" onclick="location.reload()">
-            <table style="color: #002175;font-family: &#39;Product Sans&#39;;">
+          <a href="index.html" id="home-link" onclick="location.reload()">
+            <table style="color: #002175;font-family: 'Product Sans';">
               <tbody><tr>
-                <td>
-                  <img src="image/logo/usual_circle.svg" style="width: 1.4em; clear: both; display: block; margin: auto; padding: 8px; ">
+                <td style="font-family: 'Segoe Fluent Icons';padding-left: 0.8em;padding-right: 0.2em;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="#002175" d="m7.825 13l5.6 5.6L12 20l-8-8l8-8l1.425 1.4l-5.6 5.6H20v2z"/></svg>&nbsp;
                 </td>
                 <td>
                   <b>FlyGuesWeb</b>
@@ -739,7 +716,8 @@
       </md-icon-button>
     <!--/lit-part--></template>
         </copy-code-button>
-      </div><div class="sliders">
+      </div>
+<div class="sliders">
       <!--lit-node 1--><hct-slider type="hue" label="Hue" max="360" defer-hydration=""><template shadowrootmode="open"><style>
     section {
       display: flex;
@@ -914,27 +892,51 @@
     <section slot="toc">
       <div class="toc">
         <ol>
-          <li><a href="app.html">应用和小工具</a></li>
-          <li><a href="filelib.html">文件</a></li>
+          <li><a href="#webapp">网页应用</a></li>
+          <li><a href="#tools">小工具</a></li>
+          <li><a href="#copy">声明</a></li>
         </ol>
       </div>
     </section>
-    <section slot="stoc">
-      <div class="stoc">
-        <ol>
-          <li>网站浏览量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></li>
-          <li>访客数：<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></li>
-        </ol>
-      </div>
-    </section>
-
   <main id="main-content" slot="app-content" tabindex="0">
-    <center>
-           <h1>FlyGuesWeb</h1>
+      <h1>应用和小工具</h1>
       <div class="heading h2">
-        FlyGuesWeb库是个人课业之余制作的demo源码存放的地方。<br />
- 
-    </center>
+        在这里按分类访问小工具和网页应用。
+
+        <h2 id="webapp" tabindex="-1">网页应用</h2>
+
+        <link rel="stylesheet" type="text/css" href="css/syntax-highlight.css"/>
+        <div class="ListBox">
+          <h3>Swiffe</h3>
+          Swiffe 网页版<br>
+          <a class="ListBtn" href="#Swiffe" style="text-decoration: none;">
+            <input type="button" class="ListBtn" value="打开">
+          </a>
+        </div>
+        <br>
+
+
+        <h2 id="tools" tabindex="-1">小工具</h2>
+        <div class="ListBox">
+          <h3>随机数抽取器</h3>
+          纯净网页版随机数抽取器<br>
+          <a class="ListBtn" href="demo/RandomMem.html" style="text-decoration: none;">
+            <input type="button" class="ListBtn" value="打开">
+          </a>&nbsp;
+        </div>
+        <br>
+        <div class="ListBox">
+          <h3>展示牌</h3>
+          用于班级智能班牌的内容展示<br>
+          <a class="ListBtn" href="demo/Board.html" style="text-decoration: none;">
+            <input type="button" class="ListBtn" value="打开">
+          </a>&nbsp;
+        </div>
+        <br>
+
+        <h2 id="copy" tabindex="-1">声明</h2>
+        该页面仅作为一个通用的demo存储项目展示页面，供需要的用户使用。你可以自己取用除了我们特别标注外的内容进行二次制作、分发而不受约束。
+
 
 </div></main>
 
@@ -960,7 +962,7 @@
     <div slot="headline">导航</div>
   </md-item>
 
-  <md-list-item href="app.html" role="menuitem" type="link" tabindex="-1" md-list-item="" style="background-color: #002fa71a;">
+  <md-list-item href="app.html" role="menuitem" type="link" tabindex="-1" md-list-item="">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <style>:host{display:flex;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}:host(:is([type=button]:not([disabled]),[type=link])){cursor:pointer}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;cursor:inherit;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;max-width:inherit;min-width:inherit;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);width:100%}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}</style>
       <a id="item" tabindex="0" role="listitem" class="list-item   " href="index.html">
@@ -984,10 +986,10 @@
         </md-item>
       </a>
     </template>
-    首页
+  首页
   </md-list-item>
 
-  <md-list-item href="app.html" role="menuitem" type="link" tabindex="-1" md-list-item="">
+  <md-list-item href="app.html" role="menuitem" type="link" tabindex="-1" md-list-item="" style="background-color: #002fa71a;">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <style>:host{display:flex;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}:host(:is([type=button]:not([disabled]),[type=link])){cursor:pointer}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;cursor:inherit;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;max-width:inherit;min-width:inherit;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);width:100%}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}</style>
       <a id="item" tabindex="0" role="listitem" class="list-item   " href="app.html">
@@ -1121,7 +1123,4 @@
 
 
   </body>
-
-
-
 </html>
