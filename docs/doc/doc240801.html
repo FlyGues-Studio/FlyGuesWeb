@@ -24,14 +24,15 @@
 
     </head>
     <body>
+      <div style="position: relative">
         <mdui-navigation-rail contained>
-            <mdui-navigation-rail-item icon="home--filded" href="../index.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="apps--filled" href="../app.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="folder--filled" href="../file.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="info--filled" href="../info.html"></mdui-navigation-rail-item>
+          <mdui-navigation-rail-item icon="home--filded" href="../index.html"></mdui-navigation-rail-item>
+          <mdui-navigation-rail-item icon="apps--filled" href="../app.html"></mdui-navigation-rail-item>
+          <mdui-navigation-rail-item icon="folder--filled" href="../file.html"></mdui-navigation-rail-item>
+          <mdui-navigation-rail-item icon="info--filled" href="../info.html"></mdui-navigation-rail-item>
         </mdui-navigation-rail>
-
-        <mdui-top-app-bar style="position: relative;">
+        <div style="height:95vh;overflow: auto">
+                  <mdui-top-app-bar style="position: sticky;">
           <mdui-button-icon icon="arrow_back" href="../file.html"></mdui-button-icon>
           <mdui-top-app-bar-title>文章-正确启用 Flash Player</mdui-top-app-bar-title>
           <div style="flex-grow: 1"></div>
@@ -104,5 +105,8 @@
           <img src="image/doc1.jpeg" width="100%">
           <br> 
         </div>
+        </div>
+
+      </div>
       </body>
 </html>

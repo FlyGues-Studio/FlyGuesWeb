@@ -36,13 +36,14 @@
         </style>
     </head>
     <body>
-        <mdui-navigation-rail contained>
-            <mdui-navigation-rail-item icon="home--filded" href="index.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="apps--filled" href="app.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="folder--filled" href="file.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="info--filled" href="info.html"></mdui-navigation-rail-item>
-        </mdui-navigation-rail>
-
+        <div style="position: relative">
+            <mdui-navigation-rail contained>
+              <mdui-navigation-rail-item icon="home--filded" href="index.html"></mdui-navigation-rail-item>
+              <mdui-navigation-rail-item icon="apps--filled" href="app.html"></mdui-navigation-rail-item>
+              <mdui-navigation-rail-item icon="folder--filled" href="file.html"></mdui-navigation-rail-item>
+              <mdui-navigation-rail-item icon="info--filled" href="info.html"></mdui-navigation-rail-item>
+            </mdui-navigation-rail>
+            <div style="height:95vh;overflow: auto">
         <mdui-card clickable  class="title" style="width: 100%">
             <div class="mdui-prose">
                 <h1 style="text-align: center;font-family: 'Product Sans';"><b>FlyGuesWeb</b></h1>
@@ -92,5 +93,7 @@
             </td>
         </table>
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div>
+        </div>
     </body>
 </html>

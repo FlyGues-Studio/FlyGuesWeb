@@ -26,14 +26,17 @@
         </style>
     </head>
     <body>
-        <mdui-navigation-rail contained>
-            <mdui-navigation-rail-item icon="home--filded" href="index.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="apps--filled" href="app.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="folder--filled" href="file.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="info--filled" href="info.html"></mdui-navigation-rail-item>
-        </mdui-navigation-rail>
-
-        <mdui-top-app-bar style="position: relative;">
+        <div style="position: relative">
+            <mdui-navigation-rail contained>
+              <mdui-navigation-rail-item icon="home--filded" href="index.html"></mdui-navigation-rail-item>
+              <mdui-navigation-rail-item icon="apps--filled" href="app.html"></mdui-navigation-rail-item>
+              <mdui-navigation-rail-item icon="folder--filled" href="file.html"></mdui-navigation-rail-item>
+              <mdui-navigation-rail-item icon="info--filled" href="info.html"></mdui-navigation-rail-item>
+            </mdui-navigation-rail>
+    
+            <div style="height:95vh;overflow: auto">
+    
+        <mdui-top-app-bar style="position: sticky;">
 
             <mdui-top-app-bar-title>归档文件和项目</mdui-top-app-bar-title>
             <div style="flex-grow: 1"></div>
@@ -100,5 +103,7 @@
                 </div>
             </mdui-tab-panel>
           </mdui-tabs>
+          </div>
+          </div>
     </body>
 </html>
