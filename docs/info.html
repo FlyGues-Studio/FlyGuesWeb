@@ -54,7 +54,46 @@
                 <h3 style="font-family: 'Product Sans';"><b>FlyGuesWeb</b></h3>
                 <small>&copy 2024 , FlyGues Studio. &nbsp; By LYF</small><br><br>
             </mdui-card><br>
-            <mdui-button end-icon="open_in_new" href="https://github.com/FlyGues2889/FlyGuesWeb" variant="outlined">GitHub存储库</mdui-button>
+            <mdui-button end-icon="open_in_new" href="https://github.com/FlyGues2889/FlyGuesWeb" variant="outlined">GitHub存储库</mdui-button><br>
+            <p style="display: flex;align-items: center;margin-top: 4rem;">
+                <mdui-icon name="update"></mdui-icon>更新记录
+            </p>
+            <mdui-tabs value="tab-1">
+                <mdui-tab value="tab-1">更新</mdui-tab>
+                <mdui-tab value="tab-2">修补</mdui-tab>
+              
+                <mdui-tab-panel slot="panel" value="tab-1">
+                    <div class="mdui-prose" style="margin: 1rem;width: auto;">
+                        <style>
+                            mdui-card.list{
+                                padding: 2rem;
+                                width: 80%;
+                                border-radius: 2rem;
+                                margin-bottom: 1rem;
+                            }
+                        </style>
+                        <mdui-card class="list" variant="outlined">
+                            <h4>20240826</h4>
+                            <oi>
+                                <li>重构网站主界面</li>
+                            </oi>
+                        </mdui-card>
+                    </div>
+                </mdui-tab-panel>
+                <mdui-tab-panel slot="panel" value="tab-2">
+                    <div class="mdui-prose" style="margin: 1rem;width: auto;">
+                        <mdui-card class="list" variant="outlined">
+                            <h4>20240827</h4>
+                            <oi>
+                                <li>修改网站主题色</li>
+                                <li>修改 随机数抽取器 和 MC15 界面</li>
+                                <li>为网站无障碍功能添加弹窗</li>
+                                <li>修补网站标题栏无法始终固定在页面顶部的问题</li>
+                            </oi>
+                        </mdui-card>
+                    </div>
+                </mdui-tab-panel>
+              </mdui-tabs>
 
         </div>
         </div>

@@ -41,27 +41,51 @@
             <mdui-top-app-bar-title>应用和小工具</mdui-top-app-bar-title>
             <div style="flex-grow: 1"></div>
         </mdui-top-app-bar>
+        <mdui-tabs value="tab-1">
+            <mdui-tab value="tab-1">小工具</mdui-tab>
+            <mdui-tab value="tab-2">应用</mdui-tab>
+          
+            <mdui-tab-panel slot="panel" value="tab-1">
+                <style>
+                    mdui-card.list{
+                        padding: 2rem;
+                        width: 80%;
+                        border-radius: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                </style>
+                <div class="mdui-prose" style="margin: 1rem;width: auto;">
+                    <style>
+                        mdui-card.list{
+                            padding: 2rem;
+                            width: 80%;
+                            border-radius: 2rem;
+                            margin-bottom: 1rem;
+                        }
+                    </style>
+                    <mdui-card class="list">
+                        <h4><b>随机数抽取器</b></h4>
+                        <p>随机数抽取器纯净网页版</p>
+                        <mdui-button end-icon="arrow_forward" href="demo/RandomMem.html">进入</mdui-button>
+                    </mdui-card>
+                    <mdui-card class="list">
+                        <h4><b>展示牌</b></h4>
+                        <p>用于班级智能班牌的展示内容</p>
+                        <mdui-button end-icon="arrow_forward" href="demo/Board.html">进入</mdui-button>
+                    </mdui-card>
+                </div>
         
-        <div class="mdui-prose" style="margin: 1rem;width: auto;">
-            <style>
-                mdui-card.list{
-                    padding: 2rem;
-                    width: 80%;
-                    border-radius: 2rem;
-                    margin-bottom: 1rem;
-                }
-            </style>
-            <mdui-card class="list">
-                <h4><b>随机数抽取器</b></h4>
-                <p>随机数抽取器纯净网页版</p>
-                <mdui-button end-icon="arrow_forward" href="demo/RandomMem.html">进入</mdui-button>
-            </mdui-card>
-            <mdui-card class="list">
-                <h4>展示牌</h4>
-                <p>用于班级智能班牌的展示内容</p>
-                <mdui-button end-icon="arrow_forward" href="demo/Board.html">进入</mdui-button>
-            </mdui-card>
-        </div>
+            </mdui-tab-panel>
+            <mdui-tab-panel slot="panel" value="tab-2">
+                <div class="mdui-prose" style="margin: 1rem;width: auto;">
+                    <mdui-card class="list">
+                        <h4><b>Swiffe</b></h4>
+                        <p>Swiffe 网页版</p>
+                        <mdui-button loading disabled>不可用，正在搜索</mdui-button>
+                    </mdui-card>
+                </div>
+            </mdui-tab-panel>
+          </mdui-tabs>
         </div>
         </div>
     </body>
