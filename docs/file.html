@@ -1,109 +1,110 @@
 <!DOCTYPE html>
 <html lang="zh-CN" class="mdui-theme-auto">
-    <head>
-        <meta charset="utf-8">
 
-        <link rel="shortcut icon" href="image/logonormal.png" type="image/x-icon">
-        <title>FlyGuesWeb</title>
+<head>
+    <meta charset="utf-8">
 
-        <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
-        <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
-        <!-- Filled -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- Outlined -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-        <!-- Rounded -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-        <!-- Sharp -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-        <!-- Two Tone -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/font.css">
-        <link rel="stylesheet" type="text/css" href="css/mduiColor.css">
+    <link rel="shortcut icon" href="image/logonormal.png" type="image/x-icon">
+    <title>FlyGuesWeb</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Rounded -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- Sharp -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- Two Tone -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/mduiColor.css">
 
 
-        <style>
-        </style>
-    </head>
-    <body>
-        <div style="position: relative">
-            <mdui-navigation-rail contained>
-              <mdui-navigation-rail-item icon="home--filded" href="index.html"></mdui-navigation-rail-item>
-              <mdui-navigation-rail-item icon="apps--filled" href="app.html"></mdui-navigation-rail-item>
-              <mdui-navigation-rail-item icon="folder--filled" href="file.html"></mdui-navigation-rail-item>
-              <mdui-navigation-rail-item icon="info--filled" href="info.html"></mdui-navigation-rail-item>
-            </mdui-navigation-rail>
-    
-            <div style="height:95vh;overflow: auto">
-    
-        <mdui-top-app-bar style="position: sticky;">
+    <style>
+    </style>
+</head>
 
-            <mdui-top-app-bar-title>归档文件和项目</mdui-top-app-bar-title>
-            <div style="flex-grow: 1"></div>
-        </mdui-top-app-bar>
-        
-        <mdui-tabs value="tab-1">
-            <mdui-tab value="tab-1">项目</mdui-tab>
-            <mdui-tab value="tab-2">文件</mdui-tab>
-            <mdui-tab value="tab-3">发布的文章</mdui-tab>
-          
-            <mdui-tab-panel slot="panel" value="tab-1">
-                <style>
-                    mdui-card.list{
-                        padding: 2rem;
-                        width: 80%;
-                        border-radius: 2rem;
-                        margin-bottom: 1rem;
-                    }
-                </style>
-                <div class="mdui-prose" style="margin: 1rem;width: auto;">
-                    <mdui-card class="list">
-                        <h4><b>MC_柳州市第十五中学总部</b></h4>
-                        <p>[Minecraft项目]柳州市第十五中学总部（滨江校区）</p>
-                        <mdui-button end-icon="arrow_forward" href="doc/mc15.html">了解更多</mdui-button>
+<body>
+    <div style="position: relative">
+        <mdui-navigation-rail contained>
+            <mdui-navigation-rail-item icon="home--filded" href="index.html"></mdui-navigation-rail-item>
+            <mdui-navigation-rail-item icon="apps--filled" href="app.html"></mdui-navigation-rail-item>
+            <mdui-navigation-rail-item icon="folder--filled" href="file.html"></mdui-navigation-rail-item>
+            <mdui-navigation-rail-item icon="info--filled" href="info.html"></mdui-navigation-rail-item>
+        </mdui-navigation-rail>
 
-                        <mdui-dialog
-                          close-on-overlay-click
-                          headline="你将离开本网站"
-                          class="example-action"
-                        >
-                        <mdui-icon slot="icon" name="warning"></mdui-icon>
-                        存储库密码为1234，请注意信息安全。
-                          <mdui-button slot="action" variant="filled" href="https://flygues.lanzn.com/b009g0c1sd" target="_blank">确定</mdui-button>
-                        </mdui-dialog>
+        <div style="height:95vh;overflow: auto">
 
-                        <mdui-button end-icon="open_in_new" variant="text">项目存储库</mdui-button>
+            <mdui-top-app-bar style="position: sticky;">
 
-                        <script>
-                          const dialog = document.querySelector(".example-action");
-                          const openButton = dialog.nextElementSibling;
+                <mdui-top-app-bar-title>归档文件和项目</mdui-top-app-bar-title>
+                <div style="flex-grow: 1"></div>
+            </mdui-top-app-bar>
 
-                          openButton.addEventListener("click", () => dialog.open = true);
-                        </script>
-                    </mdui-card>
-                </div>
-            </mdui-tab-panel>
-            <mdui-tab-panel slot="panel" value="tab-2">
-                <div class="mdui-prose" style="margin: 1rem;width: auto;">
-                    <mdui-card class="list">
-                        <h4><b>MC基础卷2024.6</b></h4>
-                        <p>[Minecraft项目]minecraft基础卷</p>
-                        <mdui-button end-icon="download" href="demo/doc/minecraft试卷1.21.0基础.pdf" download>下载试卷</mdui-button>
-                        <mdui-button href="demo/doc/minecraft试卷1.21.0基础.pdf" variant="text">预览</mdui-button>
-                    </mdui-card>
-                </div>
-            </mdui-tab-panel>
-            <mdui-tab-panel slot="panel" value="tab-3">
-                <div class="mdui-prose" style="margin: 1rem;width: auto;">
-                    <mdui-card class="list">
-                        <h4><b>正确启用Adobe Flash Player</b></h4>
-                        <p>[教程]正确下载纯净的Adobe Flash Player并启用Flash。</p>
-                        <mdui-button end-icon="arrow_forward" href="doc/doc240801.html">阅读</mdui-button>
-                    </mdui-card>
-                </div>
-            </mdui-tab-panel>
-          </mdui-tabs>
-          </div>
-          </div>
-    </body>
+            <mdui-tabs value="tab-1">
+                <mdui-tab value="tab-1">项目</mdui-tab>
+                <mdui-tab value="tab-2">文件</mdui-tab>
+                <mdui-tab value="tab-3">发布的文章</mdui-tab>
+
+                <mdui-tab-panel slot="panel" value="tab-1">
+                    <style>
+                        mdui-card.list {
+                            padding: 2rem;
+                            width: 80%;
+                            border-radius: 2rem;
+                            margin-bottom: 1rem;
+                        }
+                    </style>
+                    <div class="mdui-prose" style="margin: 1rem;width: auto;">
+                        <mdui-card class="list">
+                            <h4><b>MC_柳州市第十五中学总部</b></h4>
+                            <p>[Minecraft项目]柳州市第十五中学总部（滨江校区）</p>
+                            <mdui-button end-icon="arrow_forward" href="doc/mc15.html">了解更多</mdui-button>
+
+                            <mdui-dialog close-on-overlay-click headline="你将离开本网站" class="example-action">
+                                <mdui-icon slot="icon" name="warning"></mdui-icon>
+                                存储库密码为1234，请注意信息安全。
+                                <mdui-button slot="action" variant="filled" href="https://flygues.lanzn.com/b009g0c1sd"
+                                    target="_blank">确定</mdui-button>
+                            </mdui-dialog>
+
+                            <mdui-button end-icon="open_in_new" variant="text">项目存储库</mdui-button>
+
+                            <script>
+                                const dialog = document.querySelector(".example-action");
+                                const openButton = dialog.nextElementSibling;
+
+                                openButton.addEventListener("click", () => dialog.open = true);
+                            </script>
+                        </mdui-card>
+                    </div>
+                </mdui-tab-panel>
+                <mdui-tab-panel slot="panel" value="tab-2">
+                    <div class="mdui-prose" style="margin: 1rem;width: auto;">
+                        <mdui-card class="list">
+                            <h4><b>MC基础卷2024.6</b></h4>
+                            <p>[Minecraft项目]minecraft基础卷</p>
+                            <mdui-button end-icon="download" href="demo/doc/minecraft试卷1.21.0基础.pdf"
+                                download>下载试卷</mdui-button>
+                            <mdui-button href="demo/doc/minecraft试卷1.21.0基础.pdf" variant="text">预览</mdui-button>
+                        </mdui-card>
+                    </div>
+                </mdui-tab-panel>
+                <mdui-tab-panel slot="panel" value="tab-3">
+                    <div class="mdui-prose" style="margin: 1rem;width: auto;">
+                        <mdui-card class="list">
+                            <h4><b>正确启用Adobe Flash Player</b></h4>
+                            <p>[教程]正确下载纯净的Adobe Flash Player并启用Flash。</p>
+                            <mdui-button end-icon="arrow_forward" href="doc/doc240801.html">阅读</mdui-button>
+                        </mdui-card>
+                    </div>
+                </mdui-tab-panel>
+            </mdui-tabs>
+        </div>
+    </div>
+</body>
+
 </html>
