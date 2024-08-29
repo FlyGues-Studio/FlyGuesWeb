@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mdui-theme-auto" id="html">
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="../image/logonormal.png" type="image/x-icon">
+    <title>FlyGuesWeb</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Rounded -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- Sharp -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- Two Tone -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/font.css">
+    <link rel="stylesheet" type="text/css" href="../css/mduiColor.css">
+
+
+    <style>
+        html,
+        body {
+            min-height: 500px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        mdui-card.title {
+            padding: 3rem;
+            border-radius: 2rem;
+
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        mdui-card.text {
+            padding: 1rem;
+        }
+
+        nav.bottom {
+            position: fixed;
+            bottom: 0.5em;
+            right: 2em;
+            display: flex;
+        }
+
+        nav.topright {
+            position: fixed;
+            top: 0.5em;
+            right: 2em;
+            display: flex;
+            align-items: center;
+
+        }
+
+        nav.topleft {
+            position: fixed;
+            top: 0.5em;
+            left: 2em;
+            font-family: 'Product Sans';
+            font-size: 1.2em;
+        }
+
+        mdui-menu {
+            border-radius: 2em;
+            padding: 2em;
+        }
+
+        mdui-switch {
+            position: fixed;
+            right: 4em;
+        }
+    </style>
+</head>
+
+<body class="mdui-prose">
+    <mdui-card class="title" style="width: 60%;height: 50vh;">
+        <mdui-icon name="security_update" style="font-size: 2em;color: --mdui-color-primary;"></mdui-icon>
+        <!-- <mdui-button-icon selectable selected icon="security_update" selected-icon="security_update" style="font-size: 2em;"></mdui-button-icon> -->
+        <h3 style="margin-top: 1em;">你的 Android 设备需要安全更新</h3>
+        你的设备未安装新的安全补丁，我们正在检查并为你下载所需的安全更新。
+        <mdui-linear-progress style="background-color: none;margin-top: 5em;"></mdui-linear-progress>
+    </mdui-card>
+
+    <nav class="topleft">
+        <output id="clock" style="vertical-align:middle;"></output>
+    </nav>
+    <nav class="topright">
+        <mdui-dropdown>
+            <mdui-button-icon icon="no_sim" class="nav" slot="trigger"></mdui-button-icon>
+            <mdui-menu style="width:20em;margin-right: 2em;">
+                <h4>请插入SIM卡</h4>
+                <small>
+                    在这台设备上没有检测到SIM卡。
+                </small>
+
+            </mdui-menu>
+        </mdui-dropdown>
+
+        <mdui-dropdown>
+            <mdui-button-icon icon="network_wifi_3_bar--outlined" class="nav" slot="trigger"></mdui-button-icon>
+            <mdui-menu style="width:20em;margin-right: 2em;">
+                <h4>网络连接设置</h4>
+                <label style="display: flex;align-items: center;">
+                    <mdui-switch>
+                        <mdui-icon slot="checked-icon" name=""></mdui-icon>
+                    </mdui-switch>
+                    打开WLAN
+                </label>
+                <mdui-divider style="margin-top: 1em;margin-bottom: 1em;"></mdui-divider>
+                <small>
+                    你附近没有可用网络。<br>
+                    请打开 WLAN开关 或 重试
+                </small>
+
+            </mdui-menu>
+        </mdui-dropdown>
+    </nav>
+
+    <nav class="bottom">
+        <mdui-button-icon icon="light_mode" onclick="changeTheme()"></mdui-button-icon>
+        <script>
+            function changeTheme() {
+                var Theme = html.getAttribute('class');
+                switch (Theme) {
+                    case "mdui-theme-light":
+                        html.setAttribute('class', 'mdui-theme-dark');
+                        break;
+                    case "mdui-theme-dark":
+                        html.setAttribute('class', 'mdui-theme-light');
+                        break;
+                    default:
+                        alert("请再点击一次");
+                        html.setAttribute('class','mdui-theme-light')
+                        break;
+                }
+            }
+        </script>
+
+
+        <mdui-dialog close-on-overlay-click headline="启用无障碍模式" class="example-action">
+            <mdui-icon slot="icon" name="accessibility--outlined"></mdui-icon>
+            在打开无障碍模式后，为保障可读性，显示的页面可能会出现显示错位。
+            <mdui-button slot="action" variant="text">取消</mdui-button>
+            <mdui-button slot="action" variant="filled">开启</mdui-button>
+        </mdui-dialog>
+
+        <mdui-button-icon icon="accessibility--outlined"></mdui-button-icon>
+
+        <script>
+            const dialog = document.querySelector(".example-action");
+            const openButton = dialog.nextElementSibling;
+
+            openButton.addEventListener("click", () => dialog.open = true);
+
+            const closeButton = dialog.querySelector("mdui-button");
+
+            openButton.addEventListener("click", () => dialog.open = true);
+            closeButton.addEventListener("click", () => dialog.open = false);
+        </script>
+
+        <mdui-button-icon icon="fullscreen" onclick="handleFullScreen()"></mdui-button-icon>
+    </nav>
+
+
+</body>
+
+<script>
+    //定义一个变量进行判断，默认false 非全屏状态
+    var exitFullscreen = false
+    // 全屏事件
+    function handleFullScreen() {
+        var element = document.documentElement;
+        if (this.fullscreen) {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        } else {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.webkitRequestFullScreen) {
+                element.webkitRequestFullScreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.msRequestFullscreen) {
+                // IE11
+                element.msRequestFullscreen();
+            }
+        }
+    }
+    window.onresize = function () {
+        var isFull = !!(document.webkitIsFullScreen || document.mozFullScreen ||
+            document.msFullscreenElement || document.fullscreenElement
+        );//!document.webkitIsFullScreen都为true。因此用!!
+        if (isFull == false) {
+            $("#exitFullScreen").css("display", "none");
+            $("#fullScreen").css("display", "");
+        } else {
+            $("#exitFullScreen").css("display", "");
+            $("#fullScreen").css("display", "none");
+        }
+    }
+
+    function showTime() {
+        var t = new Date();
+        var h = t.getHours();
+        var m = t.getMinutes();
+        var s = t.getSeconds();
+        var showTime = ((h < 10) ? "0" : "") + h + ((m < 10) ? ":0" : ":") + m
+        document.getElementById("clock").value = showTime;
+    }
+
+    setInterval("showTime()", 1000);
+</script>
+
+</html>
