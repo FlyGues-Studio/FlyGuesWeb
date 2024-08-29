@@ -84,6 +84,10 @@
             right: 4em;
         }
     </style>
+    <script>
+        var Theme = html.getAttribute('class');
+        console.log(Theme);
+    </script>
 </head>
 
 <body class="mdui-prose">
@@ -131,21 +135,38 @@
     </nav>
 
     <nav class="bottom">
+        <mdui-snackbar class="example-snackbar" auto-close-delay="1500">
+            已切换模式，若无反应请再试一次。
+        </mdui-snackbar>
+
         <mdui-button-icon icon="light_mode" onclick="changeTheme()"></mdui-button-icon>
         <script>
+            var Theme = html.getAttribute('class');
+            const snackbar = document.querySelector(".example-snackbar");
+            const openButton2 = snackbar.nextElementSibling;
+
+            if (Theme == "mdui-theme-auto") {
+                openButton2.addEventListener("click", () => snackbar.open = true);
+
+            }
+
             function changeTheme() {
                 var Theme = html.getAttribute('class');
+
+
                 switch (Theme) {
                     case "mdui-theme-light":
                         html.setAttribute('class', 'mdui-theme-dark');
+                        openButton2.removeEventListener
                         break;
                     case "mdui-theme-dark":
                         html.setAttribute('class', 'mdui-theme-light');
+                        openButton2.removeEventListener
                         break;
-                    default:
-                        alert("请再点击一次");
-                        html.setAttribute('class','mdui-theme-light')
-                        break;
+                    case "mdui-theme-auto":
+                        html.setAttribute('class', 'mdui-theme-light');
+                        openButton2.removeEventListener
+
                 }
             }
         </script>
