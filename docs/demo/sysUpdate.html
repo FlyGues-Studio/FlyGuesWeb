@@ -27,11 +27,7 @@
         body {
             display: flex;
             flex-direction: row;
-
-            transform: scale(0.8);
-            transform-origin: middle;
-            width: 100vw;
-            height: 90vh;
+            font-size: 63%;
         }
 
         mdui-card.title {
@@ -45,7 +41,6 @@
             transform: translate(-50%, -50%);
             background-color: rgb(var(--mdui-color-inverse-on-surface));
 
-            min-height: 280px;
             width: 60%;
             height: 70vh;
         }
@@ -63,7 +58,7 @@
 
         nav.topright {
             position: fixed;
-            top: 0.5em;
+            top: 1em;
             right: 2em;
             display: flex;
             align-items: center;
@@ -75,7 +70,7 @@
             top: 0.5em;
             left: 2em;
             font-family: 'Product Sans';
-            font-size: 0.8em;
+            font-size: 1em;
         }
 
         mdui-menu {
@@ -97,7 +92,6 @@
 <body class="mdui-prose">
     <mdui-card class="title">
         <mdui-icon name="security_update" style="font-size: 2em;color: --mdui-color-primary;"></mdui-icon>
-        <!-- <mdui-button-icon selectable selected icon="security_update" selected-icon="security_update" style="font-size: 2em;"></mdui-button-icon> -->
         <h3 style="margin-top: 1em;">你的 Android 设备需要安全更新</h3>
         你的设备未安装新的安全补丁，我们正在检查并为你下载所需的更新。
         <mdui-linear-progress style="background-color: none;margin-top: 4em;"></mdui-linear-progress>
@@ -108,7 +102,7 @@
     </nav>
     <nav class="topright">
         <mdui-dropdown>
-            <mdui-icon name="no_sim" style="color: --mdui-color-primary;font-size: 1em;" slot="trigger"></mdui-icon>
+            <mdui-icon name="no_sim" style="color: --mdui-color-primary;font-size: 1.4em;" slot="trigger"></mdui-icon>
             <mdui-menu style="width:20em;margin-right: 2em;">
                 <h4>请插入SIM卡</h4>
                 <small>
@@ -119,7 +113,7 @@
         </mdui-dropdown>
         &nbsp;&nbsp;
         <mdui-dropdown>
-            <mdui-icon name="network_wifi_3_bar--outlined" style="color: --mdui-color-primary;font-size:1em;"
+            <mdui-icon name="network_wifi_3_bar--outlined" style="color: --mdui-color-primary;font-size:1.4em;"
                 slot="trigger"></mdui-icon>
             <mdui-menu style="width:20em;margin-right: 2em;">
                 <h4>网络连接设置</h4>
