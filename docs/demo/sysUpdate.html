@@ -27,7 +27,11 @@
         body {
             display: flex;
             flex-direction: row;
-            align-items: center;
+
+            transform: scale(0.8);
+            transform-origin: middle;
+            width: 100vw;
+            height: 90vh;
         }
 
         mdui-card.title {
@@ -63,7 +67,7 @@
             right: 2em;
             display: flex;
             align-items: center;
-
+            font-size: smaller;
         }
 
         nav.topleft {
@@ -71,7 +75,7 @@
             top: 0.5em;
             left: 2em;
             font-family: 'Product Sans';
-            font-size: 1.2em;
+            font-size: 0.8em;
         }
 
         mdui-menu {
@@ -104,7 +108,7 @@
     </nav>
     <nav class="topright">
         <mdui-dropdown>
-            <mdui-button-icon icon="no_sim" class="nav" slot="trigger"></mdui-button-icon>
+            <mdui-icon name="no_sim" style="color: --mdui-color-primary;font-size: 1em;" slot="trigger"></mdui-icon>
             <mdui-menu style="width:20em;margin-right: 2em;">
                 <h4>请插入SIM卡</h4>
                 <small>
@@ -113,9 +117,10 @@
 
             </mdui-menu>
         </mdui-dropdown>
-
+        &nbsp;&nbsp;
         <mdui-dropdown>
-            <mdui-button-icon icon="network_wifi_3_bar--outlined" class="nav" slot="trigger"></mdui-button-icon>
+            <mdui-icon name="network_wifi_3_bar--outlined" style="color: --mdui-color-primary;font-size:1em;"
+                slot="trigger"></mdui-icon>
             <mdui-menu style="width:20em;margin-right: 2em;">
                 <h4>网络连接设置</h4>
                 <label style="display: flex;align-items: center;">
