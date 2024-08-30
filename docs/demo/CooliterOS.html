@@ -74,10 +74,10 @@
 
         nav.topleft {
             position: fixed;
-            top: 0.5em;
+            top: 0.3em;
             left: 2em;
             font-family: 'Product Sans';
-            font-size: 1em;
+            font-size: 1.2em;
             font-weight: bold;
         }
 
@@ -89,6 +89,18 @@
         mdui-switch {
             position: fixed;
             right: 4em;
+        }
+
+        .table {
+            /*此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。*/
+            display: table;
+            /*border-collapse:collapse;*/
+            width: 100%;
+        }
+
+        .table-cell {
+            /*此元素会作为一个表格单元格显示（类似 <td> 和 <th>）*/
+            display: table-cell;
         }
     </style>
     <script>
@@ -102,18 +114,50 @@
 
     <center>
         <mdui-dialog fullscreen class="navbkg">
-            <div class="navbkg" style="width: 100%;height: 80vh;text-align: left;">
+            <div class="navbkg" style="width: 60%;height: 80vh;text-align: left;">
                 <h2>
-                    <output id="clock2" style="vertical-align:middle;font-family: 'Product Sans';left:5em"></output>
-                    <nav class="topright" style="background-color: rgb(var(--mdui-color-primary));color:rgb(var(--mdui-color-background));;border-radius: 10em;padding: 0.5em;padding-left:1em;padding-right: 1em;top:1.2em;">
-                        <mdui-icon name="no_sim" style="color: --mdui-color-primary;font-size: 1em;"></mdui-icon>
-                        &nbsp;&nbsp;
-                        <mdui-icon name="notifications_active"
-                            style="color: --mdui-color-primary;font-size: 1em;"></mdui-icon>
-                    </nav>
-        
-                </h2>
+                    <center>
+                        <output id="clock2" style="vertical-align:middle;font-family: 'Product Sans';left:5em"></output>
+                    </center>
+
+                </h2><br>
+                <center>
+                    <mdui-card style="width: 100%;padding: 1em;">
+                        <center>
+                            <mdui-icon name="light_mode--outlined" style="color: --mdui-color-primary;"></mdui-icon>
+                            <mdui-slider nolabel value="100"></mdui-slider>
+                        </center>
+                    </mdui-card>
+                    <div class="table" style="margin-top: 1em;text-align: left;display: flex;align-items: center;font-family: 'Product Sans';">
+                        <mdui-card style="width: 48%;padding: 2em;display: flex;align-items: center;flex-direction:row;background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-surface-container-high));" clickable>
+                            <div class="table-cell" style="margin-right: 1em;">
+                                <mdui-icon name="network_wifi_3_bar" style="color: --mdui-color-primary;"></mdui-icon>
+                            </div>
+                            <div class="table-cell">
+                                <h4 style="padding-top: 0;">WLAN</h4>
+                                Vitural WLAN
+                            </div>
+                        </mdui-card>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <mdui-card style="width: 48%;padding: 2em;display: flex;align-items: center;flex-direction:row;" clickable>
+                            <div class="table-cell" style="margin-right: 1em;">
+                                <mdui-icon name="bluetooth_disabled" style="color: --mdui-color-primary;"></mdui-icon>
+                            </div>
+                            <div class="table-cell">
+                                <h4 style="padding-top: 0;">蓝牙设置</h4>
+                                你的设备不支持蓝牙
+                            </div>
+                        </mdui-card>
+
+                    </div>
+
+                </center>
             </div>
+            <div style="display: flex;align-items: center;bottom: 1em;justify-content: center;">
+                <mdui-button-icon icon="settings"></mdui-button-icon>
+                <mdui-button-icon icon="close" class="close"></mdui-button-icon>
+            </div>
+
         </mdui-dialog>
 
         <nav class="top">
@@ -133,7 +177,7 @@
         <script>
             const dialog2 = document.querySelector(".navbkg");
             const openButton2 = dialog2.nextElementSibling;
-            const closeButton2 = dialog2.querySelector(".navbkg");
+            const closeButton2 = dialog2.querySelector(".close");
 
             openButton2.addEventListener("click", () => dialog2.open = true);
             closeButton2.addEventListener("click", () => dialog2.open = false);
@@ -177,8 +221,9 @@
         var m = t.getMinutes();
         var s = t.getSeconds();
         var showTime = ((h < 10) ? "0" : "") + h + ((m < 10) ? ":0" : ":") + m
+        var showTimes = ((h < 10) ? "0" : "") + h + ((m < 10) ? ":0" : ":") + m + ((s < 10) ? ":0" : ":") + s
         document.getElementById("clock").value = showTime;
-        document.getElementById("clock2").value = showTime;
+        document.getElementById("clock2").value = showTimes;
     }
 
     setInterval("showTime()", 1000);
