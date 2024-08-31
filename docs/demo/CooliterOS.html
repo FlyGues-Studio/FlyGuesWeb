@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="../image/logonormal.png" type="image/x-icon">
     <title>FlyGuesWeb - CooliterOS</title>
 
+    <script src="https://unpkg.com/sober/dist/sober.min.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
     <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
     <!-- Filled -->
@@ -28,10 +30,11 @@
             display: flex;
             flex-direction: row;
             font-size: 63%;
+            background-color: rgb(var(--mdui-color-secondary-container)) !important;
         }
 
         html {
-            background: --mdui-color-surface-container-high;
+            background-color: rgb(var(--mdui-color-secondary-container)) !important;
             width: 100%;
             height: 100vh;
         }
@@ -116,46 +119,165 @@
         <mdui-dialog fullscreen class="navbkg">
             <div class="navbkg" style="width: 60%;height: 80vh;text-align: left;">
                 <h2>
-                    <center>
-                        <output id="clock2" style="vertical-align:middle;font-family: 'Product Sans';left:5em"></output>
+                    <center style="vertical-align:middle;font-family: 'Product Sans';">
+                        <output id="clock2"></output>
                     </center>
-
-                </h2><br>
+                </h2>
                 <center>
-                    <mdui-card style="width: 100%;padding: 1em;">
-                        <center>
-                            <mdui-icon name="light_mode--outlined" style="color: --mdui-color-primary;"></mdui-icon>
-                            <mdui-slider nolabel value="100"></mdui-slider>
-                        </center>
-                    </mdui-card>
-                    <div class="table" style="margin-top: 1em;text-align: left;display: flex;align-items: center;font-family: 'Product Sans';">
-                        <mdui-card style="width: 48%;padding: 2em;display: flex;align-items: center;flex-direction:row;background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-surface-container-high));" clickable>
-                            <div class="table-cell" style="margin-right: 1em;">
-                                <mdui-icon name="network_wifi_3_bar" style="color: --mdui-color-primary;"></mdui-icon>
-                            </div>
-                            <div class="table-cell">
-                                <h4 style="padding-top: 0;">WLAN</h4>
-                                Vitural WLAN
-                            </div>
-                        </mdui-card>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <mdui-card style="width: 48%;padding: 2em;display: flex;align-items: center;flex-direction:row;" clickable>
-                            <div class="table-cell" style="margin-right: 1em;">
-                                <mdui-icon name="bluetooth_disabled" style="color: --mdui-color-primary;"></mdui-icon>
-                            </div>
-                            <div class="table-cell">
-                                <h4 style="padding-top: 0;">蓝牙设置</h4>
-                                你的设备不支持蓝牙
-                            </div>
-                        </mdui-card>
+                    <s-carousel duration="999999"
+                        style="background-color: rgb(var(--mdui-color-secondary-container));color: rgb(var(--mdui-color-primary));">
+                        <div style="background-color: rgb(var(--mdui-color-background));">
+                            <center>
+                                <div class="table"
+                                    style="margin-top: 1em;text-align: left;display: flex;align-items: center;font-family: 'Product Sans';">
+                                    <style>
+                                        mdui-card {
+                                            border-radius: 2em;
+                                            padding: 1em;
+                                            padding-top: 1.4em;
+                                            padding-bottom: 1.4em;
+                                        }
+                                    </style>
+                                    <mdui-card
+                                        style="width: 49%;display: flex;align-items: center;flex-direction:row;background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-surface-container-high));"
+                                        clickable>
+                                        <div class="table-cell"
+                                            style="margin-right: 1em;display: flex;align-items: center;margin-left: 0.5em;">
+                                            <mdui-icon name="network_wifi_3_bar"
+                                                style="color: --mdui-color-primary;"></mdui-icon>
+                                        </div>
+                                        <div class="table-cell">
+                                            <h4 style="padding-top: 0;">WLAN</h4>
+                                            FlyGuesWeb WLAN
+                                        </div>
+                                    </mdui-card>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <mdui-card style="width: 49%;display: flex;align-items: center;flex-direction:row;"
+                                        clickable>
+                                        <div class="table-cell"
+                                            style="margin-right: 1em;display: flex;align-items: center;margin-left: 0.5em;">
+                                            <mdui-icon name="bluetooth_disabled"
+                                                style="color: --mdui-color-primary;"></mdui-icon>
+                                        </div>
+                                        <div class="table-cell">
+                                            <h4 style="padding-top: 0;">Bluetooth</h4>
+                                            Disabled on your device
+                                        </div>
+                                    </mdui-card>
+                                </div>
 
-                    </div>
+                                <div class="table"
+                                    style="margin-top: 1em;text-align: left;display: flex;align-items: center;font-family: 'Product Sans';">
+                                    <mdui-card style="width: 49%;display: flex;align-items: center;flex-direction:row;"
+                                        clickable>
+                                        <div class="table-cell"
+                                            style="margin-right: 1em;display: flex;align-items: center;margin-left: 0.5em;">
+                                            <mdui-icon name="flashlight_off"
+                                                style="color: --mdui-color-primary;"></mdui-icon>
+                                        </div>
+                                        <div class="table-cell">
+                                            <h4 style="padding-top: 0;">Flashlight</h4>
+                                            Disabled on your device
+                                        </div>
+                                    </mdui-card>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <mdui-card
+                                        style="width: 49%;display: flex;align-items: center;flex-direction:row;background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-surface-container-high));"
+                                        clickable>
+                                        <div class="table-cell"
+                                            style="margin-right: 1em;display: flex;align-items: center;margin-left: 0.5em;">
+                                            <mdui-icon name="notifications_active"
+                                                style="color: --mdui-color-primary;"></mdui-icon>
+                                        </div>
+                                        <div class="table-cell">
+                                            <h4 style="padding-top: 0;">Notification</h4>
+                                            Allowed nomorally
+                                        </div>
+                                    </mdui-card>
+                                </div>
+                            </center>
+                        </div>
+                        <div style="background-color: rgb(var(--mdui-color-background));">
+                            <center>
+                                <div class="table"
+                                    style="margin-top: 1em;text-align: left;display: flex;align-items: center;font-family: 'Product Sans';">
+                                    <style>
+                                        mdui-card {
+                                            border-radius: 2em;
+                                            padding: 1em;
+                                            padding-top: 1.4em;
+                                            padding-bottom: 1.4em;
+                                        }
+                                    </style>
+                                    <mdui-card
+                                        style="width: 49%;display: flex;align-items: center;flex-direction:row;background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-surface-container-high));"
+                                        clickable>
+                                        <div class="table-cell"
+                                            style="margin-right: 1em;display: flex;align-items: center;margin-left: 0.5em;">
+                                            <mdui-icon name="videocam" style="color: --mdui-color-primary;"></mdui-icon>
+                                        </div>
+                                        <div class="table-cell">
+                                            <h4 style="padding-top: 0;">Camera access</h4>
+                                            Avaliable
+                                        </div>
+                                    </mdui-card>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <mdui-card
+                                        style="width: 49%;display: flex;align-items: center;flex-direction:row;background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-surface-container-high));"
+                                        clickable>
+                                        <div class="table-cell"
+                                            style="margin-right: 1em;display: flex;align-items: center;margin-left: 0.5em;">
+                                            <mdui-icon name="mic" style="color: --mdui-color-primary;"></mdui-icon>
+                                        </div>
+                                        <div class="table-cell">
+                                            <h4 style="padding-top: 0;">Mic access</h4>
+                                            Avaliable
+                                        </div>
+                                    </mdui-card>
+                                </div>
 
+                                <div class="table"
+                                    style="margin-top: 1em;text-align: left;display: flex;align-items: center;font-family: 'Product Sans';">
+                                    <mdui-card
+                                        style="width: 49%;display: flex;align-items: center;flex-direction:row;background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-surface-container-high));"
+                                        clickable>
+                                        <div class="table-cell"
+                                            style="margin-right: 1em;display: flex;align-items: center;margin-left: 0.5em;">
+                                            <mdui-icon name="location_on"
+                                                style="color: --mdui-color-primary;"></mdui-icon>
+                                        </div>
+                                        <div class="table-cell">
+                                            <h4 style="padding-top: 0;">Location access</h4>
+                                            Avaliable
+                                        </div>
+                                    </mdui-card>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <mdui-card style="width: 49%;display: flex;align-items: center;flex-direction:row;"
+                                        clickable>
+                                        <div class="table-cell"
+                                            style="margin-right: 1em;display: flex;align-items: center;margin-left: 0.5em;">
+                                            <mdui-icon name="airplanemode_active"
+                                                style="color: --mdui-color-primary;"></mdui-icon>
+                                        </div>
+                                        <div class="table-cell">
+                                            <h4 style="padding-top: 0;">Airplane mode</h4>
+                                            Disabled
+                                        </div>
+                                    </mdui-card>
+                                </div>
+                            </center>
+                        </div>
+                    </s-carousel>
                 </center>
+                <div style="position: fixed;bottom: 1em;justify-content: center;left:0;width: 100%;">
+                    <center>
+                        <mdui-button-icon icon="edit--outlined"></mdui-button-icon>
+                        <mdui-button-icon icon="settings--outlined"></mdui-button-icon>
+                        <mdui-button-icon icon="power_settings_new" class="close"></mdui-button-icon>
+                    </center>
+                </div>
+
             </div>
-            <div style="display: flex;align-items: center;bottom: 1em;justify-content: center;">
-                <mdui-button-icon icon="settings"></mdui-button-icon>
-                <mdui-button-icon icon="close" class="close"></mdui-button-icon>
             </div>
 
         </mdui-dialog>
@@ -165,10 +287,11 @@
                 <output id="clock" style="vertical-align:middle;"></output>
             </nav>
             <nav class="topright">
-                <mdui-icon name="no_sim" style="color: --mdui-color-primary;font-size: 1.4em;"></mdui-icon>
+                <mdui-icon name="network_wifi_3_bar" style="color: --mdui-color-primary;font-size: 1.4em;"></mdui-icon>
                 &nbsp;&nbsp;
                 <mdui-icon name="notifications_active"
                     style="color: --mdui-color-primary;font-size: 1.4em;"></mdui-icon>
+
             </nav>
 
         </nav>
@@ -183,9 +306,9 @@
             closeButton2.addEventListener("click", () => dialog2.open = false);
         </script>
     </center>
-
+    <!--========================================================-->
+    <!--========================================================-->
     <div class="nav">
-        <!--========================================================-->
         <mdui-dialog class="example-dialog">
             <center>
                 <h2>电源选项</h2>
