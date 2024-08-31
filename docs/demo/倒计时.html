@@ -1,66 +1,270 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="zh-CN" class="mdui-theme-dark" id="html">
+
 <head>
-<meta charset="utf-8">
-<title>中考倒计时</title>
-<style>
-*{ margin:0; padding:0; list-style:none;}
-body{ font-size:18px; text-align:center;font-family: 'HarmonyOS Sans SC';}
-.time{ height:30px; padding:200px;}
-</style>
-</head>
-<body style="background-color: black;">
+  <meta charset="utf-8">
+
+  <link rel="shortcut icon" href="../image/logonormal.png" type="image/x-icon">
+  <title>FlyGuesWeb - 模拟Android更新</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+  <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+  <!-- Filled -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Outlined -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <!-- Rounded -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- Sharp -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <!-- Two Tone -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/font.css">
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <div class="time" style="font-size: 8em;color:yellow;font-family: 'Product Sans Bold';">
-        <!--span id="t_d">00天</span-->
+  <link rel="stylesheet" type="text/css" href="../css/mduiColor.css">
+
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: row;
+      font-size: 63%;
+      font-family: 'HarmonyOS Sans';
+
+    }
+
+    mdui-card.title {
+      padding: 3rem;
+      border-radius: 2rem;
+
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(var(--mdui-color-inverse-on-surface));
+
+      width: 60%;
+      height: 70vh;
+      max-height: 300px;
+      max-width: 720px;
+    }
+
+    mdui-card.text {
+      padding: 1rem;
+    }
+
+    nav.bottom {
+      position: fixed;
+      bottom: 0.5em;
+      right: 2em;
+      display: flex;
+    }
+
+    nav.topright {
+      position: fixed;
+      top: 1em;
+      right: 2em;
+      display: flex;
+      align-items: center;
+      font-size: smaller;
+    }
+
+    nav.topleft {
+      position: fixed;
+      top: 0.5em;
+      left: 2em;
+      font-family: 'Product Sans';
+      font-size: 1em;
+    }
+
+    mdui-menu {
+      border-radius: 2em;
+      padding: 2em;
+    }
+
+    mdui-switch {
+      position: fixed;
+      right: 4em;
+    }
+
+    div.time {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: xxx-large;
+    }
+  </style>
+  <script>
+    var Theme = html.getAttribute('class');
+    console.log(Theme);
+  </script>
+</head>
+
+<body class="mdui-prose">
+  <mdui-card class="title">
+    <div class="time">
+      <h1
+        style="display: flex;align-items: center;font-family: 'Product Sans';font-weight: bold;justify-content: center;color: rgb(var(--mdui-color-primary)) !important;margin-bottom: 0.4em;">
         <span id="t_h">00时</span>
         <span id="t_m">00分</span>
         <span id="t_s">00秒</span>
         <span id="daoqi"></span>
-        
+      </h1>
+
+      <center>
+        <h4 style="font-size: 0.4em;">
+          距离开学当日12:00剩余时间
+        </h4>
+      </center>
     </div>
-    <p style="
-    font-size:30px;
-    color: white;
-  ">
-    距离放假当日8:00剩余时间
-  </p>
-  <p>
-    &nbsp;
-  </p>
-    <p>
-    &nbsp;
-  </p>
-    <p>
-    &nbsp;
-  </p>
-  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  </mdui-card>
 
-      <p style="
-    font-size:25px;
-    color: white;
-  ">
-  </p>
-<script>
-   function GetRTime(){
-       var EndTime= new Date('2024/7/22 24:00:00');//!!这里设置你预定的时间
-       var NowTime = new Date();
-       var t =EndTime.getTime() - NowTime.getTime();
-       var d=Math.floor(t/1000/60/60/24);
-       var h=Math.floor(t/1000/60/60%24);
-       var m=Math.floor(t/1000/60%60);
-       var s=Math.floor(t/1000%60);
 
-       //document.getElementById("t_d").innerHTML = d + "day";
-       document.getElementById("t_h").innerHTML = h + ":";
-       document.getElementById("t_m").innerHTML = m + ":";
-       document.getElementById("t_s").innerHTML = s ;
-       if(s=="0" && m=="0" && h=="0" && d=="0"){
-       document.getElementById("daoqi").innerHTML ="中考时间已到";//这里设置到期时间后的提醒内容
-       document.getElementById("daoqi").style.color="red";}
-}
-   setInterval(GetRTime,0);
-</script>
+  <nav class="topleft">
+    <output id="clock" style="vertical-align:middle;"></output>
+  </nav>
+
+
+  <nav class="bottom">
+    <mdui-snackbar class="example-snackbar" auto-close-delay="1500">
+      已切换模式，若无反应请再试一次。
+    </mdui-snackbar>
+
+    <mdui-button-icon icon="light_mode" onclick="changeTheme()"></mdui-button-icon>
+    <script>
+      var Theme = html.getAttribute('class');
+      const snackbar = document.querySelector(".example-snackbar");
+      const openButton2 = snackbar.nextElementSibling;
+
+      if (Theme == "mdui-theme-auto") {
+        openButton2.addEventListener("click", () => snackbar.open = true);
+
+      }
+
+      function changeTheme() {
+        var Theme = html.getAttribute('class');
+
+
+        switch (Theme) {
+          case "mdui-theme-light":
+            html.setAttribute('class', 'mdui-theme-dark');
+            openButton2.removeEventListener
+            break;
+          case "mdui-theme-dark":
+            html.setAttribute('class', 'mdui-theme-light');
+            openButton2.removeEventListener
+            break;
+          case "mdui-theme-auto":
+            html.setAttribute('class', 'mdui-theme-light');
+            openButton2.removeEventListener
+
+        }
+      }
+    </script>
+
+
+    <mdui-dialog close-on-overlay-click headline="启用无障碍模式" class="example-action">
+      <mdui-icon slot="icon" name="accessibility--outlined"></mdui-icon>
+      在打开无障碍模式后，为保障可读性，显示的页面可能会出现显示错位。
+      <mdui-button slot="action" variant="text">取消</mdui-button>
+      <mdui-button slot="action" variant="filled">开启</mdui-button>
+    </mdui-dialog>
+
+    <mdui-button-icon icon="accessibility--outlined"></mdui-button-icon>
+
+    <script>
+      const dialog = document.querySelector(".example-action");
+      const openButton = dialog.nextElementSibling;
+
+      openButton.addEventListener("click", () => dialog.open = true);
+
+      const closeButton = dialog.querySelector("mdui-button");
+
+      openButton.addEventListener("click", () => dialog.open = true);
+      closeButton.addEventListener("click", () => dialog.open = false);
+    </script>
+
+    <mdui-button-icon icon="fullscreen" onclick="handleFullScreen()"></mdui-button-icon>
+  </nav>
+
+
 </body>
+
+<script>
+  //定义一个变量进行判断，默认false 非全屏状态
+  var exitFullscreen = false
+  // 全屏事件
+  function handleFullScreen() {
+    var element = document.documentElement;
+    if (this.fullscreen) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    } else {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen();
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if (element.msRequestFullscreen) {
+        // IE11
+        element.msRequestFullscreen();
+      }
+    }
+  }
+  window.onresize = function () {
+    var isFull = !!(document.webkitIsFullScreen || document.mozFullScreen ||
+      document.msFullscreenElement || document.fullscreenElement
+    );//!document.webkitIsFullScreen都为true。因此用!!
+    if (isFull == false) {
+      $("#exitFullScreen").css("display", "none");
+      $("#fullScreen").css("display", "");
+    } else {
+      $("#exitFullScreen").css("display", "");
+      $("#fullScreen").css("display", "none");
+    }
+  }
+
+  function showTime() {
+    var t = new Date();
+    var h = t.getHours();
+    var m = t.getMinutes();
+    var s = t.getSeconds();
+    var showTime = ((h < 10) ? "0" : "") + h + ((m < 10) ? ":0" : ":") + m
+    document.getElementById("clock").value = showTime;
+  }
+
+  setInterval("showTime()", 1000);
+</script>
+<script>
+  function GetRTime() {
+    var EndTime = new Date('2024/9/1 12:00:00');//!!这里设置你预定的时间
+    var NowTime = new Date();
+    var t = EndTime.getTime() - NowTime.getTime();
+    var d = Math.floor(t / 1000 / 60 / 60 / 24);
+    var h = Math.floor(t / 1000 / 60 / 60 % 24);
+    var m = Math.floor(t / 1000 / 60 % 60);
+    var s = Math.floor(t / 1000 % 60);
+
+    //document.getElementById("t_d").innerHTML = d + "day";
+    document.getElementById("t_h").innerHTML = ((h < 10) ? "0" : "") + h + ":";
+    document.getElementById("t_m").innerHTML = ((m < 10) ? "0" : "") + m + ":";
+    document.getElementById("t_s").innerHTML = ((s < 10) ? "0" : "") + s;
+    if (s == "0" && m == "0" && h == "0" && d == "0") {
+      document.getElementById("daoqi").innerHTML = "时间已到";//这里设置到期时间后的提醒内容
+      document.getElementById("daoqi").style.color = "red";
+    }
+  }
+  setInterval(GetRTime, 0);
+</script>
+
 </html>
