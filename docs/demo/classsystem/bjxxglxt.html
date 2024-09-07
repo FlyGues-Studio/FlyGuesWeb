@@ -70,7 +70,7 @@
             <mdui-navigation-rail-item icon="apps">应用</mdui-navigation-rail-item>
         </mdui-navigation-rail>
 
-        <mdui-list style="margin-left: 80px;background-color: aliceblue;">
+        <mdui-list style="margin-left: 80px;background-color: rgb(var(--mdui-color-surface-container));">
             <center>
                 <s-search size="small" style="width: 80%;text-align: center;margin: 1em;">
                     <s-icon-button slot="start">
@@ -84,12 +84,60 @@
                 <mdui-list-item>
                     <mdui-avatar slot="icon" icon="drive_folder_upload--rounded"></mdui-avatar>
                     文件传输助手
-                    <span slot="description">Supporting text</span>
+                    <span slot="description">-</span>
+                </mdui-list-item>
+            </mdui-list>
+            <mdui-list>
+                <mdui-list-item>
+                    <mdui-avatar slot="icon"
+                        src="https://qlogo2.store.qq.com/qzone/2037432889/2037432889/100?1722233080"></mdui-avatar>
+                    FlyGues
+                    <span slot="description">-</span>
                 </mdui-list-item>
             </mdui-list>
         </mdui-list>
 
-        <mdui-layout-main class="example-layout-main" style="min-height: 300px">Main</mdui-layout-main>
+        <mdui-layout-main class="example-layout-main" style="min-height: 300px">
+            <mdui-top-app-bar style="position: sticky;">
+                <mdui-button-icon icon="chat--outlined" href="../file.html"></mdui-button-icon>
+                <mdui-top-app-bar-title><small>FlyGues</small></mdui-top-app-bar-title>
+                <div style="flex-grow: 1"></div>
+
+
+                <mdui-dialog close-on-overlay-click headline="在 Web 打开语音聊天" class="example-action">
+                    <mdui-icon slot="icon" name="call--outlined"></mdui-icon>
+                    确认与好友开启语音聊天。
+                    <mdui-button slot="action" variant="text">取消</mdui-button>
+                    <mdui-button slot="action" variant="filled">开启</mdui-button>
+                </mdui-dialog>
+
+                <mdui-button-icon icon="call"></mdui-button-icon>
+
+                <script>
+                    const dialog = document.querySelector(".example-action");
+                    const openButton = dialog.nextElementSibling;
+
+                    openButton.addEventListener("click", () => dialog.open = true);
+
+                    const closeButton = dialog.querySelector("mdui-button");
+
+                    openButton.addEventListener("click", () => dialog.open = true);
+                    closeButton.addEventListener("click", () => dialog.open = false);
+                </script>
+
+
+                <mdui-dropdown>
+                    <mdui-button-icon slot="trigger" icon="more_vert"></mdui-button-icon>
+                    <mdui-menu>
+                        <mdui-menu-item icon="report--outlined"
+                            href="https://txc.qq.com/products/667423">举报</mdui-menu-item>
+                        <mdui-menu-item icon="people--outlined"
+                            href="https://github.com/FlyGues2889/FlyGuesWeb">查看个人信息</mdui-menu-item>
+                    </mdui-menu>
+                </mdui-dropdown>
+            </mdui-top-app-bar>
+
+        </mdui-layout-main>
     </mdui-layout>
 </body>
 
