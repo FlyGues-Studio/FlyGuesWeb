@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="mdui-theme-auto">
+<html lang="zh-CN" class="mdui-theme-auto"
+    style="background-color: rgb(var(--mdui-color-surface-container)) !important;">
 
 <head>
     <meta charset="utf-8">
@@ -21,6 +22,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/mduiColor.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
 
 
     <style>
@@ -40,16 +42,19 @@
 
 <body>
     <div style="position: relative">
-        <mdui-navigation-rail contained>
-            <mdui-navigation-rail-item icon="home--filded" href="index.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="apps--filled" href="app.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="folder--filled" href="file.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="info--filled" href="info.html"></mdui-navigation-rail-item>
-        </mdui-navigation-rail>
-        <div style="height:95vh;overflow: auto;">
-            <mdui-card clickable class="title" style="width: 100%">
+        <div style="position: relative">
+            <mdui-navigation-rail contained value="home">
+                <mdui-navigation-rail-item icon="home--filded" href="index.html" value="home">主页</mdui-navigation-rail-item>
+                <mdui-navigation-rail-item icon="apps--outlined" href="app.html" value="app">应用工具</mdui-navigation-rail-item>
+                <mdui-navigation-rail-item icon="folder--outlined" href="file.html"
+                    value="file">归档文件</mdui-navigation-rail-item>
+                <mdui-navigation-rail-item icon="info--outlined" href="info.html" value="info" slot="bottom">关于</mdui-navigation-rail-item>
+            </mdui-navigation-rail>
+    
+            <div class="main">
+                <mdui-card disabled class="title" style="width: 100%" variant="outlined">
                 <div class="mdui-prose">
-                    <h1 style="text-align: center;font-family: 'Product Sans';"><b>FlyGuesWeb</b></h1>
+                    <h1 style="text-align: center;font-family: 'Product Sans Bold';"><b>FlyGuesWeb</b></h1>
                     <p style="text-align: center;">FlyGuesWeb库是个人课业之余制作的demo源码存放的地方。</p>
                 </div>
             </mdui-card>
@@ -65,11 +70,6 @@
                             归档文件和项目
                             <mdui-icon slot="icon" name="folder--outlined"></mdui-icon>
                         </mdui-button>
-                        <h4>最近更新</h4>
-                        <mdui-button variant="text" href="file.html">
-                            项目：柳州市第十五中学总部
-                            <mdui-icon slot="icon" name="folder--outlined"></mdui-icon>
-                        </mdui-button>
                     </div>
                 </td>
                 <td style="width: 50%;margin-left: 1em;">
@@ -83,11 +83,6 @@
                             访客数：<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>
                             <mdui-icon slot="icon" name="people--outlined"></mdui-icon>
                         </mdui-button>
-                        <h4>页面数据</h4>
-                        <mdui-button variant="text" href="app.html">
-                            关于 FlyGuesWeb
-                            <mdui-icon slot="icon" name="info--outlined"></mdui-icon>
-                        </mdui-button>
                     </div>
                 </td>
             </table>
@@ -95,5 +90,6 @@
         </div>
     </div>
 </body>
+
 
 </html>

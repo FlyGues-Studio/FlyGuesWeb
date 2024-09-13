@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="mdui-theme-auto">
+<html lang="zh-CN" class="mdui-theme-auto"
+    style="background-color: rgb(var(--mdui-color-surface-container)) !important;">
 
 <head>
     <meta charset="utf-8">
@@ -21,6 +22,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/mduiColor.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
 
     <style>
     </style>
@@ -28,15 +30,17 @@
 
 <body>
     <div style="position: relative">
-        <mdui-navigation-rail contained>
-            <mdui-navigation-rail-item icon="home--filded" href="index.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="apps--filled" href="app.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="folder--filled" href="file.html"></mdui-navigation-rail-item>
-            <mdui-navigation-rail-item icon="info--filled" href="info.html"></mdui-navigation-rail-item>
-        </mdui-navigation-rail>
-
-        <div style="height:95vh;overflow: auto">
-
+        <div style="position: relative">
+            <mdui-navigation-rail contained value="info">
+                <mdui-navigation-rail-item icon="home--outlined" href="index.html" value="home">主页</mdui-navigation-rail-item>
+                <mdui-navigation-rail-item icon="apps--outlined" href="app.html" value="app">应用工具</mdui-navigation-rail-item>
+                <mdui-navigation-rail-item icon="folder--outlined" href="file.html"
+                    value="file">归档文件</mdui-navigation-rail-item>
+                <mdui-navigation-rail-item icon="info--filled" href="info.html" value="info" slot="bottom">关于</mdui-navigation-rail-item>
+            </mdui-navigation-rail>
+    
+            <div class="main">
+    
             <mdui-top-app-bar style="position: sticky;">
 
                 <mdui-top-app-bar-title>关于此网站</mdui-top-app-bar-title>
@@ -60,9 +64,6 @@
                     variant="outlined">GitHub存储库</mdui-button>&nbsp;&nbsp;
                 <mdui-button icon="report--outlined" href="https://txc.qq.com/products/667423">举报和反馈</mdui-button>
                 <br>
-                <p style="display: flex;align-items: center;margin-top: 4rem;">
-                    <mdui-icon name="update"></mdui-icon>更新记录
-                </p>
             </div>
         </div>
     </div>

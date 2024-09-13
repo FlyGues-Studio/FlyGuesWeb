@@ -19,8 +19,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <!-- Two Tone -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../css/font.css">
-    <link rel="stylesheet" type="text/css" href="../../css/mduiColor.css">
+    <link rel="stylesheet" type="text/css" href="../css/font.css">
+    <link rel="stylesheet" type="text/css" href="../css/mduiColor.css">
 
 
     <style>
@@ -43,6 +43,10 @@
     </style>
 
     <script src="https://unpkg.com/sober/dist/sober.min.js"></script>
+    <script>
+        var Theme = html.getAttribute('class');
+        console.log(Theme);
+    </script>
 </head>
 
 
@@ -61,6 +65,8 @@
                     <mdui-button icon="edit">编辑</mdui-button>&nbsp;
                     <mdui-button-icon variant="standard" icon="logout"></mdui-button-icon>
                     <mdui-button-icon variant="standard" icon="cached"></mdui-button-icon>
+
+                    
                 </mdui-menu>
             </mdui-dropdown>
             <mdui-button-icon icon="settings--outlined" slot="bottom"></mdui-button-icon>
@@ -126,15 +132,33 @@
                 </script>
 
 
-                <mdui-dropdown>
-                    <mdui-button-icon slot="trigger" icon="more_vert"></mdui-button-icon>
-                    <mdui-menu>
-                        <mdui-menu-item icon="report--outlined"
-                            href="https://txc.qq.com/products/667423">举报</mdui-menu-item>
-                        <mdui-menu-item icon="people--outlined"
-                            href="https://github.com/FlyGues2889/FlyGuesWeb">查看个人信息</mdui-menu-item>
-                    </mdui-menu>
-                </mdui-dropdown>
+                <mdui-button-icon icon="light_mode--outlined" onclick="changeTheme()"></mdui-button-icon>
+                <script>
+                    var Theme = html.getAttribute('class');
+                    const snackbar = document.querySelector(".example-snackbar");
+                    const openButton2 = snackbar.nextElementSibling;
+
+                    if (Theme == "mdui-theme-auto") {
+                        openButton2.addEventListener("click", () => snackbar.open = true);
+
+                    }
+
+                    function changeTheme() {
+                        var Theme = html.getAttribute('class');
+
+
+                        switch (Theme) {
+                            case "mdui-theme-light":
+                                html.setAttribute('class', 'mdui-theme-dark');
+                                break;
+                            case "mdui-theme-dark":
+                                html.setAttribute('class', 'mdui-theme-light');
+                                break;
+                            case "mdui-theme-auto":
+                                html.setAttribute('class', 'mdui-theme-light');
+                        }
+                    }
+                </script>
             </mdui-top-app-bar>
 
         </mdui-layout-main>

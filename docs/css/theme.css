@@ -1,0 +1,12 @@
+div.main {
+    height: auto;
+    margin: 1em;
+    border-radius: 1em;
+    background-color: rgb(var(--mdui-color-on-primary));
+    padding: 1em;
+}
+mdui-navigation-rail{
+    background-color: rgb(var(--mdui-color-surface-container));
+    position: fixed;
+    margin-left: 0.8em;
+}
