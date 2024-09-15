@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="mdui-theme-auto">
+<html lang="zh-CN" class="mdui-theme-auto"
+	style="background-color: rgb(var(--mdui-color-surface-container)) !important;">
 
 <head>
 	<meta charset="utf-8">
@@ -21,167 +22,223 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/font.css">
 	<link rel="stylesheet" type="text/css" href="../css/mduiColor.css">
+	<link rel="stylesheet" type="text/css" href="../css/theme.css">
 
 
 	<style>
+		mdui-card.list {
+			padding: 2rem;
+			width: 80%;
+			border-radius: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		h4.text {
+			padding: 1em;
+			padding-left: 0;
+			font-weight: bold;
+		}
+
+		img.show {
+			width: 90%;
+		}
 	</style>
 </head>
 
 <body>
-	<div style="position: relative">
+	<div class="normalView">
 		<mdui-navigation-rail contained>
-			<mdui-navigation-rail-item icon="home--filded" href="../index.html"></mdui-navigation-rail-item>
-			<mdui-navigation-rail-item icon="apps--filled" href="../app.html"></mdui-navigation-rail-item>
-			<mdui-navigation-rail-item icon="folder--filled" href="../file.html"></mdui-navigation-rail-item>
-			<mdui-navigation-rail-item icon="info--filled" href="../info.html"></mdui-navigation-rail-item>
+			<mdui-navigation-rail-item icon="home--outlined" href="../index.html"
+				value="home">主页</mdui-navigation-rail-item>
+			<mdui-navigation-rail-item icon="apps--outlined" href="../app.html"
+				value="app">应用工具</mdui-navigation-rail-item>
+			<mdui-navigation-rail-item icon="folder--outlined" href="../file.html"
+				value="file">归档文件</mdui-navigation-rail-item>
+			<mdui-navigation-rail-item icon="info--outlined" href="../info.html" value="info"
+				slot="bottom">关于</mdui-navigation-rail-item>
+
+			<mdui-fab icon="refresh" slot="bottom" href="RandomMem.html"></mdui-fab>
 		</mdui-navigation-rail>
 
-		<div style="height:95vh;overflow: auto">
-			<div>
-				<mdui-top-app-bar style="position: sticky;">
-					<mdui-button-icon icon="arrow_back" href="../app.html"></mdui-button-icon>
-					<mdui-top-app-bar-title>随机数抽取器</mdui-top-app-bar-title>
-					<div style="flex-grow: 1"></div>
+		<div class="main">
+
+			<mdui-top-app-bar style="position: sticky;">
+				<mdui-top-app-bar-title>随机数抽取器</mdui-top-app-bar-title>
+				<mdui-dialog close-on-overlay-click headline="使用指南" class="example-action">
+					<mdui-icon slot="icon" name="help_outline--outlined"></mdui-icon>
+					<div>
+						<li>点击 <b>“开始抽取”按钮/回车键/空格键</b> 开始抽取数字。</li><br>
+						<li>在 <b>“设置”按钮</b> 设置抽取数字范围、抽取时长、是否重复和是否手动抽取。</li>
+						<mdui-divider style="margin: 1em;"></mdui-divider>
+						<small>
+							随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数。人的主观意念认为数字范围的最小端和最大端抽取到的概率更低，实际上它们和中间段数字出现的概率相同。<br><br>
+							该页面作为一个通用的抽号在线工具，供需要的用户使用。抽号工具默认开启了去重处理，即在一个周期内不会抽取到重复的数字。例如抽取1-9，在第10次抽取前不会出现重复数字。关闭“周期内不重复”选项，可取消此限制。
+						</small>
+					</div>
+					<mdui-button slot="action">了解</mdui-button>
+				</mdui-dialog>
+
+				<mdui-button-icon icon="help_outline--outlined"></mdui-button-icon>
+
+				<script>
+					const dialog = document.querySelector(".example-action");
+					const openButton = dialog.nextElementSibling;
+
+					openButton.addEventListener("click", () => dialog.open = true);
+
+					const closeButton = dialog.querySelector("mdui-button");
+
+					openButton.addEventListener("click", () => dialog.open = true);
+					closeButton.addEventListener("click", () => dialog.open = false);
+				</script>
 
 
-					<mdui-dialog close-on-overlay-click headline="范围不符合要求" class="example-action">
-						<mdui-icon slot="icon" name="warning_amber--outlined"></mdui-icon>
-						输入有误！<br>
-						格式如：1-100，范围必须是0至999999之间的整数。
-						<mdui-button slot="action" variant="filled">重试</mdui-button>
-					</mdui-dialog>
+				<mdui-dropdown>
+					<style>
+						mdui-menu {
+							border-radius: 1em;
+							padding: 0.5em;
+						}
+					</style>
+					<mdui-button-icon slot="trigger" icon="more_vert"></mdui-button-icon>
+					<mdui-menu>
+						<mdui-menu-item icon="report--outlined"
+							href="https://txc.qq.com/products/667423">举报</mdui-menu-item>
+						<mdui-menu-item icon="edit--outlined" href="https://github.com/FlyGues2889/FlyGuesWeb">在 GitHub
+							上编辑</mdui-menu-item>
+					</mdui-menu>
+				</mdui-dropdown>
+
+			</mdui-top-app-bar>
 
 
-					<script>
-						const dialog = document.querySelector(".example-action");
-						const openButton = dialog.nextElementSibling;
-
-						openButton.addEventListener("click", () => dialog.open = true);
-
-						const closeButton = dialog.querySelector("mdui-button");
-
-						openButton.addEventListener("click", () => dialog.open = true);
-						closeButton.addEventListener("click", () => dialog.open = false);
-					</script>
-
-
-					<mdui-dropdown>
-						<mdui-button-icon slot="trigger" icon="more_vert"></mdui-button-icon>
-						<mdui-menu>
-							<mdui-menu-item icon="report--outlined"
-								href="https://txc.qq.com/products/667423">举报</mdui-menu-item>
-							<mdui-menu-item icon="edit--outlined" href="https://github.com/FlyGues2889/FlyGuesWeb">在
-								GitHub 上编辑</mdui-menu-item>
-						</mdui-menu>
-					</mdui-dropdown>
-				</mdui-top-app-bar>
-
-				<style>
-					mdui-card.list {
-						padding: 2rem;
+			<div class="mdui-prose" style="margin: 1rem;width: auto;margin-left:4em;margin-right:4em">
+				<center>
+					<mdui-card style="
 						width: 80%;
 						border-radius: 2rem;
 						margin-bottom: 1rem;
-					}
-
-					h4.text {
-						padding: 1em;
-						padding-left: 0;
-						font-weight: bold;
-					}
-
-					img.show {
-						width: 90%;
-					}
-				</style>
-				<div class="mdui-prose" style="margin: 1rem;width: auto;margin-left:4em;margin-right:4em">
-					<center>
-						<mdui-card style="
-				width: 60%;
-				border-radius: 2rem;
-				margin-bottom: 1rem;
-				">
-							<div id="out"
-								style="font-family: 'Product Sans Bold';font-size: 8em;">-</div>
-							<mdui-divider style="margin-left: 1em;margin-right: 1em;"></mdui-divider>
-							<div id="notes">
-								<center style="margin: 1em;color: grey;">
-									<mdui-icon name="history"></mdui-icon><br>
-									<span><small>开始抽取以显示记录</small></span>
-								</center>
-							</div>
-							<mdui-button id="btn" onclick="getNum()" variant="filled"
-								icon="play_arrow--filled">开始抽取</mdui-button>
-							<mdui-button-icon variant="filled" icon="fullscreen" disabled></mdui-button-icon>
-						</mdui-card>
-					</center>
+						padding-bottom: 1em;
+						">
+						<div id="out" style="font-family: 'Product Sans Bold';font-size: 8em;color: lightgrey;">-</div>
+						<mdui-button id="btn" onclick="getNum()" variant="filled"
+							icon="play_arrow--filled">开始抽取</mdui-button>
+					</mdui-card>
+				</center>
 
 
 
-					<mdui-dialog close-on-overlay-click class="example-header">
-						<mdui-top-app-bar slot="header">
-							<mdui-top-app-bar-title>&nbsp;&nbsp;抽取器设置</mdui-top-app-bar-title>
-							<mdui-button-icon icon="close"></mdui-button-icon>
+				<mdui-dialog close-on-overlay-click class="example-header">
+					<mdui-top-app-bar slot="header">
+						<mdui-top-app-bar-title>&nbsp;&nbsp;抽取器设置</mdui-top-app-bar-title>
+						<mdui-button-icon icon="close"></mdui-button-icon>
 
-						</mdui-top-app-bar>
-						<div style="width: 100%;overflow: hidden;">
-							<br>
-							<mdui-text-field variant="outlined" label="抽取数字范围" id="num"
-								value="1-55"></mdui-text-field><br /><br>
+					</mdui-top-app-bar>
+					<div style="width: 100%;overflow: hidden;padding-top: 1em;">
+						<mdui-text-field variant="outlined" label="抽取数字范围" id="num"
+							value="1-55"></mdui-text-field><br /><br>
 
-							时延：<span id="time">0.70</span>秒<br>
-							<span id="timeout">
-								<mdui-slider nolabel step="250" max="5000" min="250" value="700" class="GETTIME"
-									onchange="tm=false;settime(this.value,0);storage(0)" id="settime"></mdui-slider>
-							</span><br>
+						时延：<span id="time">0.70</span>秒<br>
+						<span id="timeout">
+							<mdui-slider nolabel step="250" max="5000" min="250" value="700" class="GETTIME"
+								onchange="tm=false;settime(this.value,0);storage(0)" id="settime"></mdui-slider>
+						</span><br>
 
-							<label style="display: flex;align-items: center;">
-								<mdui-switch class="manual" id="manual" onclick="manuald();storage(0)">
-									<mdui-icon slot="checked-icon" name=""></mdui-icon>
-								</mdui-switch>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是否手动（点击按钮/回车/空格键停止）
-							</label><br>
+						<label style="display: flex;align-items: center;">
+							<mdui-switch class="manual" id="manual" onclick="manuald();storage(0)">
+								<mdui-icon slot="checked-icon" name=""></mdui-icon>
+							</mdui-switch>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是否手动（点击按钮/回车/空格键停止）
+						</label><br>
 
-							<div style="display: none;">
-								数字颜色（滚动）
-								<input type="color" value="#CFCFCF" id="tc"
-									onchange="$('out').style.color=this.value;storage(0)"
-									style="border-radius: 0px;"><br>
+						<div style="display: none;">
+							数字颜色（滚动）
+							<input type="color" value="#CFCFCF" id="tc"
+								onchange="$('out').style.color=this.value;storage(0)" style="border-radius: 0px;"><br>
 
-								数字颜色（抽中）<input type="color" value="#002FA7" id="tsc"
-									onchange="$('out').style.color=this.value;storage(0)"
-									style="border: 0px;"><br><br />
-							</div>
-
-							<div style="display: flex;align-items: center;">
-								<mdui-switch class="toggle" id="repeat" type="checkbox" value="1" checked=""
-									onchange="if(this.checked)add=[];storage(0)"
-									onclick="if(c){alert('运行中不可设置！');return false}"
-									style="margin: 0;margin-right: 1em;">
-									<mdui-icon slot="checked-icon" name=""></mdui-icon>
-								</mdui-switch>
-								<label for="repeat"></label>
-								&nbsp;周期内不重复
-							</div>
+							数字颜色（抽中）<input type="color" value="#0061a4" id="tsc"
+								onchange="$('out').style.color=this.value;storage(0)" style="border: 0px;"><br><br />
 						</div>
-					</mdui-dialog>
 
-					<center>
-						<mdui-button icon="settings" variant="text">设置</mdui-button>
-					</center>
+						<div style="display: flex;align-items: center;">
+							<mdui-switch class="toggle" id="repeat" type="checkbox" value="1" checked=""
+								onchange="if(this.checked)add=[];storage(0)"
+								onclick="if(c){alert('运行中不可设置！');return false}" style="margin: 0;margin-right: 1em;">
+								<mdui-icon slot="checked-icon" name=""></mdui-icon>
+							</mdui-switch>
+							<label for="repeat"></label>
+							&nbsp;周期内不重复
+						</div>
+					</div>
+				</mdui-dialog>
 
-					<script>
-						const dialog2 = document.querySelector(".example-header");
-						const openButton2 = dialog2.nextElementSibling;
-						const closeButton2 = dialog2.querySelector("mdui-button-icon");
+				<center>
+					<mdui-button icon="settings" variant="text">设置</mdui-button>
+					<!-- <mdui-button icon="output--outlined" variant="text" disabled>导出记录</mdui-button> -->
+				</center>
 
-						openButton2.addEventListener("click", () => dialog2.open = true);
-						closeButton2.addEventListener("click", () => dialog2.open = false);
-					</script>
+				<script>
+					const dialog2 = document.querySelector(".example-header");
+					const openButton2 = dialog2.nextElementSibling;
+					const closeButton2 = dialog2.querySelector("mdui-button-icon");
 
-				</div>
+					openButton2.addEventListener("click", () => dialog2.open = true);
+					closeButton2.addEventListener("click", () => dialog2.open = false);
+				</script>
+
+				<center>
+					<mdui-list style="
+					width: 80%;
+					border-radius: 1.6rem;
+					margin-bottom: 1rem;
+					padding-bottom: 1em;
+					background-color: rgb(var(--mdui-color-surface-container));
+					padding-left: 1em;
+					padding-right: 1em;
+					padding-bottom: 8px !important;
+					">
+						<mdui-collapse>
+							<mdui-collapse-item>
+								<mdui-list-item slot="header" icon="history" end-icon="keyboard_arrow_down">
+									抽取记录
+								</mdui-list-item>
+								<div id="notes">
+									<center style="margin: 1em;color: grey;">
+										<span><small>开始抽取以显示记录</small></span>
+									</center>
+								</div>
+							</mdui-collapse-item>
+						</mdui-collapse>
+					</mdui-list>
+				</center>
+
 			</div>
 		</div>
+	</div>
+
+	<mdui-dialog close-on-overlay-click headline="抽取范围不正确" class="example-action3">
+		<mdui-icon slot="icon" name="warning_amber--outlined"></mdui-icon>
+		输入有误，请注意以下规则：<br><br>
+		<li>范围只能是 <b>0至999999之间的整数</b> 。</li>
+		<li>输入格式为 <b>[最小整数] - [最大整数]</b> ，例如 1-100。</li><br>
+		<mdui-button slot="action">确定</mdui-button>
+	</mdui-dialog>
+
+	<mdui-button-icon icon="help_outline--outlined" style="display: none;"></mdui-button-icon>
+
+	<script>
+		const dialog3 = document.querySelector(".example-action3");
+		const openButton3 = dialog3.nextElementSibling;
+
+		openButton3.addEventListener("click", () => dialog3.open = true);
+
+		const closeButton3 = dialog3.querySelector("mdui-button");
+
+		openButton3.addEventListener("click", () => dialog3.open = true);
+		closeButton3.addEventListener("click", () => dialog3.open = false);
+	</script>
+
+
 </body>
 
 <script>
@@ -222,7 +279,7 @@
 			sessionStorage.setItem('randomIn', nr);
 			add = [];
 		}
-		if (!/^\d{1,6}-\d{1,6}$/.test(nr)) return dialog.open = true;
+		if (!/^\d{1,6}-\d{1,6}$/.test(nr)) return dialog3.open = true;
 		arr = nr.split("-");
 		a = 0, b = 0;
 		var in0 = Number(arr[0]), in1 = Number(arr[1]);
@@ -247,7 +304,7 @@
 			add = [];
 			window.removeEventListener("devicemotion", motionEventHandler, false);
 			x = y = z = lastX = lastY = lastZ = 0;
-			out.style.color = 'grey';
+			out.style.color = '#0061a4';
 			out.innerHTML = '抽取已完成';
 			return;
 		}

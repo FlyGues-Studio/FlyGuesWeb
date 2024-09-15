@@ -10,18 +10,21 @@ div.normalView {
 div.main {
     height: 100%;
     overflow-y: auto;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     box-sizing: border-box;
     margin: 1em;
     border-radius: 1em;
-    background-color: rgb(var(--mdui-color-on-primary));
+    background-color: rgb(var(--mdui-color-surface));
     padding: 1em;
+    padding-top: 0;
 }
 
 mdui-navigation-rail {
     background-color: rgb(var(--mdui-color-surface-container));
     position: fixed;
-    margin-left: 0.8em;
+    margin-left: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 mdui-navigation-bar {
