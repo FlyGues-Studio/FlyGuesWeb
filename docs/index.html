@@ -41,20 +41,68 @@
 </head>
 
 <body>
-    <div style="position: relative">
-        <div style="position: relative">
-            <mdui-navigation-rail contained value="home">
-                <mdui-navigation-rail-item icon="home--filded" href="index.html" value="home">主页</mdui-navigation-rail-item>
-                <mdui-navigation-rail-item icon="apps--outlined" href="app.html" value="app">应用工具</mdui-navigation-rail-item>
-                <mdui-navigation-rail-item icon="folder--outlined" href="file.html"
-                    value="file">归档文件</mdui-navigation-rail-item>
-                <mdui-navigation-rail-item icon="info--outlined" href="info.html" value="info" slot="bottom">关于</mdui-navigation-rail-item>
-            </mdui-navigation-rail>
-    
-            <div class="main">
-                <mdui-card disabled class="title" style="width: 100%" variant="outlined">
+    <div class="normalView">
+        <mdui-navigation-rail contained value="home">
+            <mdui-navigation-rail-item icon="home--filded" href="index.html" value="home">主页</mdui-navigation-rail-item>
+            <mdui-navigation-rail-item icon="apps--outlined" href="app.html"
+                value="app">应用工具</mdui-navigation-rail-item>
+            <mdui-navigation-rail-item icon="folder--outlined" href="file.html"
+                value="file">归档文件</mdui-navigation-rail-item>
+            <mdui-navigation-rail-item icon="info--outlined" href="info.html" value="info"
+                slot="bottom">关于</mdui-navigation-rail-item>
+        </mdui-navigation-rail>
+
+        <div class="main">
+            <mdui-card disabled class="title" style="width: 100%" variant="outlined">
                 <div class="mdui-prose">
-                    <h1 style="text-align: center;font-family: 'Product Sans Bold';"><b>FlyGuesWeb</b></h1>
+                    <h1 style="text-align: center;font-family: 'Product Sans Bold'!important;">FlyGuesWeb</h1>
+                    <p style="text-align: center;">FlyGuesWeb库是个人课业之余制作的demo源码存放的地方。</p>
+                </div>
+            </mdui-card>
+            <table style="width: 100%;padding: 0;" cellpadding="0" cellspacing="1">
+                <td style="width: 50%;margin-right: 1em;">
+                    <div class="mdui-prose">
+                        <h4>快速入口</h4>
+                        <mdui-button variant="text" href="app.html">
+                            应用和小工具
+                            <mdui-icon slot="icon" name="apps"></mdui-icon>
+                        </mdui-button>
+                        <mdui-button variant="text" href="file.html">
+                            归档文件和项目
+                            <mdui-icon slot="icon" name="folder--outlined"></mdui-icon>
+                        </mdui-button>
+                    </div>
+                </td>
+                <td style="width: 50%;margin-left: 1em;">
+                    <div class="mdui-prose">
+                        <h4>访问数据</h4>
+                        <mdui-button variant="text" disabled>
+                            浏览数：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>
+                            <mdui-icon slot="icon" name="remove_red_eye--outlined"></mdui-icon>
+                        </mdui-button>
+                        <mdui-button variant="text" disabled>
+                            访客数：<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>
+                            <mdui-icon slot="icon" name="people--outlined"></mdui-icon>
+                        </mdui-button>
+                    </div>
+                </td>
+            </table>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div>
+    </div>
+    <div class="mobileView">
+        <mdui-navigation-bar value="home" style="position: fixed">
+            <mdui-navigation-bar-item icon="home--filded" value="home" href="index.html">主页</mdui-navigation-bar-item>
+            <mdui-navigation-bar-item icon="apps--outlined" value="app" href="app.html">应用工具</mdui-navigation-bar-item>
+            <mdui-navigation-bar-item icon="folder--outlined" value="file" href="file.html">归档文件</mdui-navigation-bar-item>
+            <mdui-navigation-bar-item icon="info--outlined" value="info" href="info.html">关于</mdui-navigation-bar-item>
+        </mdui-navigation-bar>
+
+
+        <div class="main">
+            <mdui-card disabled class="title" style="width: 100%" variant="outlined">
+                <div class="mdui-prose">
+                    <h1 style="text-align: center;font-family: 'Product Sans Bold'!important;">FlyGuesWeb</h1>
                     <p style="text-align: center;">FlyGuesWeb库是个人课业之余制作的demo源码存放的地方。</p>
                 </div>
             </mdui-card>

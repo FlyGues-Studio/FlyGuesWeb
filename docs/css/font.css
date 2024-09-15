@@ -1,10 +1,22 @@
 @font-face {
     font-family: "Prodct Sans";
-    src: url("fonts/Product Sans Regular.ttf");
+    src: url("../fonts/Product Sans Regular.ttf");
 }
 @font-face {
     font-family: "Harmony Sans SC";
-    src: url("../fonts/Harmony_Sans_SC_Regular.ttf");
+    src: url("../fonts/HarmonyOS_Sans_SC_Regular.ttf");
+}
+@font-face {
+    font-family: "Harmony Sans SC M";
+    src: url("../fonts/HarmonyOS_Sans_SC_Medium.ttf");
+}
+@font-face {
+    font-family: "Harmony Sans SC Bold";
+    src: url("../fonts/HarmonyOS_Sans_SC_Bold.ttf");
+}
+@font-face {
+    font-family: "Harmony Sans SC Black";
+    src: url("../fonts/HarmonyOS_Sans_SC_Black.ttf");
 }
 @font-face {
     font-family: "Product Sans Bold";
