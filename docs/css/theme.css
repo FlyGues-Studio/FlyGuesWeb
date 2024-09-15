@@ -7,12 +7,6 @@ div.normalView {
     display: block;
 }
 
-div.mobileView {
-    height: 85vh;
-    display: none;
-    margin: 0 !important;
-}
-
 div.main {
     height: 100%;
     overflow-y: auto;
@@ -40,19 +34,4 @@ b {
 
 mdui-top-app-bar-title {
     font-family: 'Harmony Sans SC Bold';
-}
-
-/*响应式导航栏=========================================*/
-div.mobileView {
-    display: none;
-}
-
-@media(max-width:600px) {
-    div.normalView {
-        display: none;
-    }
-
-    div.mobileView {
-        display: block;
-    }
 }
