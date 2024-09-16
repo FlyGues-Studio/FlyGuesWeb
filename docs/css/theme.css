@@ -23,8 +23,8 @@ mdui-navigation-rail {
     background-color: rgb(var(--mdui-color-surface-container));
     position: fixed;
     margin-left: 0.5em;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 1em !important;
+    margin-top: 1em !important;
 }
 
 mdui-navigation-bar {
