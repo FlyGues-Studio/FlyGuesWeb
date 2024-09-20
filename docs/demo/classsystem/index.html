@@ -66,7 +66,9 @@
             </mdui-dropdown>
             <mdui-button-icon icon="settings--outlined" slot="bottom"></mdui-button-icon>
 
-            <mdui-navigation-rail-item icon="notifications" value="noti">通知</mdui-navigation-rail-item>
+            <mdui-navigation-rail-item icon="notifications" value="noti">
+                <mdui-badge slot="badge">1</mdui-badge>
+                通知</mdui-navigation-rail-item>
             <mdui-navigation-rail-item icon="people_alt--outlined">学生</mdui-navigation-rail-item>
             <mdui-navigation-rail-item icon="apps">应用</mdui-navigation-rail-item>
         </mdui-navigation-rail>
@@ -82,26 +84,25 @@
             </center>
 
             <mdui-list>
-                <mdui-list-item>
-                    <mdui-avatar slot="icon" icon="drive_folder_upload--rounded"></mdui-avatar>
-                    文件传输助手
+                <mdui-list-item active>
+                    <mdui-avatar slot="icon" icon="browser_updated"></mdui-avatar>
+                    更新记录
                     <span slot="description">-</span>
                 </mdui-list-item>
             </mdui-list>
             <mdui-list>
                 <mdui-list-item>
-                    <mdui-avatar slot="icon"
-                        src="https://qlogo2.store.qq.com/qzone/2037432889/2037432889/100?1722233080"></mdui-avatar>
-                    FlyGues
+                    <mdui-avatar slot="icon" icon="person_1--rounded"></mdui-avatar>
+                    吕颖飞（07）
                     <span slot="description">-</span>
                 </mdui-list-item>
             </mdui-list>
         </mdui-list>
 
         <mdui-layout-main class="example-layout-main" style="min-height: 300px">
-            <mdui-top-app-bar style="position: sticky;">
-                <mdui-button-icon icon="chat--outlined" href="../file.html"></mdui-button-icon>
-                <mdui-top-app-bar-title><small>FlyGues</small></mdui-top-app-bar-title>
+            <mdui-top-app-bar style="position: sticky;margin-left: 2em;">
+                <!-- <mdui-button-icon icon="chat--outlined" href="../../file.html"></mdui-button-icon> -->
+                <mdui-top-app-bar-title>更新记录</mdui-top-app-bar-title>
                 <div style="flex-grow: 1"></div>
 
 
