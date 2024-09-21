@@ -81,7 +81,7 @@
 			<mdui-navigation-rail-item icon="apps--outlined" href="tool.html"
 				value="tool">小工具</mdui-navigation-rail-item>
 			<s-bottom-sheet slot="bottom">
-				<mdui-fab icon="checklist" slot="trigger"></mdui-fab>
+				<mdui-fab icon="fact_check" slot="trigger"></mdui-fab>
 				<div style="padding: 2em;text-align: center;">
 					<mdui-icon name="contactless--outlined"
 						style="font-size: 10em;opacity: 0.3;color:rgb(var(--mdui-color-primary))"></mdui-icon>
@@ -117,6 +117,7 @@
 				s-card {
 					width: 16em;
 					padding: 1em;
+					margin-right: 1em;
 				}
 
 				div.cardBkg {
@@ -137,10 +138,19 @@
 			<s-card>
 				<div slot="image" class="cardBkg">
 					<mdui-avatar class="cardAvatar">
+						<mdui-icon name="android--rounded"></mdui-icon>
+					</mdui-avatar>
+				</div>
+				<div slot="headline" style="margin-bottom: 1em;">2318</div>
+				<mdui-button slot="action" icon="contacts">查看个人资料</mdui-button>
+			</s-card>
+			<s-card>
+				<div slot="image" class="cardBkg">
+					<mdui-avatar class="cardAvatar">
 						<mdui-icon name="person_1--rounded"></mdui-icon>
 					</mdui-avatar>
 				</div>
-				<div slot="headline" style="margin-bottom: 1em;">吕颖飞(07)</div>
+				<div slot="headline" style="margin-bottom: 1em;">FlyGues (07)</div>
 				<mdui-button slot="action" icon="contacts">查看个人资料</mdui-button>
 			</s-card>
 		</div>
