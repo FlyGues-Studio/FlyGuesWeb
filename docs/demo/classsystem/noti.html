@@ -20,6 +20,9 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
 	<!-- Two Tone -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+
+	<script src="https://unpkg.com/sober/dist/sober.min.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="../../css/font.css">
 	<link rel="stylesheet" type="text/css" href="../../css/mduiColor.css">
 	<link rel="stylesheet" type="text/css" href="../../css/theme.css">
@@ -48,26 +51,27 @@
 
 <body>
 	<div class="normalView">
-        <mdui-top-app-bar style="position: sticky;background-color: rgb(var(--mdui-color-surface-container));margin-right: 1em;">
-            <mdui-top-app-bar-title style="margin-left: 1em;">班级智能信息管理系统</mdui-top-app-bar-title>
-            <mdui-button-icon icon="settings_outline--outlined"></mdui-button-icon>
-            <mdui-dropdown>
-                <style>
-                    mdui-menu {
-                        border-radius: 1em;
-                        padding: 0.5em;
-                    }
-                </style>
-                <mdui-button slot="trigger" icon="account_circle">2318</mdui-button>
-                <mdui-menu>
-                    <mdui-menu-item icon="edit--outlined">编辑个人资料</mdui-menu-item>
+		<mdui-top-app-bar
+			style="position: sticky;background-color: rgb(var(--mdui-color-surface-container));margin-right: 1em;">
+			<mdui-top-app-bar-title style="margin-left: 1em;">班级智能信息管理系统</mdui-top-app-bar-title>
+			<mdui-button-icon icon="settings_outline--outlined"></mdui-button-icon>
+			<mdui-dropdown>
+				<style>
+					mdui-menu {
+						border-radius: 1em;
+						padding: 0.5em;
+					}
+				</style>
+				<mdui-button slot="trigger" icon="account_circle">2318</mdui-button>
+				<mdui-menu>
+					<mdui-menu-item icon="edit--outlined">编辑个人资料</mdui-menu-item>
 					<mdui-divider></mdui-divider>
-                    <mdui-menu-item icon="logout--outlined" disabled>登出</mdui-menu-item>
+					<mdui-menu-item icon="logout--outlined" disabled>登出</mdui-menu-item>
 
-                </mdui-menu>
-            </mdui-dropdown>
+				</mdui-menu>
+			</mdui-dropdown>
 
-        </mdui-top-app-bar>
+		</mdui-top-app-bar>
 		<mdui-navigation-rail contained value="noti">
 			<mdui-navigation-rail-item icon="notifications" href="../index.html"
 				value="noti">通知</mdui-navigation-rail-item>
@@ -75,12 +79,27 @@
 				value="student">学生</mdui-navigation-rail-item>
 			<mdui-navigation-rail-item icon="apps--outlined" href="../file.html"
 				value="tool">小工具</mdui-navigation-rail-item>
-				
-			<mdui-fab icon="checklist" slot="bottom" href="noti.html"></mdui-fab>
+			<s-bottom-sheet slot="bottom">
+				<mdui-fab icon="checklist" slot="trigger"></mdui-fab>
+				<div style="padding: 2em;text-align: center;">
+					<mdui-icon name="contactless--outlined" style="font-size: 10em;opacity: 0.3;"></mdui-icon>
+					<h2>请将校园卡放在感应区以识别</h2>
+					<mdui-button icon="question_mark--outlined">无法识别</mdui-button>
+				</div>
+			</s-bottom-sheet>
 		</mdui-navigation-rail>
 
-		<div class="main" style="height: 80vh;">
-            1
+		<div class="main" style="height: 80vh;padding: 1em;padding-left: 2em;padding-right: 2em;">
+			<h1>通知</h1>
+			<mdui-tabs value="tab-1">
+				<mdui-tab value="tab-1">Tab 1</mdui-tab>
+				<mdui-tab value="tab-2">Tab 2</mdui-tab>
+				<mdui-tab value="tab-3">Tab 3</mdui-tab>
+
+				<mdui-tab-panel slot="panel" value="tab-1">Panel 1</mdui-tab-panel>
+				<mdui-tab-panel slot="panel" value="tab-2">Panel 2</mdui-tab-panel>
+				<mdui-tab-panel slot="panel" value="tab-3">Panel 3</mdui-tab-panel>
+			</mdui-tabs>
 		</div>
 	</div>
 
@@ -108,4 +127,5 @@
 
 
 </body>
+
 </html>
