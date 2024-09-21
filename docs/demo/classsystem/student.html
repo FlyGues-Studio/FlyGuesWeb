@@ -72,13 +72,12 @@
 			</mdui-dropdown>
 
 		</mdui-top-app-bar>
-		<mdui-navigation-rail contained value="noti">
-			<mdui-navigation-rail-item icon="notifications" href="noti.html" value="noti">
+		<mdui-navigation-rail contained value="student">
+			<mdui-navigation-rail-item icon="notifications--outlined" href="noti.html" value="noti">
 				通知
 				<mdui-badge slot="badge">1</mdui-badge>
 			</mdui-navigation-rail-item>
-			<mdui-navigation-rail-item icon="people--outlined" href="student.html"
-				value="student">学生</mdui-navigation-rail-item>
+			<mdui-navigation-rail-item icon="people" href="student.html" value="student">学生</mdui-navigation-rail-item>
 			<mdui-navigation-rail-item icon="apps--outlined" href="tool.html"
 				value="tool">小工具</mdui-navigation-rail-item>
 			<s-bottom-sheet slot="bottom">
@@ -93,55 +92,59 @@
 		</mdui-navigation-rail>
 
 		<div class="main" style="height: 80vh;padding: 1em;padding-left: 2em;padding-right: 2em;">
-			<h1>通知</h1>
-			<mdui-tabs value="tab-1">
-				<div style="display: flex;align-items: center;margin-bottom: 1em;">
-					<s-search style="width: 100%;margin-right: 1em;">
-						<s-icon-button slot="start">
-							<s-icon type="search"></s-icon>
-						</s-icon-button>
-						<input type="text" placeholder="搜索关键字">
-						<s-icon-button slot="end" style="margin-right: 1em;">
-							<mdui-button-icon icon="filter_list"></mdui-button-icon>
-						</s-icon-button>
-						<s-icon-button slot="end">
-							<s-icon type="close"></s-icon>
-						</s-icon-button>
-					</s-search>
+			<h1>学生</h1>
+			<div style="display: flex;align-items: center;margin-bottom: 1em;">
+				<s-search style="width: 16em;margin-right: 1em;">
+					<s-icon-button slot="start">
+						<s-icon type="search"></s-icon>
+					</s-icon-button>
+					<input type="text" placeholder="搜索学生">
+					<s-icon-button slot="end" style="margin-right: 1em;">
+						<mdui-button-icon icon="filter_list"></mdui-button-icon>
+					</s-icon-button>
+					<s-icon-button slot="end">
+						<s-icon type="close"></s-icon>
+					</s-icon-button>
+				</s-search>
+				<mdui-chip icon="select_all" style="margin-right: 1em;" selectable selected>全部学生</mdui-chip>
+				<mdui-chip icon="person_1--rounded" style="margin-right: 1em;" selectable>男生</mdui-chip>
+				<mdui-chip icon="person_3--rounded" style="margin-right: 1em;" selectable>女生</mdui-chip>
+			</div>
+
+			<mdui-divider style="margin-bottom: 1em;"></mdui-divider>
+
+			<style>
+				s-card {
+					width: 16em;
+					padding: 1em;
+				}
+
+				div.cardBkg {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: rgb(var(--mdui-color-surface-container));
+					border-radius: 2em;
+				}
+				.cardAvatar{
+					width: 80%;
+					height: 80%;
+					background-color: rgb(var(--mdui-color-surface-container));
+					color:rgb(var(--mdui-color-primary));
+					font-size: 3em;
+				}
+			</style>
+			<s-card>
+				<div slot="image" class="cardBkg">
+					<mdui-avatar class="cardAvatar">
+						<mdui-icon name="person_1--rounded"></mdui-icon>
+					</mdui-avatar>
 				</div>
-				<mdui-tab value="tab-1">
-					未读&nbsp;
-					<mdui-badge>1</mdui-badge>
-				</mdui-tab>
-				<mdui-tab value="tab-2">Tab 2</mdui-tab>
-				<mdui-tab value="tab-3">Tab 3</mdui-tab>
-
-				<mdui-tab-panel slot="panel" value="tab-1">
-					<style>
-						mdui-card.list {
-							padding: 2rem;
-							width: 80%;
-							border-radius: 2rem;
-							margin-bottom: 1rem;
-						}
-					</style>
-					<div class="mdui-prose" style="margin: 1rem;width: auto;">
-
-						<mdui-card class="list">
-							<h4>
-								<mdui-icon name="install_desktop"></mdui-icon><br>
-								<b>Updated edition 240921</b>
-								<mdui-badge>NEW</mdui-badge>
-							</h4>
-							<p>分离项目，系统试运行</p>
-						</mdui-card>
-					</div>
-
-				</mdui-tab-panel>
-				<mdui-tab-panel slot="panel" value="tab-2">Panel 2</mdui-tab-panel>
-				<mdui-tab-panel slot="panel" value="tab-3">Panel 3</mdui-tab-panel>
-			</mdui-tabs>
+				<div slot="headline" style="margin-bottom: 1em;">吕颖飞(07)</div>
+				<mdui-button slot="action" icon="contacts">查看个人资料</mdui-button>
+			</s-card>
 		</div>
+
 	</div>
 
 </body>
