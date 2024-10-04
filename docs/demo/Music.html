@@ -46,31 +46,6 @@
 
 <body style="margin: 0;">
 	<mdui-layout style="height: 100vh;">
-		<mdui-top-app-bar style="background-color: rgb(var(--mdui-color-surface-container-low)) !important;"
-			scroll-behavior="elevate" scroll-target=".main" order="-1" class="topBar">
-			<mdui-button-icon icon="arrow_back" href="../app.html"></mdui-button-icon>
-
-			<mdui-top-app-bar-title>Web Music Player</mdui-top-app-bar-title>
-
-			<mdui-dropdown>
-				<style>
-					mdui-menu {
-						border-radius: 1em;
-						padding: 0.5em;
-					}
-				</style>
-				<mdui-button-icon slot="trigger" icon="more_vert"></mdui-button-icon>
-				<mdui-menu>
-					<mdui-menu-item icon="report--outlined"
-						href="https://txc.qq.com/products/667423">举报</mdui-menu-item>
-					<mdui-menu-item icon="edit--outlined" href="https://github.com/FlyGues2889/FlyGuesWeb">在
-						GitHub
-						上编辑</mdui-menu-item>
-				</mdui-menu>
-			</mdui-dropdown>
-
-		</mdui-top-app-bar>
-
 		<mdui-layout-main class="main" style="margin-top: 4em;padding: 10em 0 0 0">
 			<center>
 				<style>
@@ -82,6 +57,8 @@
 						justify-content: center;
 						align-items: center;
 						background-color: rgb(var(--mdui-color-primary-container));
+
+						margin-top: -20vh;
 					}
 
 					div.control {
@@ -178,7 +155,7 @@
 						justify-content: center;
 					}
 				</style>
-				<mdui-linear-progress style="position: fixed;top: 64px;left: 0;"></mdui-linear-progress>
+				<mdui-linear-progress style="position: fixed;top: 0;left: 0;"></mdui-linear-progress>
 				<mdui-card class="cover">
 					<mdui-icon name="library_music"
 						style="font-size: 12vh;color: rgb(var(--mdui-color-on-primary-container));"></mdui-icon>
@@ -190,7 +167,7 @@
 				</div>
 
 				<div class="actionBar">
-					<mdui-button-icon icon="file_upload--outlined" style="margin-right: 2vw;"></mdui-button-icon>
+					<mdui-button-icon icon="arrow_back" style="margin-right: 2vw;"></mdui-button-icon>
 					<mdui-button-icon icon="download--outlined" style="margin-right: 2vw;"></mdui-button-icon>
 					<mdui-button-icon icon="share--outlined" style="margin-right: 2vw;"></mdui-button-icon>
 				</div>
