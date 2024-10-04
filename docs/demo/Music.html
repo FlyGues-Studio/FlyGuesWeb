@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mdui-theme-auto">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="shortcut icon" href="../image/logonormal.png" type="image/x-icon">
+	<title>FlyGuesWeb - Web Music Player</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+	<script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+	<!-- Filled -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Outlined -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+	<!-- Rounded -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+	<!-- Sharp -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+	<!-- Two Tone -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/font.css">
+	<link rel="stylesheet" type="text/css" href="../css/theme.css">
+	<link rel="stylesheet" type="text/css" href="../css/mduiColor.css">
+
+	<style>
+		mdui-top-app-bar {
+			background-color: rgb(var(--mdui-color-background-container));
+		}
+
+		mdui-card.title {
+			padding: 1rem;
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+			margin-bottom: 1rem;
+			border-radius: 2rem
+		}
+
+		mdui-card.text {
+			padding: 1rem;
+		}
+	</style>
+</head>
+
+<body style="margin: 0;">
+	<mdui-layout style="height: 100vh;">
+		<mdui-top-app-bar style="background-color: rgb(var(--mdui-color-surface-container-low)) !important;"
+			scroll-behavior="elevate" scroll-target=".main" order="-1" class="topBar">
+			<mdui-button-icon icon="arrow_back" href="../app.html"></mdui-button-icon>
+
+			<mdui-top-app-bar-title>Web Music Player</mdui-top-app-bar-title>
+
+			<mdui-dropdown>
+				<style>
+					mdui-menu {
+						border-radius: 1em;
+						padding: 0.5em;
+					}
+				</style>
+				<mdui-button-icon slot="trigger" icon="more_vert"></mdui-button-icon>
+				<mdui-menu>
+					<mdui-menu-item icon="report--outlined"
+						href="https://txc.qq.com/products/667423">举报</mdui-menu-item>
+					<mdui-menu-item icon="edit--outlined" href="https://github.com/FlyGues2889/FlyGuesWeb">在
+						GitHub
+						上编辑</mdui-menu-item>
+				</mdui-menu>
+			</mdui-dropdown>
+
+		</mdui-top-app-bar>
+
+		<mdui-layout-main class="main" style="margin-top: 4em;padding: 10em 0 0 0">
+			<center>
+				<style>
+					mdui-card.cover {
+						height: 30vh;
+						width: 30vh;
+						border-radius: 2em;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: rgb(var(--mdui-color-primary-container));
+					}
+
+					div.control {
+						width: 100%;
+						position: fixed;
+						left: 0;
+						bottom: 56px;
+						padding-bottom: 5vh;
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					div.actionBar {
+						width: 100%;
+						position: fixed;
+						left: 8vw;
+						bottom: 220px;
+
+						display: flex;
+						align-items: center;
+						justify-content: left;
+					}
+
+					div.actionBar_right {
+						/* width: 100%; */
+						position: fixed;
+						right: 8vw;
+						bottom: 220px;
+
+						display: flex;
+						align-items: center;
+						justify-content: right;
+					}
+
+					div.slide {
+						/* padding-top: 1em; */
+						padding-bottom: 1em;
+						width: 100%;
+						position: fixed;
+						bottom: 160px;
+						left: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					div.showTimeLeft {
+						/* padding-top: 1em; */
+						padding-bottom: 0.4em;
+						width: 100%;
+						position: fixed;
+						bottom: 160px;
+						left: 9vw;
+						display: flex;
+						align-items: center;
+						justify-content: left;
+						font-size: smaller;
+						font-family: 'Product Sans';
+					}
+
+					div.showTimeRight {
+						/* padding-top: 1em; */
+						padding-bottom: 0.4em;
+						width: 100%;
+						position: fixed;
+						bottom: 160px;
+						right: 9vw;
+						display: flex;
+						align-items: center;
+						justify-content: right;
+						font-size: smaller;
+						font-family: 'Product Sans';
+					}
+
+					div.subtitle {
+						padding-top: 4vh;
+						left: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						font-family: 'Product Sans';
+					}
+
+					div.bottom {
+						width: 100%;
+						position: fixed;
+						bottom: 0;
+						left: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				</style>
+				<mdui-card class="cover">
+					<mdui-icon name="library_music"
+						style="font-size: 12vh;color: rgb(var(--mdui-color-on-primary-container));"></mdui-icon>
+				</mdui-card>
+
+				<div class="subtitle">
+					<h3 style="font-family: 'Product Sans' !important;">Defult Music</h3>
+					<small>FlyGues Studio</small>
+				</div>
+
+				<div class="actionBar">
+					<mdui-button-icon icon="file_upload--outlined" style="margin-right: 2vw;"></mdui-button-icon>
+					<mdui-button-icon icon="download--outlined" style="margin-right: 2vw;"></mdui-button-icon>
+					<mdui-button-icon icon="share--outlined" style="margin-right: 2vw;"></mdui-button-icon>
+				</div>
+				<div class="actionBar_right">
+					<mdui-button-icon selectable icon="subtitles--outlined" selected-icon="subtitles--filled"
+						style="margin-right: 2vw;"></mdui-button-icon>
+				</div>
+				<div class="slide">
+					<mdui-slider nolabel style="width: 90%;" value="12"></mdui-slider>
+				</div>
+				<div class="showTimeLeft">
+					0:00
+				</div>
+				<div class="showTimeRight">
+					0:01
+				</div>
+				<div class="control">
+					<mdui-button-icon selectable icon="favorite_border" selected-icon="favorite"
+						style="margin-right: 8vw;"></mdui-button-icon>
+					<mdui-button-icon icon="first_page"></mdui-button-icon>
+					<mdui-fab size="normal" icon="play_arrow--filled"
+						style="margin-left: 8vw;margin-right: 8vw;"></mdui-fab>
+					<mdui-button-icon icon="last_page"></mdui-button-icon>
+					<mdui-button-icon selectable icon="repeat_one" selected-icon="repeat_one_on" style="margin-left: 8vw;"></mdui-button-icon>
+				</div>
+
+				<script src="https://unpkg.com/sober/dist/sober.min.js"></script>
+
+				<div class="bottom">
+					<mdui-list style="width: 100%;background-color: rgb(var(--mdui-color-surface-container-low));border-radius: 2em 2em 0 0;">
+						<mdui-collapse>
+							<mdui-collapse-item>
+								<mdui-list-item slot="header" style="margin-left: 1vw;margin-right: 1vw;" rounded>
+									<mdui-icon name="queue_music"></mdui-icon>
+									<mdui-icon name="keyboard_arrow_up"></mdui-icon>
+								</mdui-list-item>
+								<div id="notes" style="padding: 1em;text-align: left;">
+									<mdui-divider style="margin-bottom: 2vh;"></mdui-divider>
+									<h3 style="text-align: center;">播放队列</h3>
+
+									<mdui-button icon="add" full-width style="margin-bottom: 1vh;">添加文件</mdui-button>
+									<mdui-list-item icon="music_note" end-icon="pause_circle--outlined" rounded active style="margin-bottom: 1vh;">
+										Defult Music
+										<span slot="description">FlyGues Studio</span>
+									</mdui-list-item>
+									<mdui-list-item icon="music_note" rounded>
+										Defult Music2
+										<span slot="description">FlyGues Studio</span>
+									</mdui-list-item>
+								</div>
+							</mdui-collapse-item>
+						</mdui-collapse>
+					</mdui-list>
+				</div>
+			</center>
+		</mdui-layout-main>
+	</mdui-layout>
+
+</body>
+
+</html>

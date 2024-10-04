@@ -14,8 +14,8 @@ div.normalView {
     box-sizing: border-box;
     margin: 1em;
     border-radius: 1em;
-    background-color: rgb(var(--mdui-color-surface));
-    padding: 1em 1em 1em 1em;
+    background-color: rgb(var(--mdui-color-background)) !important;
+    padding: 10em 1em 1em 1em;
     padding-top: 0;
 }
 
@@ -36,5 +36,8 @@ b {
 }
 
 mdui-top-app-bar-title {
-    font-family: 'Product Sans Bold';
+    font-family: 'Product Sans';
+}
+mdui-top-app-bar {
+    background-color: rgb(var(--mdui-color-background));
 }
