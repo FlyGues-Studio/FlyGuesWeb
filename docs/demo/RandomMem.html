@@ -92,9 +92,9 @@
 				</style>
 				<mdui-button-icon slot="trigger" icon="more_vert"></mdui-button-icon>
 				<mdui-menu>
-					<mdui-menu-item icon="report--outlined"
+					<mdui-menu-item icon="report--outlined" rounded 
 						href="https://txc.qq.com/products/667423">举报</mdui-menu-item>
-					<mdui-menu-item icon="edit--outlined" href="https://github.com/FlyGues2889/FlyGuesWeb">
+					<mdui-menu-item icon="edit--outlined" rounded href="https://github.com/FlyGues2889/FlyGuesWeb">
 						在GitHub上编辑
 					</mdui-menu-item>
 				</mdui-menu>
@@ -111,7 +111,7 @@
 				</style>
 				<mdui-list-subheader style="margin-bottom: -1.6em;">主界面</mdui-list-subheader>
 				<mdui-list-item icon="home--outlined" rounded href="../index.html">主页</mdui-list-item>
-				<mdui-list-item icon="apps--filled" rounded href="../app.html" active>应用和小工具</mdui-list-item>
+				<mdui-list-item icon="apps--filled" rounded href="../app.html">应用和小工具</mdui-list-item>
 				<mdui-list-item icon="folder--outlined" rounded href="../file.html">归档文件和项目</mdui-list-item>
 				<mdui-list-subheader style="margin-bottom: -1.6em;">关于此网站</mdui-list-subheader>
 				<mdui-list-item icon="info--outlined" rounded href="../info.html">关于</mdui-list-item>
@@ -122,10 +122,10 @@
 			const topBar = document.querySelector(".topBar");
 			const openListButton = topBar.querySelector(".showList");
 
-			if (navigationDrawer.open = true) {
-				openListButton.addEventListener("click", () => navigationDrawer.open = true);
-			} else {
+			if (navigationDrawer.open = false) {
 				openListButton.addEventListener("click", () => navigationDrawer.open = false);
+			} else {
+				openListButton.addEventListener("click", () => navigationDrawer.open = true);
 			}
 		</script>
 
@@ -177,7 +177,7 @@
 								onchange="tm=false;settime(this.value,0);storage(0)"
 								id="settime"
 								>
-								<mdui-menu-item value="250">0.25s</mdui-menu-item>
+								<!-- <mdui-menu-item value="250">0.25s</mdui-menu-item> -->
 								<mdui-menu-item value="500">0.50s</mdui-menu-item>
 								<mdui-menu-item value="750">0.75s</mdui-menu-item>
 								<mdui-menu-item value="1000">1s</mdui-menu-item>

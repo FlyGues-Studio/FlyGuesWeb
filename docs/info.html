@@ -74,22 +74,24 @@
                 <mdui-list-item icon="info--filled" rounded href="info.html" active>关于</mdui-list-item>
             </mdui-list>
         </mdui-navigation-drawer>
-        <script>
-            const navigationDrawer = document.querySelector(".example-drawer");
-            const topBar = document.querySelector(".topBar");
-            const openListButton = topBar.querySelector(".showList");
+		<script>
+			const navigationDrawer = document.querySelector(".example-drawer");
+			const topBar = document.querySelector(".topBar");
+			const openListButton = topBar.querySelector(".showList");
 
-            if (navigationDrawer.open = true) {
-                openListButton.addEventListener("click", () => navigationDrawer.open = true);
-            } else {
-                openListButton.addEventListener("click", () => navigationDrawer.open = false);
-            }
-        </script>
+			if (navigationDrawer.open = false) {
+				openListButton.addEventListener("click", () => navigationDrawer.open = false);
+			} else {
+				openListButton.addEventListener("click", () => navigationDrawer.open = true);
+			}
+		</script>
 
 
         <mdui-layout-main class="main">
             <div style="width: 100%;height: 100%;margin-top: 1.2em;text-align: left;" class="mdui-prose">
-                <h1 style="font-family: 'Harmony Sans SC Bold'!important;">关于此网站</h1>
+                <h1 style="margin-left: 2vw;font-family: 'Harmony Sans SC Bold'!important;display: flex;align-items: center;">
+                    <mdui-icon name="info--outlined" style="font-size: 1em;"></mdui-icon>
+                    &nbsp;关于此网站</h1>
                 <div class="mdui-prose" style="margin: 1rem;width: auto;">
                     <style>
                         mdui-card.list {
@@ -97,11 +99,13 @@
                             width: 80%;
                             border-radius: 2rem;
                             margin-bottom: 1rem;
+                            font-family: 'Product Sans'!important;
                         }
                     </style>
                     <mdui-card class="list">
-                        <h3 style="font-family: 'Product Sans'!important;">FlyGuesWeb</h3>
-                        <small>&copy 2024 , FlyGues Studio. &nbsp; By LYF</small><br><br>
+                        <!-- <mdui-icon name="info--outlined" style="font-size: 2em;"></mdui-icon> -->
+                        <h3 style="font-size:x-large;">FlyGuesWeb</h3>
+                        <small>&copy 2024 , FlyGues Studio. &nbsp; By LYF</small>
                     </mdui-card><br>
                     <mdui-button icon="open_in_new" href="https://github.com/FlyGues2889/FlyGuesWeb"
                         variant="outlined">GitHub存储库</mdui-button>&nbsp;&nbsp;

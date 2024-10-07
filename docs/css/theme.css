@@ -1,43 +1,43 @@
 body {
-    font-family: 'Harmony Sans SC M' !important;
+  font-family: "Harmony Sans SC M" !important;
 }
 
 div.normalView {
-    height: 92vh;
-    display: block;
+  height: 92vh;
+  display: block;
 }
 
 .main {
-    height: 100%;
-    overflow-y: auto;
-    scrollbar-width: none;
-    box-sizing: border-box;
-    margin: 1em;
-    border-radius: 1em;
-    background-color: rgb(var(--mdui-color-background)) !important;
-    padding: 10em 1em 1em 1em;
-    padding-top: 0;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  box-sizing: border-box;
+  margin: 1em;
+  border-radius: 1em;
+  background-color: rgb(var(--mdui-color-background)) !important;
+  padding: 10em 1em 1em 1em;
+  padding-top: 0;
 }
 
 mdui-navigation-rail {
-    background-color: rgb(var(--mdui-color-surface-container));
-    position: fixed;
-    margin-left: 0.5em;
-    margin-bottom: 1em !important;
-    margin-top: 1em !important;
+  background-color: rgb(var(--mdui-color-surface-container));
+  position: fixed;
+  margin-left: 0.5em;
+  margin-bottom: 1em !important;
+  margin-top: 1em !important;
 }
 
 mdui-navigation-bar {
-    background-color: rgb(var(--mdui-color-surface-container));
+  background-color: rgb(var(--mdui-color-surface-container));
 }
 
 b {
-    font-family: 'Harmony Sans SC Black';
+  font-family: "Harmony Sans SC Black";
 }
 
 mdui-top-app-bar-title {
-    font-family: 'Product Sans';
+  font-family: "Product Sans";
 }
 mdui-top-app-bar {
-    background-color: rgb(var(--mdui-color-background));
+  background-color: rgb(var(--mdui-color-background));
 }
