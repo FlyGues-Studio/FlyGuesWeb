@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="mdui-theme-auto">
+
+<head>
+    <title>FlyGuesWeb</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./" type="image/x-icon">
+
+    <!--样式=======================================-->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Rounded -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- Sharp -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- Two Tone -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+
+    <link href="css/global.css" type="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+
+    <style>
+        :root,
+        :host {
+            --mdui-color-primary-light: 0, 104, 116;
+            --mdui-color-on-primary-light: 255, 255, 255;
+            --mdui-color-primary-container-light: 153, 240, 255;
+            --mdui-color-on-primary-container-light: 0, 31, 36;
+            --mdui-color-secondary-light: 74, 98, 103;
+            --mdui-color-on-secondary-light: 255, 255, 255;
+            --mdui-color-secondary-container-light: 205, 231, 236;
+            --mdui-color-on-secondary-container-light: 5, 31, 35;
+            --mdui-color-tertiary-light: 83, 94, 125;
+            --mdui-color-on-tertiary-light: 255, 255, 255;
+            --mdui-color-tertiary-container-light: 218, 226, 255;
+            --mdui-color-on-tertiary-container-light: 15, 26, 55;
+            --mdui-color-error-light: 186, 26, 26;
+            --mdui-color-on-error-light: 255, 255, 255;
+            --mdui-color-error-container-light: 255, 218, 214;
+            --mdui-color-on-error-container-light: 65, 0, 2;
+            --mdui-color-background-light: 251, 252, 253;
+            --mdui-color-on-background-light: 25, 28, 29;
+            --mdui-color-surface-light: 251, 252, 253;
+            --mdui-color-on-surface-light: 25, 28, 29;
+            --mdui-color-surface-variant-light: 219, 228, 230;
+            --mdui-color-on-surface-variant-light: 63, 72, 74;
+            --mdui-color-outline-light: 111, 121, 123;
+            --mdui-color-outline-variant-light: 191, 200, 202;
+            --mdui-color-shadow-light: 0, 0, 0;
+            --mdui-color-scrim-light: 0, 0, 0;
+            --mdui-color-inverse-surface-light: 46, 49, 50;
+            --mdui-color-inverse-on-surface-light: 239, 241, 241;
+            --mdui-color-inverse-primary-light: 80, 216, 236;
+            --mdui-color-surface-dim-light: 216, 218, 219;
+            --mdui-color-surface-bright-light: 248, 250, 250;
+            --mdui-color-surface-container-lowest-light: 255, 255, 255;
+            --mdui-color-surface-container-low-light: 242, 244, 244;
+            --mdui-color-surface-container-light: 236, 238, 239;
+            --mdui-color-surface-container-high-light: 230, 232, 233;
+            --mdui-color-surface-container-highest-light: 225, 227, 227;
+            --mdui-color-surface-tint-color-light: 0, 104, 116;
+            --mdui-color-primary-dark: 80, 216, 236;
+            --mdui-color-on-primary-dark: 0, 54, 61;
+            --mdui-color-primary-container-dark: 0, 79, 88;
+            --mdui-color-on-primary-container-dark: 153, 240, 255;
+            --mdui-color-secondary-dark: 177, 203, 208;
+            --mdui-color-on-secondary-dark: 28, 52, 56;
+            --mdui-color-secondary-container-dark: 51, 75, 79;
+            --mdui-color-on-secondary-container-dark: 205, 231, 236;
+            --mdui-color-tertiary-dark: 187, 198, 234;
+            --mdui-color-on-tertiary-dark: 36, 48, 77;
+            --mdui-color-tertiary-container-dark: 59, 70, 101;
+            --mdui-color-on-tertiary-container-dark: 218, 226, 255;
+            --mdui-color-error-dark: 255, 180, 171;
+            --mdui-color-on-error-dark: 105, 0, 5;
+            --mdui-color-error-container-dark: 147, 0, 10;
+            --mdui-color-on-error-container-dark: 255, 180, 171;
+            --mdui-color-background-dark: 25, 28, 29;
+            --mdui-color-on-background-dark: 225, 227, 227;
+            --mdui-color-surface-dark: 25, 28, 29;
+            --mdui-color-on-surface-dark: 225, 227, 227;
+            --mdui-color-surface-variant-dark: 63, 72, 74;
+            --mdui-color-on-surface-variant-dark: 191, 200, 202;
+            --mdui-color-outline-dark: 137, 146, 148;
+            --mdui-color-outline-variant-dark: 63, 72, 74;
+            --mdui-color-shadow-dark: 0, 0, 0;
+            --mdui-color-scrim-dark: 0, 0, 0;
+            --mdui-color-inverse-surface-dark: 225, 227, 227;
+            --mdui-color-inverse-on-surface-dark: 46, 49, 50;
+            --mdui-color-inverse-primary-dark: 0, 104, 116;
+            --mdui-color-surface-dim-dark: 16, 20, 21;
+            --mdui-color-surface-bright-dark: 54, 58, 58;
+            --mdui-color-surface-container-lowest-dark: 11, 15, 15;
+            --mdui-color-surface-container-low-dark: 25, 28, 29;
+            --mdui-color-surface-container-dark: 29, 32, 33;
+            --mdui-color-surface-container-high-dark: 39, 43, 43;
+            --mdui-color-surface-container-highest-dark: 50, 53, 54;
+            --mdui-color-surface-tint-color-dark: 80, 216, 236;
+            --mdui-color-primary: var(--mdui-color-primary-light);
+            --mdui-color-on-primary: var(--mdui-color-on-primary-light);
+            --mdui-color-primary-container: var(--mdui-color-primary-container-light);
+            --mdui-color-on-primary-container: var(--mdui-color-on-primary-container-light);
+            --mdui-color-secondary: var(--mdui-color-secondary-light);
+            --mdui-color-on-secondary: var(--mdui-color-on-secondary-light);
+            --mdui-color-secondary-container: var(--mdui-color-secondary-container-light);
+            --mdui-color-on-secondary-container: var(--mdui-color-on-secondary-container-light);
+            --mdui-color-tertiary: var(--mdui-color-tertiary-light);
+            --mdui-color-on-tertiary: var(--mdui-color-on-tertiary-light);
+            --mdui-color-tertiary-container: var(--mdui-color-tertiary-container-light);
+            --mdui-color-on-tertiary-container: var(--mdui-color-on-tertiary-container-light);
+            --mdui-color-error: var(--mdui-color-error-light);
+            --mdui-color-on-error: var(--mdui-color-on-error-light);
+            --mdui-color-error-container: var(--mdui-color-error-container-light);
+            --mdui-color-on-error-container: var(--mdui-color-on-error-container-light);
+            --mdui-color-background: var(--mdui-color-background-light);
+            --mdui-color-on-background: var(--mdui-color-on-background-light);
+            --mdui-color-surface: var(--mdui-color-surface-light);
+            --mdui-color-on-surface: var(--mdui-color-on-surface-light);
+            --mdui-color-surface-variant: var(--mdui-color-surface-variant-light);
+            --mdui-color-on-surface-variant: var(--mdui-color-on-surface-variant-light);
+            --mdui-color-outline: var(--mdui-color-outline-light);
+            --mdui-color-outline-variant: var(--mdui-color-outline-variant-light);
+            --mdui-color-shadow: var(--mdui-color-shadow-light);
+            --mdui-color-scrim: var(--mdui-color-scrim-light);
+            --mdui-color-inverse-surface: var(--mdui-color-inverse-surface-light);
+            --mdui-color-inverse-on-surface: var(--mdui-color-inverse-on-surface-light);
+            --mdui-color-inverse-primary: var(--mdui-color-inverse-primary-light);
+            --mdui-color-surface-dim: var(--mdui-color-surface-dim-light);
+            --mdui-color-surface-bright: var(--mdui-color-surface-bright-light);
+            --mdui-color-surface-container-lowest: var(--mdui-color-surface-container-lowest-light);
+            --mdui-color-surface-container-low: var(--mdui-color-surface-container-low-light);
+            --mdui-color-surface-container: var(--mdui-color-surface-container-light);
+            --mdui-color-surface-container-high: var(--mdui-color-surface-container-high-light);
+            --mdui-color-surface-container-highest: var(--mdui-color-surface-container-highest-light);
+            --mdui-color-surface-tint-color: var(--mdui-color-surface-tint-color-light);
+            color: rgb(var(--mdui-color-on-background));
+            background-color: rgb(var(--mdui-color-background));
+        }
+        }
+    </style>
+</head>
+
+<body style="margin: 0;position: relative;">
+    <mdui-layout style="height: 100vh;">
+        <mdui-top-app-bar class="topBar" style="background-color: rgb(var(--mdui-color-surface-container)) !important;">
+            <mdui-button-icon icon="menu" class="showList"></mdui-button-icon>
+            <mdui-top-app-bar-title style="font-family: 'Product Sans';">FlyGuesWeb</mdui-top-app-bar-title>
+            <mdui-tooltip variant="rich" headline="FlyGuesWeb 存储库"
+                content="最近更新时间：2024/11/02"
+                href="https://txc.qq.com/products/667423">
+                <mdui-button-icon icon="history--outlined"></mdui-button-icon>
+            </mdui-tooltip>
+        </mdui-top-app-bar>
+
+        <mdui-navigation-drawer close-on-overlay-click class="drawer">
+            <mdui-list style="padding: 1em;padding-left: 0;">
+                <style>
+                    mdui-list-item {
+                        margin-bottom: 0.5em;
+                        border-radius: 0 1.75rem 1.75rem 0;
+                    }
+                </style>
+                <mdui-list-subheader style="margin-bottom: -1em;">主界面</mdui-list-subheader>
+                <mdui-list-item icon="home--filled" rounded href="index.html" active>主页</mdui-list-item>
+                <mdui-list-item icon="apps--outlined" rounded href="demo.html">Demo</mdui-list-item>
+                <mdui-list-item icon="folder--outlined" rounded href="file.html">归档文件和项目</mdui-list-item>
+                <mdui-list-subheader style="margin-bottom: -1em;">关于此网站</mdui-list-subheader>
+                <mdui-list-item icon="info--outlined" rounded href="info.html">关于</mdui-list-item>
+            </mdui-list>
+        </mdui-navigation-drawer>
+        <script>
+            const navigationDrawer = document.querySelector(".drawer");
+            const topBar = document.querySelector(".topBar");
+            const openListButton = topBar.querySelector(".showList");
+
+            if (navigationDrawer.open = false) {
+                openListButton.addEventListener("click", () => navigationDrawer.open = false);
+            } else {
+                openListButton.addEventListener("click", () => navigationDrawer.open = true);
+            }
+        </script>
+
+        <mdui-layout-main class="main" style="margin: 2rem;">
+            <div
+                style="margin-bottom: 2rem;font-size: var(--mdui-typescale-display-large-size);font-family: 'Product Sans Bold';width: 100%;">
+                <center>
+                    <mdui-card
+                        style="margin-bottom: 0.25rem;padding: 0.3em;background-color: rgb(var(--mdui-color-on-secondary-container-dark));font-size: var(--mdui-typescale-display-small-line-height);color: rgb(var(--mdui-color-primary));font-family: 'Product Sans';display: flex;align-items: center;width: 18rem;min-width: 18rem;"
+                        variant="filled">
+                        <mdui-icon name="lightbulb"
+                            style="font-size: var(--mdui-typescale-display-large-size);"></mdui-icon> &nbsp;Creativity
+                    </mdui-card>
+                    <span>Never</span><span>&nbsp;Ends</span>
+                </center>
+            </div>
+            <br>
+            <div style="text-align: center;width: 100%;">
+                FlyGuesWeb库 是一些demo项目和文件存放的地方。<br><br>
+                <mdui-button icon="apps--outlined" variant="tonal" href="demo.html"
+                    style="margin-right: 1em;">Demo</mdui-button>
+                <mdui-button icon="folder--outlined" variant="tonal" href="file.html">归档文件和项目</mdui-button>
+            </div>
+        </mdui-layout-main>
+
+        <mdui-tooltip content="收集与反馈" placement="top" href="https://txc.qq.com/products/667423">
+            <mdui-fab style="position: fixed;bottom: 2rem;right: 2rem;" icon="feedback--outlined"></mdui-fab>
+        </mdui-tooltip>
+    </mdui-layout>
+</body>
+
+</html>
