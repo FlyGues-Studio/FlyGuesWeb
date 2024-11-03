@@ -147,11 +147,11 @@
 
 <body style="margin: 0;position: relative;">
     <mdui-layout style="height: 100vh;">
-        <mdui-top-app-bar class="topBar" style="background-color: rgb(var(--mdui-color-surface-container)) !important;box-shadow: var(--mdui-elevation-level3) !important;">
+        <mdui-top-app-bar class="topBar"
+            style="background-color: rgb(var(--mdui-color-surface-container)) !important;box-shadow: var(--mdui-elevation-level3) !important;">
             <mdui-button-icon icon="menu" class="showList"></mdui-button-icon>
             <mdui-top-app-bar-title style="font-family: 'Product Sans';">FlyGuesWeb</mdui-top-app-bar-title>
-            <mdui-tooltip variant="rich" headline="FlyGuesWeb 存储库"
-                content="最近更新时间：2024/11/02"
+            <mdui-tooltip variant="rich" headline="FlyGuesWeb 存储库" content="最近更新时间：2024/11/02"
                 href="https://txc.qq.com/products/667423">
                 <mdui-button-icon icon="history--outlined"></mdui-button-icon>
             </mdui-tooltip>
@@ -171,6 +171,7 @@
                 <mdui-list-item icon="folder--outlined" rounded href="file.html">归档文件和项目</mdui-list-item>
                 <mdui-list-subheader style="margin-bottom: -1em;">关于此网站</mdui-list-subheader>
                 <mdui-list-item icon="info--outlined" rounded href="info.html">关于</mdui-list-item>
+                <mdui-list-item icon="arrow_back--outlined" rounded href="docs/index.html">返回旧版</mdui-list-item>
             </mdui-list>
         </mdui-navigation-drawer>
         <script>
@@ -207,8 +208,9 @@
             </div>
         </mdui-layout-main>
 
-        <mdui-tooltip content="收集与反馈" placement="top" href="https://txc.qq.com/products/667423">
-            <mdui-fab style="position: fixed;bottom: 2rem;right: 2rem;" icon="feedback--outlined"></mdui-fab>
+        <mdui-tooltip content="收集与反馈" placement="top">
+            <mdui-fab style="position: fixed;bottom: 2rem;right: 2rem;" icon="feedback--outlined"
+                href="https://txc.qq.com/products/667423"></mdui-fab>
         </mdui-tooltip>
     </mdui-layout>
 </body>
