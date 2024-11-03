@@ -2,7 +2,7 @@
 <html class="mdui-theme-auto">
 
 <head>
-    <title>FlyGuesWeb</title>
+    <title>FlyGuesWeb - Demo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./" type="image/x-icon">
@@ -141,75 +141,42 @@
             color: rgb(var(--mdui-color-on-background));
             background-color: rgb(var(--mdui-color-background));
         }
-        }
     </style>
 </head>
 
 <body style="margin: 0;position: relative;">
     <mdui-layout style="height: 100vh;">
-        <mdui-top-app-bar class="topBar" style="background-color: rgb(var(--mdui-color-surface-container)) !important;box-shadow: var(--mdui-elevation-level3) !important;">
-            <mdui-button-icon icon="menu" class="showList"></mdui-button-icon>
-            <mdui-top-app-bar-title style="font-family: 'Product Sans';">FlyGuesWeb</mdui-top-app-bar-title>
-            <mdui-tooltip variant="rich" headline="FlyGuesWeb 存储库"
-                content="最近更新时间：2024/11/02"
-                href="https://txc.qq.com/products/667423">
-                <mdui-button-icon icon="history--outlined"></mdui-button-icon>
-            </mdui-tooltip>
-        </mdui-top-app-bar>
+        <mdui-layout-main class="mdui-prose" style="margin: 2rem;">
+            <mdui-card style="
+                        margin-bottom: 0.25rem;
+                        padding: 0.6em;
+                        text-align: center;
+                        background-color: rgb(var(--mdui-color-on-secondary-container-dark),0);
+                        font-size: var(--mdui-typescale-headline-small-size);
+                        color: rgb(var(--mdui-color-primary));
+                        font-family: 'Product Sans';
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        /* min-width: 8rem; */
+                        border-radius: var(--mdui-shape-corner-extra-large);"
+            variant="filled">
+                <mdui-icon name="info--outlined" style="font-size: var(--mdui-typescale-headline-medium-line-height);"></mdui-icon>
+                <!-- &nbsp;注意&nbsp; -->
+            </mdui-card>
+            <h1 style="margin-top: 1rem;text-align: center;color: rgb(var(--mdui-color-primary));">你正在前往外部网站</h1>
 
-        <mdui-navigation-drawer close-on-overlay-click class="drawer">
-            <mdui-list style="padding: 1em;padding-left: 0;">
-                <style>
-                    mdui-list-item {
-                        margin-bottom: 0.5em;
-                        border-radius: 0 1.75rem 1.75rem 0;
-                    }
-                </style>
-                <mdui-list-subheader style="margin-bottom: -1em;">主界面</mdui-list-subheader>
-                <mdui-list-item icon="home--filled" rounded href="index.html" active>主页</mdui-list-item>
-                <mdui-list-item icon="apps--outlined" rounded href="demo.html">Demo</mdui-list-item>
-                <mdui-list-item icon="folder--outlined" rounded href="file.html">归档文件和项目</mdui-list-item>
-                <mdui-list-subheader style="margin-bottom: -1em;">关于此网站</mdui-list-subheader>
-                <mdui-list-item icon="info--outlined" rounded href="info.html">关于</mdui-list-item>
-            </mdui-list>
-        </mdui-navigation-drawer>
-        <script>
-            const navigationDrawer = document.querySelector(".drawer");
-            const topBar = document.querySelector(".topBar");
-            const openListButton = topBar.querySelector(".showList");
+            <b>解压密码</b><br>
+            <code>1234</code><br>
+            <b>目标网站</b><br>
+            <code>https://flygues.lanzn.com/b009g0c1sd</code><br>
 
-            if (navigationDrawer.open = false) {
-                openListButton.addEventListener("click", () => navigationDrawer.open = false);
-            } else {
-                openListButton.addEventListener("click", () => navigationDrawer.open = true);
-            }
-        </script>
-
-        <mdui-layout-main class="main" style="margin: 2rem;">
-            <div
-                style="margin-bottom: 2rem;font-size: var(--mdui-typescale-display-large-size);font-family: 'Product Sans Bold';width: 100%;">
-                <center>
-                    <mdui-card
-                        style="margin-bottom: 0.25rem;padding: 0.3em;background-color: rgb(var(--mdui-color-on-secondary-container-dark));font-size: var(--mdui-typescale-display-small-line-height);color: rgb(var(--mdui-color-primary));font-family: 'Product Sans';display: flex;align-items: center;width: 18rem;min-width: 18rem;"
-                        variant="filled">
-                        <mdui-icon name="lightbulb"
-                            style="font-size: var(--mdui-typescale-display-large-size);"></mdui-icon> &nbsp;Creativity
-                    </mdui-card>
-                    <span>Never</span><span>&nbsp;Ends</span>
-                </center>
-            </div>
-            <br>
-            <div style="text-align: center;width: 100%;">
-                FlyGuesWeb库 是一些demo项目和文件存放的地方。<br><br>
-                <mdui-button icon="apps--outlined" variant="tonal" href="demo.html"
-                    style="margin-right: 1em;">Demo</mdui-button>
-                <mdui-button icon="folder--outlined" variant="tonal" href="file.html">归档文件和项目</mdui-button>
+            <div style="width: 100%;text-align: center;">
+                <mdui-button icon="open_in_new--outlined" style="margin-top: 2rem;margin-bottom: 0.25rem;"  href="https://flygues.lanzn.com/b009g0c1sd">前往存储库</mdui-button><br>
+                <mdui-button icon="arrow_back--outlined" variant="text" href="index.html">返回主页</mdui-button>
             </div>
         </mdui-layout-main>
-
-        <mdui-tooltip content="收集与反馈" placement="top" href="https://txc.qq.com/products/667423">
-            <mdui-fab style="position: fixed;bottom: 2rem;right: 2rem;" icon="feedback--outlined"></mdui-fab>
-        </mdui-tooltip>
     </mdui-layout>
 </body>
 

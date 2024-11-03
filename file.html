@@ -141,13 +141,13 @@
             color: rgb(var(--mdui-color-on-background));
             background-color: rgb(var(--mdui-color-background));
         }
-        }
     </style>
 </head>
 
 <body style="margin: 0;position: relative;">
     <mdui-layout style="height: 100vh;">
-        <mdui-top-app-bar class="topBar" style="background-color: rgb(var(--mdui-color-surface-container)) !important;">
+        <mdui-top-app-bar class="topBar"
+            style="background-color: rgb(var(--mdui-color-surface-container)) !important;box-shadow: var(--mdui-elevation-level3) !important;">
             <mdui-button-icon icon="menu" class="showList"></mdui-button-icon>
             <mdui-top-app-bar-title style="font-family: 'Product Sans';">FlyGuesWeb</mdui-top-app-bar-title>
             <mdui-tooltip variant="rich" headline="FlyGuesWeb 存储库" content="最近更新时间：2024/11/02"
@@ -165,9 +165,9 @@
                     }
                 </style>
                 <mdui-list-subheader style="margin-bottom: -1em;">主界面</mdui-list-subheader>
-                <mdui-list-item icon="home--filled" rounded href="index.html">主页</mdui-list-item>
+                <mdui-list-item icon="home--outlined" rounded href="index.html">主页</mdui-list-item>
                 <mdui-list-item icon="apps--outlined" rounded href="demo.html">Demo</mdui-list-item>
-                <mdui-list-item icon="folder--outlined" rounded href="file.html" active>归档文件和项目</mdui-list-item>
+                <mdui-list-item icon="folder" rounded href="file.html" active>归档文件和项目</mdui-list-item>
                 <mdui-list-subheader style="margin-bottom: -1em;">关于此网站</mdui-list-subheader>
                 <mdui-list-item icon="info--outlined" rounded href="info.html">关于</mdui-list-item>
             </mdui-list>
@@ -187,7 +187,47 @@
         <mdui-layout-main class="mdui-prose">
             <h1 style="margin: 2rem;">归档文件和项目</h1>
             <mdui-list>
-                <mdui-list-item disabled style="height: 2rem;">
+                <style>
+                    mdui-list-item.first {
+                        margin-bottom: 0;
+                        border-radius: 0;
+                        /* background-color: rgb(var(--mdui-color-secondary-container), 0.2); */
+                    }
+
+                    mdui-list-item.subList {
+                        border-radius: 0;
+                        margin-bottom: 0;
+                    }
+
+                    mdui-card.statu {
+                        padding: 0.2em;
+                        font-size: small;
+                        background-color: rgb(var(--mdui-color-on-secondary-container-dark));
+                        color: rgb(var(--mdui-color-primary));
+                        border-radius: var(--mdui-shape-corner-medium);
+                    }
+
+                    mdui-icon.statu {
+                        color: rgb(var(--mdui-color-primary));
+                        font-size:120%;
+                    }
+
+                    div.notes {
+                        font-size: small;
+                    }
+                </style>
+
+                <mdui-list-item disabled style="
+                height: 3rem;
+                position: sticky;
+                top: 0;
+                margin-bottom: 0;
+                z-index: 999;
+                border-radius: 0;
+                background-color: rgb(var(--mdui-color-secondary-container),0.2);
+                backdrop-filter: blur(10px);
+                color: rgb(var(--mdui-color-primary));
+                ">
                     <div style="display: table;font-weight: bolder;display: flex;align-items: center;">
                         <div style="display: table-cell;width: 10vw;max-width: 3rem;">
                             <!-- <mdui-icon name="folder--outlined"></mdui-icon> -->
@@ -207,42 +247,20 @@
                     </div>
                 </mdui-list-item>
 
-                <style>
-                    mdui-list-item.first {
-                        margin-bottom: 0;
-                    }
-
-                    mdui-list-item.subList {
-                        background-color: rgb(var(--mdui-color-secondary-container), 0.2);
-                        border-radius: 0;
-                        margin-bottom: 0;
-                    }
-
-                    mdui-card.statu {
-                        padding: 0.4em;
-                        background-color: rgb(var(--mdui-color-on-secondary-container-dark));
-                        color: rgb(var(--mdui-color-primary));
-                        border-radius: var(--mdui-shape-corner-medium);
-                    }
-
-                    mdui-icon.statu {
-                        color: rgb(var(--mdui-color-primary));
-                    }
-                </style>
-                <mdui-collapse class="example-value">
-                    <mdui-collapse-item value="item-2">
+                <mdui-collapse>
+                    <mdui-collapse-item value="mc15">
                         <mdui-list-item slot="header" class="first">
                             <div style="display: table;display: flex;align-items: center;">
                                 <div style="display: table-cell;width: 10vw;max-width: 3rem;">
                                     <mdui-icon name="folder"></mdui-icon>
                                 </div>
                                 <div style="display: table-cell;width: 43vw;">
-                                    MC_柳州市第十五中学总部
+                                    MC_柳州市十五中总部
                                 </div>
                                 <div style="display: table-cell;width: 12vw;">
                                     项目
                                 </div>
-                                <div style="display: table-cell;width: 12vw;">
+                                <div class="notes" style="display: table-cell;width: 12vw;">
                                     -
                                 </div>
                                 <div style="display: table-cell;width: 13vw;">
@@ -264,14 +282,268 @@
                                     <div style="display: table-cell;width: 12vw;">
                                         ZIP
                                     </div>
-                                    <div style="display: table-cell;width: 12vw;">
-                                        -
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        正式版
                                     </div>
                                     <div style="display: table-cell;width: 13vw;">
                                         <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
                                     </div>
                                 </div>
-
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] ZS_1.0
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        正式版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] A20240806
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] A20240802
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] B20240726
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] B20240724
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] B20240718
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] B20240717
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] B20240716
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] B20240706
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                        <!-- <mdui-button-icon selectable icon="insert_drive_file--outlined" selected-icon="check_circle"></mdui-button-icon> -->
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] B20240630
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        测试版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList" href="open-mc15.html">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;color: rgb(var(--mdui-color-primary));">
+                                        <mdui-icon name="open_in_new--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;color: rgb(var(--mdui-color-primary));">
+                                        还有更多文件等待展示，点击转到存储库。
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                        </div>
+                    </mdui-collapse-item>
+                    <mdui-collapse-item value="mcSkin">
+                        <mdui-list-item slot="header" class="first">
+                            <div style="display: table;display: flex;align-items: center;">
+                                <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                    <mdui-icon name="folder"></mdui-icon>
+                                </div>
+                                <div style="display: table-cell;width: 43vw;">
+                                    MCSkin
+                                </div>
+                                <div style="display: table-cell;width: 12vw;">
+                                    项目
+                                </div>
+                                <div class="notes" style="display: table-cell;width: 12vw;">
+                                    -
+                                </div>
+                                <div style="display: table-cell;width: 13vw;">
+                                    <mdui-card class="statu">
+                                        已归档
+                                    </mdui-card>
+                                </div>
+                            </div>
+                        </mdui-list-item>
+                        <div>
+                            <mdui-list-item class="subList">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;">
+                                        <mdui-icon name="insert_drive_file--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;width: 43vw;">
+                                        [1.20.4] ZS_1.1
+                                    </div>
+                                    <div style="display: table-cell;width: 12vw;">
+                                        ZIP
+                                    </div>
+                                    <div class="notes" style="display: table-cell;width: 12vw;">
+                                        正式版
+                                    </div>
+                                    <div style="display: table-cell;width: 13vw;">
+                                        <mdui-icon name="cloud_done--outlined" class="statu"></mdui-icon>
+                                    </div>
+                                </div>
+                            </mdui-list-item>
+                            <mdui-list-item class="subList" href="open-mc15.html">
+                                <div style="display: table;display: flex;align-items: center;">
+                                    <div style="display: table-cell;width: 10vw;max-width: 3rem;color: rgb(var(--mdui-color-primary));">
+                                        <mdui-icon name="open_in_new--outlined"></mdui-icon>
+                                    </div>
+                                    <div style="display: table-cell;color: rgb(var(--mdui-color-primary));">
+                                        点击转到存储库
+                                    </div>
+                                </div>
                             </mdui-list-item>
                         </div>
                     </mdui-collapse-item>
