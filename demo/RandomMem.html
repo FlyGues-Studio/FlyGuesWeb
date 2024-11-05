@@ -332,7 +332,7 @@
 						</div>
 					</mdui-dialog>
 
-					<mdui-button-icon icon="settings" variant="text" style="margin-right: 1rem;"></mdui-button-icon>
+					<mdui-button-icon icon="settings--outlined" variant="text" style="margin-right: 1rem;"></mdui-button-icon>
 
 					<script>
 						const dialog2 = document.querySelector(".settings-header");
@@ -343,10 +343,10 @@
 						closeButton2.addEventListener("click", () => dialog2.open = false);
 					</script>
 
-					<mdui-fab id="btn" onclick="getNum()" variant="filled" icon="play_arrow--filled"
+					<mdui-fab id="btn" onclick="getNum()" variant="filled" icon="play_arrow--outlined"
 						style="background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-background));">开始抽取</mdui-fab>
 
-					<mdui-button-icon icon="fullscreen" style="margin-left: 1rem;"></mdui-button-icon>
+					<mdui-button-icon icon="fullscreen" style="margin-left: 1rem;" onclick="handleFullScreen()"></mdui-button-icon>
 				</div>
 			</center>
 
@@ -380,6 +380,51 @@
 	</script>
 
 </body>
+
+<script>
+	
+	//定义一个变量进行判断，默认false 非全屏状态
+	var exitFullscreen = false
+	// 全屏事件
+	function handleFullScreen() {
+		var element = document.documentElement;
+		if (this.fullscreen) {
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			} else if (document.webkitCancelFullScreen) {
+				document.webkitCancelFullScreen();
+			} else if (document.mozCancelFullScreen) {
+				document.mozCancelFullScreen();
+			} else if (document.msExitFullscreen) {
+				document.msExitFullscreen();
+			}
+		} else {
+			if (element.requestFullscreen) {
+				element.requestFullscreen();
+			} else if (element.webkitRequestFullScreen) {
+				element.webkitRequestFullScreen();
+			} else if (element.mozRequestFullScreen) {
+				element.mozRequestFullScreen();
+			} else if (element.msRequestFullscreen) {
+				// IE11
+				element.msRequestFullscreen();
+			}
+		}
+	}
+	window.onresize = function () {
+		var isFull = !!(document.webkitIsFullScreen || document.mozFullScreen ||
+			document.msFullscreenElement || document.fullscreenElement
+		);//!document.webkitIsFullScreen都为true。因此用!!
+		if (isFull == false) {
+			$("#exitFullScreen").css("display", "none");
+			$("#fullScreen").css("display", "");
+		} else {
+			$("#exitFullScreen").css("display", "");
+			$("#fullScreen").css("display", "none");
+		}
+	}
+
+</script>
 
 <script>
 	const slider = document.querySelector(".GETTIME");
