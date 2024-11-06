@@ -207,9 +207,12 @@
 			<mdui-dialog close-on-overlay-click headline="使用指南" class="example-action">
 				<mdui-icon slot="icon" name="help_outline--outlined"></mdui-icon>
 				<div>
-					1.点击 <b> <mdui-icon name="play_arrow--outlined" style="font-size: small;"></mdui-icon>开始抽取 按钮/回车键/空格键</b> 开始抽取数字。<br>
-					2.在 <b> <mdui-icon name="settings--outlined" style="font-size: small;"></mdui-icon>设置 按钮</b> 设置抽取数字范围、抽取时长、是否重复和是否手动抽取。<br>
-					3.点击 <b> <mdui-icon name="fullscreen--outlined" style="font-size: small;"></mdui-icon>全屏 按钮</b> 以全屏网页。<br>
+					1.点击 <b> <mdui-icon name="play_arrow--outlined" style="font-size: small;"></mdui-icon>开始抽取
+						按钮/回车键/空格键</b> 开始抽取数字。<br>
+					2.在 <b> <mdui-icon name="settings--outlined" style="font-size: small;"></mdui-icon>设置 按钮</b>
+					设置抽取数字范围、抽取时长、是否重复和是否手动抽取。<br>
+					3.点击 <b> <mdui-icon name="fullscreen--outlined" style="font-size: small;"></mdui-icon>全屏 按钮</b>
+					以全屏网页。<br>
 					<mdui-divider style="margin: 1em;"></mdui-divider>
 					<small>
 						随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数。人的主观意念认为数字范围的最小端和最大端抽取到的概率更低，实际上它们和中间段数字出现的概率相同。<br><br>
@@ -334,7 +337,8 @@
 						</div>
 					</mdui-dialog>
 
-					<mdui-button-icon icon="settings--outlined" variant="text" style="margin-right: 1rem;"></mdui-button-icon>
+					<mdui-button-icon icon="settings--outlined" variant="text"
+						style="margin-right: 1rem;"></mdui-button-icon>
 
 					<script>
 						const dialog2 = document.querySelector(".settings-header");
@@ -345,10 +349,14 @@
 						closeButton2.addEventListener("click", () => dialog2.open = false);
 					</script>
 
-					<mdui-fab id="btn" onclick="getNum()" variant="filled" icon="play_arrow--outlined"
-						style="background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-background));">开始抽取</mdui-fab>
 
-					<mdui-button-icon icon="fullscreen" style="margin-left: 1rem;" onclick="handleFullScreen()"></mdui-button-icon>
+					<mdui-tooltip content="点击按钮 或按下 空格键/回车键 以开始抽取" open-delay="500" placement="bottom">
+						<mdui-fab id="btn" onclick="getNum()" variant="filled" icon="play_arrow--outlined"
+							style="background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-background));">开始抽取</mdui-fab>
+					</mdui-tooltip>
+
+					<mdui-button-icon icon="fullscreen" style="margin-left: 1rem;"
+						onclick="handleFullScreen()"></mdui-button-icon>
 				</div>
 			</center>
 
@@ -384,7 +392,7 @@
 </body>
 
 <script>
-	
+
 	//定义一个变量进行判断，默认false 非全屏状态
 	var exitFullscreen = false
 	// 全屏事件
