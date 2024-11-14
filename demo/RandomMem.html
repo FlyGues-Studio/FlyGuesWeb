@@ -186,8 +186,8 @@
 					</center>
 				</div>
 
-				<mdui-button variant="tonal" slot="action">复制</mdui-button>
-				<mdui-button slot="action" class="OK">确定</mdui-button>
+				<mdui-button variant="text" slot="action">复制</mdui-button>
+				<mdui-button slot="action" class="OK" variant="tonal">确定</mdui-button>
 			</mdui-dialog>
 
 			<mdui-button-icon icon="history--outlined"></mdui-button-icon>
@@ -219,7 +219,7 @@
 						该页面作为一个通用的抽号在线工具，供需要的用户使用。抽号工具默认开启了去重处理，即在一个周期内不会抽取到重复的数字。例如抽取1-9，在第10次抽取前不会出现重复数字。关闭“周期内不重复”选项，可取消此限制。
 					</small>
 				</div>
-				<mdui-button slot="action">了解</mdui-button>
+				<mdui-button slot="action" variant="tonal">确定</mdui-button>
 			</mdui-dialog>
 
 			<mdui-button-icon icon="help_outline--outlined"></mdui-button-icon>
@@ -280,7 +280,7 @@
 
 						</mdui-top-app-bar>
 						<div style="width: 100%;overflow: hidden;padding-top: 1em;">
-							<mdui-text-field variant="outlined" label="抽取数字范围" id="num" value="1-55"
+							<mdui-text-field variant="outlined" label="抽取数字范围 （0 - 999999） " id="num" value="1-55"
 								style="font-family: 'Product Sans';"></mdui-text-field><br /><br>
 
 							<!-- 时延：<span id="time" style="font-family: 'Product Sans';">1.00</span> 秒<br>
@@ -350,8 +350,8 @@
 					</script>
 
 
-					<mdui-tooltip content="点击按钮 或按下 空格键/回车键 以开始抽取" open-delay="500" placement="bottom">
-						<mdui-fab id="btn" onclick="getNum()" variant="filled" icon="play_arrow--outlined"
+					<mdui-tooltip content="点击按钮 或按下 空格键/回车键 以开始抽取" open-delay="2000" placement="bottom">
+						<mdui-fab id="btn" onclick="getNum()" icon="play_arrow--outlined"
 							style="background-color: rgb(var(--mdui-color-primary));color: rgb(var(--mdui-color-background));">开始抽取</mdui-fab>
 					</mdui-tooltip>
 
@@ -372,7 +372,7 @@
 		输入有误，请注意以下规则：<br><br>
 		<li>范围只能是 <b>0至999999之间的整数</b> 。</li>
 		<li>输入格式为 <b>[最小整数] - [最大整数]</b> ，例如 1-100。</li><br>
-		<mdui-button slot="action">确定</mdui-button>
+		<mdui-button slot="action" variant="tonal">确定</mdui-button>
 	</mdui-dialog>
 
 	<mdui-button-icon icon="help_outline--outlined" style="display: none;"></mdui-button-icon>
@@ -499,8 +499,8 @@
 			add = [];
 			window.removeEventListener("devicemotion", motionEventHandler, false);
 			x = y = z = lastX = lastY = lastZ = 0;
-			out.style.color = '#0061a4';
-			out.innerHTML = '抽取已完成';
+			out.style.color = '#b1cbd0';
+			out.innerHTML = 'Done';
 			return;
 		}
 		sec = new Date().getTime();

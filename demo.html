@@ -150,10 +150,6 @@
             style="background-color: rgb(var(--mdui-color-surface-container)) !important;box-shadow: var(--mdui-elevation-level3) !important;">
             <mdui-button-icon icon="menu" class="showList"></mdui-button-icon>
             <mdui-top-app-bar-title style="font-family: 'Product Sans';">FlyGuesWeb</mdui-top-app-bar-title>
-            <mdui-tooltip variant="rich" headline="FlyGuesWeb 存储库" content="最近更新时间：2024/11/02"
-                href="https://txc.qq.com/products/667423">
-                <mdui-button-icon icon="history--outlined"></mdui-button-icon>
-            </mdui-tooltip>
         </mdui-top-app-bar>
 
         <mdui-navigation-drawer close-on-overlay-click class="drawer">
@@ -192,22 +188,24 @@
             <style>
                 mdui-card.list {
                     width: 90%;
+                    max-width: 32rem;
                     margin-left: 1rem;
                     margin-bottom: 0.5rem;
                     padding: 1rem;
+                    box-shadow: var(--mdui-elevation-level2);
                 }
             </style>
             <mdui-card class="list">
                 <mdui-icon name="all_inclusive--outlined"></mdui-icon>
                 <h3 style="margin-top: 0.25rem;">随机数抽取器</h3>
-                <mdui-button icon="arrow_forward" href="demo/RandomMem.html" style="margin-right: 0.5rem;">启动</mdui-button>
-                <mdui-button icon="code" variant="tonal" disabled>查看源码</mdui-button>
+                <mdui-button icon="arrow_forward" href="demo/RandomMem.html" variant="tonal">启动</mdui-button>
+                <mdui-button icon="code" variant="text" href="https://github.com/FlyGues-Studio/FlyGuesWeb/blob/main/demo/RandomMem.html" target="_blank">查看源码</mdui-button>
             </mdui-card>
             <mdui-card class="list">
                 <mdui-icon name="library_music"></mdui-icon>
                 <h3 style="margin-top: 0.25rem;">Web音乐播放器UI控件</h3>
-                <mdui-button icon="arrow_forward" href="docs/demo/Music.html" style="margin-right: 0.5rem;">启动</mdui-button>
-                <mdui-button icon="code" variant="tonal">查看源码</mdui-button>
+                <mdui-button icon="arrow_forward" href="docs/demo/Music.html" variant="tonal">启动</mdui-button>
+                <mdui-button icon="code" variant="text" href="https://github.com/FlyGues-Studio/FlyGuesWeb/blob/main/docs/demo/Music.html" target="_blank">查看源码</mdui-button>
             </mdui-card>
 
             <mdui-tooltip content="收集与反馈" placement="top">
