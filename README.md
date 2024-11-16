@@ -1,27 +1,27 @@
-<h1> FlyGuesWeb ´æ´¢¿â½éÉÜ£¨¼òÌåÖÐÎÄ£©</h1>
+<h1> FlyGuesWeb ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½</h1>
 
-FlyGuesWeb ¿âÊÇ¸öÈË¿ÎÒµÖ®ÓàÖÆ×÷µÄ FlyGues ÍøÕ¾Ô´Âë´æ·ÅµÄµØ·½£¬Äã¿ÉÒÔÔÚÏÂ·½²é¿´ÎÒÃÇµÄÍøÕ¾¡£
+FlyGuesWeb ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½Ë¿ï¿½ÒµÖ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ FlyGues ï¿½ï¿½Õ¾Ô´ï¿½ï¿½ï¿½ÅµÄµØ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½é¿´ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½Õ¾ï¿½ï¿½
 
-**ÍøÕ¾µØÖ·**&nbsp; https://flygues2889.github.io/FlyGuesWeb/
+**ï¿½ï¿½Õ¾ï¿½ï¿½Ö·**&nbsp; https://flygues2889.github.io/FlyGuesWeb/
 
-<h2>°æÈ¨ºÍÊ¹ÓÃÐí¿É</h2>
+<h2>ï¿½ï¿½È¨ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</h2>
 
 &copy; 2023 FlyGues Organization
 
-***¾¯¸æ*** &nbsp; ÕâÊÇ¸öÈËÍøÕ¾£¬½ûÖ¹Ë½×ÔÀ­È¡Ô´Âë¿â£¨³ý·ÇµÃµ½¸öÈËÐí¿É£©¡£Äã¿ÉÒÔÏò×÷ÕßÁªÏµÒÔ»ñµÃÐí¿É¡£
+***ï¿½ï¿½ï¿½ï¿½*** &nbsp; ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½Ö¹Ë½ï¿½ï¿½ï¿½ï¿½È¡Ô´ï¿½ï¿½â£¨ï¿½ï¿½ï¿½ÇµÃµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½É¡ï¿½
 
-<h2>×÷Õß</h2>
+<h2>ï¿½ï¿½ï¿½ï¿½</h2>
 
-**Ö÷Òª±à¼­ÈË**<br/>
+**ï¿½ï¿½Òªï¿½à¼­ï¿½ï¿½**<br/>
 Lv Yingfei
 
-<h2>ÁªÏµ×÷Õß</h2>
+<h2>ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½</h2>
 
 **Email** FlyGues2889@outlook.com<br/>
 **QQ** 2037432889<br/>
 **Wechat** FlyGues2889
 
-<h2>¸üÐÂÀúÊ·¼ÇÂ¼</h2>
+<h2>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼</h2>
 
-**V0.0.1** &brvbar; ÐÞ¸ÄÁËÒ»Ð©´íÎó¡£<br/>
-**Early Test** &brvbar; ´´½¨ÍøÕ¾Ö÷Ìå¿ò¼Ü
+**V0.0.1** &brvbar; ï¿½Þ¸ï¿½ï¿½ï¿½Ò»Ð©ï¿½ï¿½ï¿½ï¿½<br/>
+**Early Test** &brvbar; ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
