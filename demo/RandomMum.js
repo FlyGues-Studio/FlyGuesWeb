@@ -172,27 +172,6 @@ function storage(n) {
     setting.fs = $('fontsize').value;
     localStorage.setItem("suijishu", JSON.stringify(setting));
 }
-function defaultValue() {
-    $('settime').value = 700;
-    tm = true;
-    setTimeout(function () { tm = false; settime(700, 0) }, 100);
-    $('bc').value = '#ffffff';
-    $('out').style.backgroundColor = '#ffffff';
-    $('tc').value = '#000000';
-    $('out').style.color = '#000000';
-    $('tsc').value = '#ff0000';
-    $('ttc').value = '#000000';
-    $('t').style.color = '#000000';
-    $('repeat').checked = true;
-    $('note').checked = false;
-    $('notes').style.display = 'none';
-    $('manual').checked = false;
-    $('position').selectedIndex = 4;
-    $('fontsize').selectedIndex = 2;
-    manuald();
-    localStorage.removeItem("suijishu");
-    $('r').innerHTML = ''
-}
 function manuald() {
     var check = $('manual').checked;
     $('timeout').style.display = check ? 'none' : 'inline-block';
