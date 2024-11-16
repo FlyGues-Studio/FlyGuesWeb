@@ -100,20 +100,6 @@ window.onresize = function () {
         document.body.parentNode.style.overflow = 'hidden';
     }
 }
-function fullScreen(e) {
-    e.blur();
-    var element = document.documentElement;
-    if (element.requestFullscreen) {
-        element.requestFullscreen();
-    } else if (element.msRequestFullscreen) {
-        element.msRequestFullscreen();
-    } else if (element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
-    } else if (element.webkitRequestFullscreen) {
-        element.webkitRequestFullscreen();
-    }
-    $('t').innerHTML = ($('tips').value).replace(/</g, '&lt;').replace(/\n/g, '<br>');
-}
 var speed = 30, last_update = 0, x = y = z = lastX = lastY = lastZ = 0, zd = sy = 0;
 function motionEventHandler(e) {
     var acceleration = e.accelerationIncludingGravity;
