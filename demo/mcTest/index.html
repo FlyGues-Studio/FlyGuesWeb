@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FlyDoc - mcTest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/font.css">
+
+    <!--样式=======================================-->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Rounded -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- Sharp -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- Two Tone -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            position: absolute;
+
+            height: 100vh;
+            width: 100vw;
+
+            scrollbar-color: rgb(var(--mdui-color-primary)) !important;
+            scrollbar-width: thin !important;
+        }
+
+        :root,
+        :host {
+            --mdui-color-primary-light: 0, 104, 116;
+            --mdui-color-on-primary-light: 255, 255, 255;
+            --mdui-color-primary-container-light: 153, 240, 255;
+            --mdui-color-on-primary-container-light: 0, 31, 36;
+            --mdui-color-secondary-light: 74, 98, 103;
+            --mdui-color-on-secondary-light: 255, 255, 255;
+            --mdui-color-secondary-container-light: 205, 231, 236;
+            --mdui-color-on-secondary-container-light: 5, 31, 35;
+            --mdui-color-tertiary-light: 83, 94, 125;
+            --mdui-color-on-tertiary-light: 255, 255, 255;
+            --mdui-color-tertiary-container-light: 218, 226, 255;
+            --mdui-color-on-tertiary-container-light: 15, 26, 55;
+            --mdui-color-error-light: 186, 26, 26;
+            --mdui-color-on-error-light: 255, 255, 255;
+            --mdui-color-error-container-light: 255, 218, 214;
+            --mdui-color-on-error-container-light: 65, 0, 2;
+            --mdui-color-background-light: 251, 252, 253;
+            --mdui-color-on-background-light: 25, 28, 29;
+            --mdui-color-surface-light: 251, 252, 253;
+            --mdui-color-on-surface-light: 25, 28, 29;
+            --mdui-color-surface-variant-light: 219, 228, 230;
+            --mdui-color-on-surface-variant-light: 63, 72, 74;
+            --mdui-color-outline-light: 111, 121, 123;
+            --mdui-color-outline-variant-light: 191, 200, 202;
+            --mdui-color-shadow-light: 0, 0, 0;
+            --mdui-color-scrim-light: 0, 0, 0;
+            --mdui-color-inverse-surface-light: 46, 49, 50;
+            --mdui-color-inverse-on-surface-light: 239, 241, 241;
+            --mdui-color-inverse-primary-light: 80, 216, 236;
+            --mdui-color-surface-dim-light: 216, 218, 219;
+            --mdui-color-surface-bright-light: 248, 250, 250;
+            --mdui-color-surface-container-lowest-light: 255, 255, 255;
+            --mdui-color-surface-container-low-light: 242, 244, 244;
+            --mdui-color-surface-container-light: 236, 238, 239;
+            --mdui-color-surface-container-high-light: 230, 232, 233;
+            --mdui-color-surface-container-highest-light: 225, 227, 227;
+            --mdui-color-surface-tint-color-light: 0, 104, 116;
+            --mdui-color-primary-dark: 80, 216, 236;
+            --mdui-color-on-primary-dark: 0, 54, 61;
+            --mdui-color-primary-container-dark: 0, 79, 88;
+            --mdui-color-on-primary-container-dark: 153, 240, 255;
+            --mdui-color-secondary-dark: 177, 203, 208;
+            --mdui-color-on-secondary-dark: 28, 52, 56;
+            --mdui-color-secondary-container-dark: 51, 75, 79;
+            --mdui-color-on-secondary-container-dark: 205, 231, 236;
+            --mdui-color-tertiary-dark: 187, 198, 234;
+            --mdui-color-on-tertiary-dark: 36, 48, 77;
+            --mdui-color-tertiary-container-dark: 59, 70, 101;
+            --mdui-color-on-tertiary-container-dark: 218, 226, 255;
+            --mdui-color-error-dark: 255, 180, 171;
+            --mdui-color-on-error-dark: 105, 0, 5;
+            --mdui-color-error-container-dark: 147, 0, 10;
+            --mdui-color-on-error-container-dark: 255, 180, 171;
+            --mdui-color-background-dark: 25, 28, 29;
+            --mdui-color-on-background-dark: 225, 227, 227;
+            --mdui-color-surface-dark: 25, 28, 29;
+            --mdui-color-on-surface-dark: 225, 227, 227;
+            --mdui-color-surface-variant-dark: 63, 72, 74;
+            --mdui-color-on-surface-variant-dark: 191, 200, 202;
+            --mdui-color-outline-dark: 137, 146, 148;
+            --mdui-color-outline-variant-dark: 63, 72, 74;
+            --mdui-color-shadow-dark: 0, 0, 0;
+            --mdui-color-scrim-dark: 0, 0, 0;
+            --mdui-color-inverse-surface-dark: 225, 227, 227;
+            --mdui-color-inverse-on-surface-dark: 46, 49, 50;
+            --mdui-color-inverse-primary-dark: 0, 104, 116;
+            --mdui-color-surface-dim-dark: 16, 20, 21;
+            --mdui-color-surface-bright-dark: 54, 58, 58;
+            --mdui-color-surface-container-lowest-dark: 11, 15, 15;
+            --mdui-color-surface-container-low-dark: 25, 28, 29;
+            --mdui-color-surface-container-dark: 29, 32, 33;
+            --mdui-color-surface-container-high-dark: 39, 43, 43;
+            --mdui-color-surface-container-highest-dark: 50, 53, 54;
+            --mdui-color-surface-tint-color-dark: 80, 216, 236;
+            --mdui-color-primary: var(--mdui-color-primary-light);
+            --mdui-color-on-primary: var(--mdui-color-on-primary-light);
+            --mdui-color-primary-container: var(--mdui-color-primary-container-light);
+            --mdui-color-on-primary-container: var(--mdui-color-on-primary-container-light);
+            --mdui-color-secondary: var(--mdui-color-secondary-light);
+            --mdui-color-on-secondary: var(--mdui-color-on-secondary-light);
+            --mdui-color-secondary-container: var(--mdui-color-secondary-container-light);
+            --mdui-color-on-secondary-container: var(--mdui-color-on-secondary-container-light);
+            --mdui-color-tertiary: var(--mdui-color-tertiary-light);
+            --mdui-color-on-tertiary: var(--mdui-color-on-tertiary-light);
+            --mdui-color-tertiary-container: var(--mdui-color-tertiary-container-light);
+            --mdui-color-on-tertiary-container: var(--mdui-color-on-tertiary-container-light);
+            --mdui-color-error: var(--mdui-color-error-light);
+            --mdui-color-on-error: var(--mdui-color-on-error-light);
+            --mdui-color-error-container: var(--mdui-color-error-container-light);
+            --mdui-color-on-error-container: var(--mdui-color-on-error-container-light);
+            --mdui-color-background: var(--mdui-color-background-light);
+            --mdui-color-on-background: var(--mdui-color-on-background-light);
+            --mdui-color-surface: var(--mdui-color-surface-light);
+            --mdui-color-on-surface: var(--mdui-color-on-surface-light);
+            --mdui-color-surface-variant: var(--mdui-color-surface-variant-light);
+            --mdui-color-on-surface-variant: var(--mdui-color-on-surface-variant-light);
+            --mdui-color-outline: var(--mdui-color-outline-light);
+            --mdui-color-outline-variant: var(--mdui-color-outline-variant-light);
+            --mdui-color-shadow: var(--mdui-color-shadow-light);
+            --mdui-color-scrim: var(--mdui-color-scrim-light);
+            --mdui-color-inverse-surface: var(--mdui-color-inverse-surface-light);
+            --mdui-color-inverse-on-surface: var(--mdui-color-inverse-on-surface-light);
+            --mdui-color-inverse-primary: var(--mdui-color-inverse-primary-light);
+            --mdui-color-surface-dim: var(--mdui-color-surface-dim-light);
+            --mdui-color-surface-bright: var(--mdui-color-surface-bright-light);
+            --mdui-color-surface-container-lowest: var(--mdui-color-surface-container-lowest-light);
+            --mdui-color-surface-container-low: var(--mdui-color-surface-container-low-light);
+            --mdui-color-surface-container: var(--mdui-color-surface-container-light);
+            --mdui-color-surface-container-high: var(--mdui-color-surface-container-high-light);
+            --mdui-color-surface-container-highest: var(--mdui-color-surface-container-highest-light);
+            --mdui-color-surface-tint-color: var(--mdui-color-surface-tint-color-light);
+            color: rgb(var(--mdui-color-on-background));
+            background-color: rgb(var(--mdui-color-background));
+        }
+
+        mdui-tabs::part(container) {
+            background-color: unset;
+        }
+
+        div.main {
+            padding-top: 4rem;
+        }
+
+        @media only screen and (max-width: 840px) {
+            div.main {
+                width: 100vw;
+            }
+        }
+
+        @media only screen and (min-width: 841px) {
+            div.main {
+                width: 80vw;
+            }
+        }
+
+        mdui-card.msgContainer {
+            width: 90%;
+            margin: 1rem;
+            padding: 1rem;
+
+            background-color: rgb(var(--mdui-color-background));
+            text-align: left;
+        }
+
+        mdui-card.avatarBox {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            width: 12rem;
+
+            background-color: rgb(var(--mdui-color-background));
+            text-align: left;
+            box-shadow: none;
+
+            display: flex;
+            align-items: center;
+
+            font-family: 'Product Sans';
+        }
+
+        .msgContext {
+            margin: 0.5rem;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .msgBottom {
+            margin: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .moreInfo {
+            position: absolute;
+            right: 1rem;
+            top: 1.5rem;
+        }
+
+        .showPhoto {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            width: 10vw;
+            height: 10vw;
+            min-width: 124px;
+            min-height: 124px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-area {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+        }
+    </style>
+</head>
+
+<body>
+<mdui-layout style="height: 100vh;">
+    <mdui-top-app-bar class="topBar"
+                      style="background-color: rgb(var(--mdui-color-surface-container)) !important;box-shadow: var(--mdui-elevation-level3) !important;font-family: 'Product Sans';">
+        <mdui-button-icon icon="logout" onclick="openConfirm()"></mdui-button-icon>
+        <mdui-top-app-bar-title style="font-family: 'Product Sans';">Minecraft Test</mdui-top-app-bar-title>
+        <mdui-button-icon icon="account_circle" style="color: rgb(var(--mdui-color-primary));"></mdui-button-icon>
+        <mdui-button-icon icon="settings--outlined"></mdui-button-icon>
+    </mdui-top-app-bar>
+
+    <mdui-layout-main style="display: flex;justify-content: center;">
+        <div class="main"
+             style="background-color: rgb(var(--mdui-color-surface-container-low),0.8);height: fit-content;">
+            <div class="bkg" id="top"
+                 style="width: 100%;height: 36vh;background-color: rgb(var(--mdui-color-primary),0.2);background-size:cover;opacity: 0.2;">
+            </div>
+            <div class="basic" style="
+                    margin-top: -3.5rem;
+                    margin-left: 2rem;
+                    display: flex;
+                    align-items: center;
+                    ">
+                <h2 style="margin-left: 1rem;color: rgb(var(--mdui-color-primary));font-family: 'Product Sans';">
+                    Minecraft 测试 </h2>
+            </div>
+
+            <mdui-card class="msgContainer">
+                <mdui-card class="avatarBox">
+                    <mdui-avatar style="margin-right: 0.5rem;font-size: large">
+                        <mdui-icon name="check_circle_outline"></mdui-icon>
+                    </mdui-avatar>
+                    <div>
+                        <b>单选题</b><br>
+                    </div>
+                </mdui-card>
+                <div class="msgContext">
+                    <small>每道题仅有一个选项符合题意。每题4分，共40分。</small>
+                    <h4 class="topic">1.Minecraft的创始人Norch原在公司Mojang Studio工作，后来Mojang被（ ）收购。</h4>
+                    <mdui-radio-group>
+                        <mdui-radio value="3">微软</mdui-radio>
+                        <mdui-radio>拓维游戏</mdui-radio>
+                        <mdui-radio>网易游戏</mdui-radio>
+                        <mdui-radio>腾讯游戏</mdui-radio>
+                    </mdui-radio-group>
+                </div>
+
+
+            </mdui-card>
+        </div>
+    </mdui-layout-main>
+
+    <mdui-fab
+            style="position: fixed;bottom: 2rem;right: 2rem;background-color: rgb(var(--mdui-color-primary-light));color: rgb(var(--mdui-color-surface))"
+            icon="done" extended>提交
+    </mdui-fab>
+</mdui-layout>
+
+<mdui-dialog close-on-overlay-click class="confirmWindow" icon="logout">
+    <span slot="headline">直接退出吗？</span>
+    <span slot="description">你将直接关闭此窗口，并且所有更改将不会保存。</span>
+    <mdui-button slot="action" variant="text" onclick="closeConfirm()">取消</mdui-button>
+    <mdui-button slot="action">确定</mdui-button>
+</mdui-dialog>
+
+</body>
+
+<script>
+    const dialog = document.querySelector(".confirmWindow");
+
+    function openConfirm() {
+        dialog.open = true;
+    }
+
+    function closeConfirm() {
+        dialog.open = false;
+    }
+
+    function greet()
+    {
+        var time=new Date().getHours();
+        if(time<12)
+            alert("Good morning");
+        else if(time<18)
+            alert("Good afternoon");
+        else
+            alert("Good night");
+    }
+
+    function thanks()
+    {
+        alert("Thanks for your attention.");
+    }
+
+    function changeColor(obj)
+    {
+
+        obj.style.background="powderblue";
+    }
+
+    function coreCount()
+    {
+        var cores=0;
+        var qestions=document.getElementsByClassName("question")
+        for(var i=0;i<qestions.length;i++)
+        {
+            var count=0;
+            var flag=1;
+            var answer=document.getElementsByName("answer"+(i+1));
+            for(var j=0;j<answer.length;j++)
+            {
+                if(answer[j].checked)
+                {
+                    if(answer[j].value*1<0)
+                    {
+                        flag=0;
+                        break;
+                    }
+                    else
+                        count+=answer[j].value*1;
+                }
+            }
+            if(flag==1)
+                cores+=count;
+        }
+        alert("Your score is "+cores);
+    }
+
+    function showWhichWrong()
+    {
+        var qestions=document.getElementsByClassName("question")
+        for(var i=0;i<qestions.length;i++)
+        {
+            var answer=document.getElementsByName("answer"+(i+1));
+            for(var j=0;j<answer.length;j++)
+            {
+                if(answer[j].checked)
+                {
+                    if(answer[j].value*1<=0)
+                    {
+                        x=document.getElementById(i+1);
+                        x.style.color="red";
+                    }
+                }
+            }
+        }
+        for(var i=0;i<qestions.length;i++)
+        {
+            var answer=document.getElementsByName("answer"+(i+1));
+            for(var j=0;j<answer.length;j++)
+            {
+                if(!answer[j].checked)
+                {
+                    if(answer[j].value*1>0)
+                    {
+                        answer[j].style.backgroundColor="red";
+                    }
+                }
+            }
+        }
+    }
+
+</script>
+
+</html>
