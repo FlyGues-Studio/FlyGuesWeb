@@ -168,19 +168,19 @@
 
 <body style="margin: 0;">
     <mdui-layout style="height: 100vh;">
-        <mdui-top-app-bar scroll-target=".main" style="background-color: #ffffff00;"
+        <!-- <mdui-top-app-bar scroll-target=".main" style="background-color: #ffffff00;"
             class="topBar">
             <mdui-button-icon icon="numbers"></mdui-button-icon>
 
             <mdui-top-app-bar-title style="font-family: 'Harmony Sans SC Bold';">随机数抽取器</mdui-top-app-bar-title>
-        </mdui-top-app-bar>
+        </mdui-top-app-bar> -->
 
         <mdui-bottom-app-bar divider scroll-target=".main">
             <mdui-button-icon icon="history--outlined" onclick="openDialog()"></mdui-button-icon>
             <mdui-button-icon icon="settings--outlined" onclick="openDialog2()"></mdui-button-icon>
             <div style="height: 2rem;padding: 0 5px">
                 <mdui-divider vertical style="background-color: rgb(var(--mdui-color-secondary-dark));"></mdui-divider>
-              </div>
+            </div>
             <mdui-button-icon icon="help_outline--outlined" onclick="openDialog1()"></mdui-button-icon>
             <mdui-button-icon icon="fullscreen" onclick="handleFullScreen()"></mdui-button-icon>
 
@@ -190,14 +190,14 @@
 
         <mdui-layout-main class="main">
             <div id="out" style="
-			font-family: 'Product Sans Bold';
-			margin: 0;
-			color:rgb(var(--mdui-color-secondary-dark));
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			font-size: 20vw">
+                    font-family: 'Product Sans Bold';
+                    margin: 0;
+                    color:rgb(var(--mdui-color-secondary-dark));
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 20vw">
                 -
             </div>
         </mdui-layout-main>
@@ -223,7 +223,7 @@
             </div>
         </div>
 
-        <mdui-button variant="text" slot="action">复制</mdui-button>
+        <mdui-button variant="text" slot="action" icon="content_copy">复制</mdui-button>
         <mdui-button slot="action" class="OK" variant="tonal">确定</mdui-button>
     </mdui-dialog>
 
@@ -251,7 +251,8 @@
         <mdui-button slot="action" variant="tonal">确定</mdui-button>
     </mdui-dialog>
 
-    <mdui-dialog close-on-overlay-click class="settings-header" style="scrollbar-color: rgb(var(--mdui-color-secondary-dark)) rgb(var(--mdui-color-surface-container-high));">
+    <mdui-dialog close-on-overlay-click class="settings-header"
+        style="scrollbar-color: rgb(var(--mdui-color-secondary-dark)) rgb(var(--mdui-color-surface-container-high));">
         <mdui-top-app-bar slot="header">
             <mdui-top-app-bar-title style="text-align: left;margin-left: 0.6em;"><b
                     style="font-family: 'Harmony Sans SC';">抽取器设置</b></mdui-top-app-bar-title>
@@ -304,7 +305,8 @@
             </mdui-list-item>
 
 
-            <mdui-divider middle style="background-color: rgb(var(--mdui-color-secondary-dark));width: 50vw;margin: 1rem 0;"></mdui-divider>
+            <mdui-divider middle
+                style="background-color: rgb(var(--mdui-color-secondary-dark));width: 50vw;margin: 1rem 0;"></mdui-divider>
 
             <mdui-list-item nonclickable style="text-align: left;padding: 0;" icon="color_lens--outlined">
                 数字颜色（滚动）
