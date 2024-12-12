@@ -298,17 +298,9 @@ function openDialog2() {
 
 function openErrorDialog() {
     const errorDialog = document.querySelector(".example-action3");
-    const closeButton3 = errorDialog.querySelector("mdui-button");
+    const closeButton3 = errorDialog.querySelector(".closeError");
 
-    closeButton3.addEventListener("click", () => errorDialog.open = false);
     errorDialog.open = true;
-
-}
-
-function closeErrorDialog() {
-    const errorDialog = document.querySelector(".example-action3");
-    const closeButton3 = errorDialog.querySelector("mdui-button");
-
-    errorDialog.open = false;
+    closeButton3.addEventListener("click", () => errorDialog.open = false);
 
 }
