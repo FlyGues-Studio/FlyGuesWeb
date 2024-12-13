@@ -189,17 +189,23 @@
         </mdui-bottom-app-bar>
 
         <mdui-layout-main class="main">
-            <div id="out" style="
-                    font-family: 'Product Sans Bold';
-                    margin: 0;
-                    color:rgb(var(--mdui-color-secondary-dark));
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-size: 20vw">
-                -
-            </div>
+            <mdui-dropdown trigger="contextmenu" open-on-pointer>
+                <div id="out" slot="trigger" style="
+                        font-family: 'Product Sans Bold';
+                        margin: 0;
+                        color:rgb(var(--mdui-color-secondary-dark));
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 20vw">
+                    -
+                </div>
+                <mdui-menu style="border-radius: var(--mdui-shape-corner-large);" dense>
+                    <mdui-menu-item icon="content_copy">复制</mdui-menu-item>
+                </mdui-menu>
+            </mdui-dropdown>
+    
         </mdui-layout-main>
     </mdui-layout>
 
@@ -216,14 +222,18 @@
 
     <mdui-dialog close-on-overlay-click headline="历史抽取数记录" class="history-action">
         <mdui-icon slot="icon" name="history--outlined"></mdui-icon>
-        <div id="notes">
-            <div
-                style="margin: 1em;color: rgb(var(--mdui-color-on-primary-container),0.5);font-family: 'Product Sans'; text-align: center;">
-                <span><small>开始抽取以显示记录</small></span>
+        <mdui-dropdown trigger="contextmenu" open-on-pointer>
+            <div slot="trigger" id="notes">
+                <div
+                    style="margin: 1em;color: rgb(var(--mdui-color-on-primary-container),0.5);font-family: 'Product Sans'; text-align: center;">
+                    <span><small>开始抽取以显示记录</small></span>
+                </div>
             </div>
-        </div>
+            <mdui-menu style="border-radius: var(--mdui-shape-corner-large);" dense>
+                <mdui-menu-item icon="content_copy">复制</mdui-menu-item>
+            </mdui-menu>
+        </mdui-dropdown>
 
-        <mdui-button variant="text" slot="action" icon="content_copy">复制</mdui-button>
         <mdui-button slot="action" class="OK" variant="tonal">确定</mdui-button>
     </mdui-dialog>
 
