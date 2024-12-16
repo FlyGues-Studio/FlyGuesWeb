@@ -21,7 +21,7 @@
     <!-- Two Tone -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="../css/font.css">
 
     <style>
         :root,
@@ -172,7 +172,7 @@
         <mdui-circular-progress></mdui-circular-progress>
     </div>
 
-    <mdui-layout class="main" style="display: none;">
+    <mdui-layout class="screen" style="display: none;">
         <mdui-top-app-bar scroll-behavior="elevate" scroll-target="mdui-layout-main">
             <!-- <mdui-button-icon icon="menu"></mdui-button-icon> -->
             <mdui-top-app-bar-title style="margin-left: 1rem;">FlyGuesWeb</mdui-top-app-bar-title>
@@ -291,7 +291,7 @@
     // 页面加载完成后隐藏进度指示条
     window.onload = function () {
         loading.style.display = "none";
-        main.style.display = "";
+        main.style.display = "flex";
     };
 
     function navigate(pageId) {
