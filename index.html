@@ -177,14 +177,10 @@
 </head>
 
 <body class="mdui-bottom-nav-body">
-    <div class="loading"
-        style="display: flex;align-items: center;flex-direction: column;justify-content: center;width: 100vw;height: 100vh;z-index: 999;">
-        <mdui-circular-progress style="scale: 1.6;margin: 3rem;"></mdui-circular-progress>
-        <p style="color: rgb(var(--mdui-color-primary));font-family: 'Harmony Sans SC';">正在加载中</p>
-    </div>
+    <mdui-linear-progress class="loading" style="position: fixed;top: 4rem;z-index: 90;"></mdui-linear-progress>
 
-    <mdui-layout class="screen" style="display: none;">
-        <mdui-top-app-bar scroll-behavior="elevate" scroll-target="mdui-layout-main">
+    <mdui-layout class="screen" style="display: flex;">
+        <mdui-top-app-bar scroll-behavior="elevate" scroll-target="mdui-layout-main" style="background-color: rgb(var(--mdui-color-surface-container));">
             <!-- <mdui-button-icon icon="menu"></mdui-button-icon> -->
             <mdui-top-app-bar-title style="margin-left: 1rem;">FlyGuesWeb</mdui-top-app-bar-title>
             <div style="flex-grow: 1"></div>
@@ -354,7 +350,6 @@
     // 页面加载完成后隐藏进度指示条
     window.onload = function () {
         loading.style.display = "none";
-        main.style.display = "flex";
     };
 
     function navigate(pageId) {
