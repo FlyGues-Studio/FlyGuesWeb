@@ -37,9 +37,8 @@ function getNum() {
         sessionStorage.setItem('randomIn', nr);
         add = [];
     }
-    const errorDialog = document.querySelector(".example-action3");
-    const closeButton3 = errorDialog.querySelector("mdui-button");
-    if (!/^\d{1,6}-\d{1,6}$/.test(nr)) return errorDialog.open = true;
+    const errorSnackbar = document.querySelector(".errorSnackbar");
+    if (!/^\d{1,6}-\d{1,6}$/.test(nr)) return errorSnackbar.open = true;
     arr = nr.split("-");
     a = 0, b = 0;
     var in0 = Number(arr[0]), in1 = Number(arr[1]);
@@ -297,10 +296,7 @@ function openDialog2() {
 }
 
 function openErrorDialog() {
-    const errorDialog = document.querySelector(".example-action3");
-    const closeButton3 = errorDialog.querySelector(".closeError");
+    const errorSnackbar = document.querySelector(".errorSnackbar");
 
-    errorDialog.open = true;
-    closeButton3.addEventListener("click", () => errorDialog.open = false);
-
+    errorSnackbar.open = true;
 }

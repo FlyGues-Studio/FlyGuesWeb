@@ -189,7 +189,7 @@
         </mdui-bottom-app-bar>
 
         <mdui-layout-main class="main">
-            <mdui-dropdown trigger="contextmenu" open-on-pointer>
+                        <mdui-dropdown trigger="contextmenu" open-on-pointer>
                 <div id="out" slot="trigger" style="
                         font-family: 'Product Sans Bold';
                         margin: 0;
@@ -209,14 +209,12 @@
         </mdui-layout-main>
     </mdui-layout>
 
-    <mdui-dialog close-on-overlay-click headline="抽取范围不正确" class="example-action3">
-        <mdui-icon slot="icon" name="warning_amber--outlined"></mdui-icon>
-        输入有误，请注意以下规则：<br><br>
-        <li>范围只能是 <b>0至999999之间的整数</b> 。</li>
-        <li>输入格式为 <b>[最小整数] - [最大整数]</b> ，例如 1-100。</li>
-        <br>
-        <mdui-button slot="action" variant="tonal" class="closeError">确定</mdui-button>
-    </mdui-dialog>
+    <mdui-snackbar close-on-outside-click class="errorSnackbar" placement="top-start" close-icon="error_outline" style="border-radius: 1rem;">
+        <div style="display: flex;align-items: center;">
+            <mdui-icon name="error_outline" style="margin-right: 0.5rem;"></mdui-icon>
+            抽取数字范围错误
+        </div>
+    </mdui-snackbar>
 
     <mdui-button-icon icon="help_outline--outlined" style="display: none;"></mdui-button-icon>
 
