@@ -28,7 +28,62 @@ function stopCount() {
 function getNum() {
     var manual = $('manual').checked;
     if (c) {
+        if (manual) m = 1;function stopCount() {
+    clearTimeout(t);
+}
+
+function getNum() {
+    var manual = $('manual').checked;
+    if (c) {
         if (manual) m = 1;
+        return;
+    }
+    m = 0;
+    var nr = $('num').value, out = $('out');
+
+    // 检查输入是否已更改
+    if (sessionStorage.getItem('randomIn') !== nr) {
+        sessionStorage.setItem('randomIn', nr);
+        add = [];
+    }
+
+    const errorSnackbar = document.querySelector(".errorSnackbar");
+
+    // 验证输入格式
+    if (!/^\d{1,6}-\d{1,6}$/.test(nr)) {
+        errorSnackbar.open = true;
+        return;
+    }
+
+    let arr = nr.split("-").map(Number);
+    let in0 = Math.min(arr[0], arr[1]);
+    let in1 = Math.max(arr[0], arr[1]);
+
+    // 使用条件表达式简化输出
+    out.innerHTML = (in0 === in1) ? in0 : '';
+
+    // 创建数字数组
+    let numarr = [];
+    for (let i = in0; i <= in1; i++) {
+        if (!$('repeat').checked || !add.includes(i)) {
+            numarr.push(i);
+        }
+    }
+
+    // 处理无数字情况
+    if (numarr.length === 0) {
+        add = [];
+        window.removeEventListener("devicemotion", motionEventHandler, false);
+        out.style.color = 'rgb(var(--mdui-color-primary))';
+        out.innerHTML = 'Done';
+        return;
+    }
+
+    sec = new Date().getTime();
+    if (manual) sec += 1000 * 60 * 60 * 24 * 7; // 添加一周的毫秒数
+    timedCount(numarr);
+}
+
         return;
     }
     m = 0;
