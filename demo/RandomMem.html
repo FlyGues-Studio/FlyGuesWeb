@@ -161,6 +161,23 @@
             color: rgb(var(--mdui-color-on-background));
             background-color: rgb(var(--mdui-color-background));
         }
+
+        @media (min-width: 616px) {
+            mdui-bottom-app-bar {
+                max-width: 600px;
+                border-radius: 1.5rem;
+                margin: 0 auto;
+                margin-bottom: 1rem;
+                box-shadow: var(--mdui-elevation-level5);
+            }
+        }
+
+        @media (max-width: 616px) {
+            mdui-bottom-app-bar {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
     </style>
 
 
@@ -182,14 +199,16 @@
                 <mdui-divider vertical style="background-color: rgb(var(--mdui-color-secondary-dark));"></mdui-divider>
             </div>
             <mdui-button-icon icon="help_outline--outlined" onclick="openDialog1()"></mdui-button-icon>
-            <mdui-button-icon icon="fullscreen" onclick="handleFullScreen()"></mdui-button-icon>
+            <mdui-button-icon icon="fullscreen" id="btn-fullscreen-icon"
+                onclick="handleFullScreen()"></mdui-button-icon>
+            <mdui-button-icon icon="logout" href="../index.html"></mdui-button-icon>
 
             <div style="flex-grow: 1"></div>
             <mdui-fab extended icon="play_arrow--outlined" id="btn" onclick="getNum()">开始抽取</mdui-fab>
         </mdui-bottom-app-bar>
 
         <mdui-layout-main class="main">
-                        <mdui-dropdown trigger="contextmenu" open-on-pointer>
+            <mdui-dropdown trigger="contextmenu" open-on-pointer>
                 <div id="out" slot="trigger" style="
                         font-family: 'Product Sans Bold';
                         margin: 0;
@@ -202,14 +221,15 @@
                     -
                 </div>
                 <mdui-menu style="border-radius: var(--mdui-shape-corner-large);" dense>
-                    <mdui-menu-item icon="content_copy">复制</mdui-menu-item>
+                    <mdui-menu-item icon="content_copy" id="copy1" onclick="copyToClipboard1()">复制</mdui-menu-item>
                 </mdui-menu>
             </mdui-dropdown>
-    
+
         </mdui-layout-main>
     </mdui-layout>
 
-    <mdui-snackbar close-on-outside-click class="errorSnackbar" placement="top-start" close-icon="error_outline" style="border-radius: 1rem;">
+    <mdui-snackbar close-on-outside-click class="errorSnackbar" placement="top-start" close-icon="error_outline"
+        style="border-radius: 1rem;">
         <div style="display: flex;align-items: center;">
             <mdui-icon name="error_outline" style="margin-right: 0.5rem;"></mdui-icon>
             抽取数字范围错误
@@ -230,9 +250,7 @@
             <mdui-menu style="border-radius: var(--mdui-shape-corner-large);" dense>
                 <mdui-menu-item icon="content_copy">复制</mdui-menu-item>
             </mdui-menu>
-        </mdui-dropdown>
-
-        <mdui-button slot="action" class="OK" variant="tonal">确定</mdui-button>
+        </mdui-dropdown>        <mdui-button slot="action" class="OK" variant="tonal">确定</mdui-button>
     </mdui-dialog>
 
     <mdui-dialog close-on-overlay-click headline="使用指南" class="example-action">

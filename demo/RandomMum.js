@@ -283,7 +283,10 @@ var exitFullscreen = false
 // 全屏事件
 function handleFullScreen() {
     var element = document.documentElement;
-    if (this.fullscreen) {
+    var btnIcon = document.getElementById('btn-fullscreen-icon'); // 获取按钮的引用
+
+    if (document.fullscreenElement) {
+        // 当前已全屏，退出全屏
         if (document.exitFullscreen) {
             document.exitFullscreen();
         } else if (document.webkitCancelFullScreen) {
@@ -293,7 +296,9 @@ function handleFullScreen() {
         } else if (document.msExitFullscreen) {
             document.msExitFullscreen();
         }
+        btnIcon.setAttribute('icon', 'fullscreen'); // 更改图标为 fullscreen
     } else {
+        // 当前未全屏，请求全屏
         if (element.requestFullscreen) {
             element.requestFullscreen();
         } else if (element.webkitRequestFullScreen) {
@@ -304,13 +309,12 @@ function handleFullScreen() {
             // IE11
             element.msRequestFullscreen();
         }
+        btnIcon.setAttribute('icon', 'close_fullscreen'); // 更改图标为 close_fullscreen
     }
 }
 
 window.onresize = function () {
-    var isFull = !!(document.webkitIsFullScreen || document.mozFullScreen ||
-        document.msFullscreenElement || document.fullscreenElement
-    );//!document.webkitIsFullScreen都为true。因此用!!
+    var isFull = !!document.fullscreenElement; // 使用现代API来检测全屏状态
     if (isFull == false) {
         $("#exitFullScreen").css("display", "none");
         $("#fullScreen").css("display", "");
@@ -319,6 +323,7 @@ window.onresize = function () {
         $("#fullScreen").css("display", "none");
     }
 }
+
 
 const slider = document.querySelector(".GETTIME");
 slider.labelFormatter = (value) => `${value} ms`;
@@ -354,4 +359,17 @@ function openErrorDialog() {
     const errorSnackbar = document.querySelector(".errorSnackbar");
 
     errorSnackbar.open = true;
+}
+
+function copyToClipboard1() {
+    const outContent = document.getElementById('out').innerText; // 获取 div#notes 的内容
+
+    navigator.clipboard.writeText(outContent).then(() => {
+        // 复制成功的反馈
+        alert('内容已复制到剪贴板！');
+    }).catch(err => {
+        // 复制失败的反馈
+        console.error('复制失败: ', err);
+        alert('复制失败，请手动复制内容。');
+    });
 }

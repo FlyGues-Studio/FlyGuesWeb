@@ -178,13 +178,16 @@
             const navigationDrawer = document.querySelector(".drawer");
             const topBar = document.querySelector(".topBar");
             const openListButton = topBar.querySelector(".showList");
-
-            if (navigationDrawer.open = false) {
-                openListButton.addEventListener("click", () => navigationDrawer.open = false);
-            } else {
-                openListButton.addEventListener("click", () => navigationDrawer.open = true);
-            }
+        
+            // 初始化抽屉关闭状态
+            navigationDrawer.open = false;
+        
+            openListButton.addEventListener("click", () => {
+                // 切换抽屉的状态
+                navigationDrawer.open = !navigationDrawer.open;
+            });
         </script>
+        
 
         <mdui-layout-main class="main" style="margin-top: 2rem;">
             <div
