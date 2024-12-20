@@ -191,6 +191,7 @@
 
             <mdui-top-app-bar-title style="font-family: 'Harmony Sans SC Bold';">随机数抽取器</mdui-top-app-bar-title>
         </mdui-top-app-bar> -->
+        <mdui-linear-progress class="loading" style="position: fixed;top: 0;z-index: 90;"></mdui-linear-progress>
 
         <mdui-bottom-app-bar divider scroll-target=".main">
             <mdui-button-icon icon="history--outlined" onclick="openDialog()"></mdui-button-icon>
@@ -349,6 +350,24 @@
 
         </div>
     </mdui-dialog>
+
+    <script>
+        const loading = document.querySelector(".loading");
+        const main = document.querySelector(".screen")
+        // 页面加载完成后隐藏进度指示条
+        window.onload = function () {
+            loading.style.display = "none";
+        };
+    
+        function navigate(pageId) {
+            var pages = document.querySelectorAll('.page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+    
 </body>
 
 </html>
